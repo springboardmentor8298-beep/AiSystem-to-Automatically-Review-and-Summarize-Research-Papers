@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Research Paper Finder</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>AI Research Paper Finder</h1>
+
+    <input type="text" id="query" placeholder="Enter research topic">
+    <input type="number" id="limit" value="5" min="1" max="20">
+
+    <button onclick="searchPapers()">Search</button>
+
+    <p id="loading">Searching...</p>
+
+    <div id="results"></div>
+</div>
+
+<script src="static/script.js"></script>
+</body>
+</html>

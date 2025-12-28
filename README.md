@@ -24,3 +24,29 @@ python scripts\check_env.py
 <!-- Run the Functionality -->
 python scripts\search_and_list.py --query "machine learning" --limit 5
 
+
+<!-- I decided to build an ui after the day 3 task  -->
+
+<!-- “I’m using SQLite initially because it’s lightweight, reliable, and ideal for prototyping. The schema is designed so it can later be migrated to a production database if needed.” -->
+
+<!-- HTML/CSS/JS = Frontend
+Python = Backend
+They communicate via HTTP (fetch / API calls) -->
+
+<!-- Browser (HTML/CSS/JS)
+        ↓
+Frontend Form (Query Input)
+        ↓
+Backend API (Python - Flask)
+        ↓
+Semantic Scholar Search
+        ↓
+Metadata JSON
+        ↓
+(UI shows results)
+ -->
+
+
+<!-- to run the backend  -->
+python backend\app.py
+
