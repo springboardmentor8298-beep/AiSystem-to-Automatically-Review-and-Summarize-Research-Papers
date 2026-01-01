@@ -126,7 +126,7 @@ if st.button(" Start Retrieval & Extraction", type="primary"):
         with open(DATASET_FILE, "w", encoding="utf-8") as f:
             json.dump(papers, f, indent=2, ensure_ascii=False)
 
-        st.success(f"🎉 Collected {len(papers)} papers with full text!")
+        st.success(f" Collected {len(papers)} papers with full text!")
         st.download_button(
             label="Download dataset.json",
             data=json.dumps(papers, indent=2, ensure_ascii=False),
