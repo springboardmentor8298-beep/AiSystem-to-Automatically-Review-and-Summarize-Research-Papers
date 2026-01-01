@@ -111,7 +111,7 @@ def extract_sections(pdf_path: str) -> dict:
         return {"error": "Failed to extract"}
 
 if __name__ == "__main__":
-    print("🚀 AI Paper Reviewer – Smart Open-Access Collection (Max 10 Successful Papers)\n")
+    print(" AI Paper Reviewer  Smart Open-Access Collection (Max 10 Successful Papers)\n")
     
     topic = input("Enter research topic: ").strip()
     if not topic:
@@ -120,7 +120,7 @@ if __name__ == "__main__":
     papers = collect_successful_papers(topic)
     
     if not papers:
-        print("❌ Could not find any papers with downloadable PDFs. Try a different topic.")
+        print("Could not find any papers with downloadable PDFs. Try a different topic.")
     else:
         # Save dataset
         dataset_path = os.path.join(os.getcwd(), DATASET_FILE)
