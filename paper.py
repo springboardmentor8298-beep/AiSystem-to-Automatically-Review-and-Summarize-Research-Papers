@@ -18,7 +18,7 @@ os.makedirs(PAPERS_FOLDER, exist_ok=True)
 MAX_SUCCESSFUL_PAPERS = 10  # As per your project (adjustable)
 
 def collect_successful_papers(topic: str):
-    print(f"\n🔍 Searching for: '{topic}'")
+    print(f"\n Searching for: '{topic}'")
     print(f"   Goal: Find up to {MAX_SUCCESSFUL_PAPERS} papers with downloadable open-access PDFs\n")
     
     successful_papers = []
