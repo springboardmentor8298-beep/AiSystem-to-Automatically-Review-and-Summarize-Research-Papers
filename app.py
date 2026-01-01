@@ -113,12 +113,12 @@ def extract_sections(pdf_path: str) -> dict:
 # Streamlit UI
 # ========================
 st.set_page_config(page_title="AI Paper Retrieval & Extraction", layout="wide")
-st.title("🧠 AI System to Automatically Review and Summarize Research Papers")
+st.title(" AI System to Automatically Review and Summarize Research Papers")
 st.markdown("**Research Phase + Analysis Phase (Semantic Scholar only)**")
 
 topic = st.text_input("Enter research topic", value="attention is all you need")
 
-if st.button("🔥 Start Retrieval & Extraction", type="primary"):
+if st.button(" Start Retrieval & Extraction", type="primary"):
     papers = search_and_collect_papers(topic)
 
     if papers:
@@ -128,7 +128,7 @@ if st.button("🔥 Start Retrieval & Extraction", type="primary"):
 
         st.success(f"🎉 Collected {len(papers)} papers with full text!")
         st.download_button(
-            label="💾 Download dataset.json",
+            label="Download dataset.json",
             data=json.dumps(papers, indent=2, ensure_ascii=False),
             file_name="dataset.json",
             mime="application/json"
