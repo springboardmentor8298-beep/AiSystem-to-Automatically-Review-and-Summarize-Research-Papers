@@ -65,7 +65,7 @@ def collect_successful_papers(topic: str):
                         "sections": sections
                     }
                     successful_papers.append(paper)
-                    print(f"   ✅ Added! ({len(successful_papers)}/{MAX_SUCCESSFUL_PAPERS})\n")
+                    print(f"  Added! ({len(successful_papers)}/{MAX_SUCCESSFUL_PAPERS})\n")
             
             time.sleep(2)  # Be gentle on API
             
@@ -127,7 +127,7 @@ if __name__ == "__main__":
         with open(DATASET_FILE, "w", encoding="utf-8") as f:
             json.dump(papers, f, indent=2, ensure_ascii=False)
         
-        print(f"🎉 SUCCESS!")
+        print(f" SUCCESS!")
         print(f"   • Collected {len(papers)} high-quality papers with full text")
         print(f"   • PDFs saved in: {PAPERS_FOLDER}/")
         print(f"   • Dataset saved: {DATASET_FILE}")
