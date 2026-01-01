@@ -1,0 +1,5 @@
+.env
+papers/
+__pycache__/
+*.pyc
+dataset.json
