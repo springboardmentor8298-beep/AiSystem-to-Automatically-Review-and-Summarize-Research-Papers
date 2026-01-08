@@ -5,11 +5,12 @@ import requests
 from semanticscholar import SemanticScholar
 import pymupdf4llm
 from dotenv import load_dotenv
+from io import BytesIO
 
-# Load .env file
+# Load .env file (secure API keys)
 load_dotenv()
 
-# Use your Semantic Scholar API key from .env (for higher rate limit)
+# Semantic Scholar API key (from .env)
 S2_API_KEY = os.getenv("SEMANTIC_SCHOLAR_API_KEY")
 sch = SemanticScholar(api_key=S2_API_KEY) if S2_API_KEY else SemanticScholar()
 
@@ -18,24 +19,28 @@ PAPERS_FOLDER = "papers"
 DATASET_FILE = "dataset.json"
 os.makedirs(PAPERS_FOLDER, exist_ok=True)
 
-MAX_PAPERS = 10  # Adjustable (document allows up to 3–10)
+MAX_PAPERS = 10  # As per your document (up to 3–10, adjustable)
 
 # ========================
-# Core Functions
+# Research Phase: Search & PDF Retrieval
 # ========================
 def search_and_collect_papers(topic: str):
-    st.write(f"🔍 Research Phase: Searching Semantic Scholar for **{topic}**")
+    st.write(f" Research Phase: Searching Semantic Scholar for **{topic}**")
     st.write(f"Goal: Collect up to {MAX_PAPERS} papers with open-access PDFs")
 
     successful_papers = []
     batch_size = 50
 
-    with st.spinner("Fetching papers..."):
-        results = list(sch.search_paper(
-            query=topic,
-            limit=batch_size,
-            fields=['title', 'authors', 'year', 'abstract', 'openAccessPdf', 'citationCount']
-        ))
+    with st.spinner("Searching papers..."):
+        try:
+            results = list(sch.search_paper(
+                query=topic,
+                limit=batch_size,
+                fields=['title', 'authors', 'year', 'abstract', 'openAccessPdf', 'citationCount']
+            ))
+        except Exception as e:
+            st.error(f"Search failed: {str(e)}. Check API key or internet.")
+            return []
 
         if not results:
             st.error("No papers found. Try a different topic.")
@@ -52,11 +57,13 @@ def search_and_collect_papers(topic: str):
                 continue
 
             title = item.title
-            st.write(f"Downloading PDF: {title} ({item.year})")
+            st.write(f"Downloading: {title} ({item.year})")
 
-            pdf_path = download_pdf(pdf_url, f"{len(successful_papers)+1}_{title}")
-            if pdf_path:
-                sections = extract_sections(pdf_path)
+            pdf_content = download_pdf_in_memory(pdf_url)
+            pdf_path = save_pdf_locally(pdf_content, title) if pdf_content else None
+
+            if pdf_content:
+                sections = extract_sections_from_memory(pdf_content)
 
                 paper = {
                     "title": title,
@@ -64,35 +71,45 @@ def search_and_collect_papers(topic: str):
                     "year": item.year,
                     "abstract": item.abstract or "No abstract available",
                     "citations": item.citationCount or 0,
-                    "pdf_file": os.path.basename(pdf_path),
+                    "pdf_url": pdf_url,
                     "sections": sections
                 }
                 successful_papers.append(paper)
                 st.success(f"Added paper {len(successful_papers)}/{MAX_PAPERS}")
 
+                # Show temporary PDF viewer
+                st.markdown(f"**Temporary PDF View** (scroll to see):")
+                st.markdown(f'<iframe src="{pdf_url}" width="100%" height="500px"></iframe>', unsafe_allow_html=True)
+
     return successful_papers
 
-def download_pdf(pdf_url: str, title_prefix: str) -> str | None:
-    safe_title = "".join(c if c.isalnum() or c in " _-" else "_" for c in title_prefix)[:100]
-    filename = f"{safe_title}.pdf"
-    path = os.path.join(PAPERS_FOLDER, filename)
-
+def download_pdf_in_memory(pdf_url: str) -> bytes | None:
     try:
-        response = requests.get(pdf_url, stream=True, timeout=120)
+        response = requests.get(pdf_url, timeout=120)
         if response.status_code == 200:
-            with open(path, "wb") as f:
-                for chunk in response.iter_content(chunk_size=8192):
-                    f.write(chunk)
-            return path
-        else:
-            st.warning(f"Download failed (HTTP {response.status_code})")
+            return response.content
+        st.warning(f"Download failed (HTTP {response.status_code})")
     except Exception as e:
         st.warning(f"Download error: {str(e)}")
     return None
 
-def extract_sections(pdf_path: str) -> dict:
+def save_pdf_locally(pdf_content: bytes, title: str) -> str | None:
+    safe_title = "".join(c if c.isalnum() or c in " _-" else "_" for c in title)[:100]
+    filename = f"{safe_title}.pdf"
+    path = os.path.join(PAPERS_FOLDER, filename)
     try:
-        md_text = pymupdf4llm.to_markdown(pdf_path)
+        with open(path, "wb") as f:
+            f.write(pdf_content)
+        return path
+    except:
+        return None
+
+def extract_sections_from_memory(pdf_content: bytes) -> dict:
+    try:
+        # Load PDF from memory
+        doc = pymupdf4llm.open_stream(BytesIO(pdf_content))
+        md_text = pymupdf4llm.to_markdown(doc)
+
         sections = {}
         current = "Full Text"
         for line in md_text.split("\n"):
@@ -122,20 +139,20 @@ if st.button(" Start Retrieval & Extraction", type="primary"):
     papers = search_and_collect_papers(topic)
 
     if papers:
-        # Save dataset
+        # Save dataset for future use
         with open(DATASET_FILE, "w", encoding="utf-8") as f:
             json.dump(papers, f, indent=2, ensure_ascii=False)
 
-        st.success(f" Collected {len(papers)} papers with full text!")
+        st.success(f" Collected {len(papers)} papers with full text extraction!")
         st.download_button(
-            label="Download dataset.json",
+            label=" Download dataset.json (with extracted sections)",
             data=json.dumps(papers, indent=2, ensure_ascii=False),
             file_name="dataset.json",
             mime="application/json"
         )
 
-        # Show collected papers summary
-        st.write("### Collected Papers")
+        # Summary of collected papers
+        st.write("### Collected Papers (PDFs displayed above)")
         for i, p in enumerate(papers, 1):
             with st.expander(f"{i}. {p['title']} ({p['year']})"):
                 st.write("**Authors**: " + ", ".join(p['authors']))
