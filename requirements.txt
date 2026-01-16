@@ -1,0 +1,8 @@
+gradio
+requests
+python-dotenv
+PyMuPDF
+transformers
+torch
+scikit-learn
+nltk

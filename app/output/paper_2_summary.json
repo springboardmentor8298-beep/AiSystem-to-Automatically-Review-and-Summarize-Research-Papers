@@ -1,0 +1,17 @@
+{
+    "title": "Review of deep learning: concepts, CNN architectures, challenges, applications, future directions",
+    "authors": [
+        "Laith Alzubaidi",
+        "Jinglan Zhang",
+        "A. Humaidi",
+        "Ayad Al-dujaili",
+        "Y. Duan",
+        "O. Al-Shamma",
+        "José I. Santamaría",
+        "M. Fadhel",
+        "Muthana Al-Amidie",
+        "Laith Farhan"
+    ],
+    "year": 2021,
+    "summary": "Deep learning (DL) is the most widely used computational approach in the field of ML. DL has outperformed well-known ML techniques in many domains, including cybersecurity, natural language processing, bioinformatics, robotics and control. This paper outlines the importance of DL, presents the types of DL tech‑niques and networks. It then presents convolutional neural networks (CNNs) which the most utilized DL network type. It describes the development of CNNs architectures together with their main features, e.g., starting with the AlexNet network and closi’s."
+}

@@ -1,0 +1,12 @@
+{
+    "title": "nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation",
+    "authors": [
+        "Fabian Isensee",
+        "P. Jaeger",
+        "Simon A. A. Kohl",
+        "Jens Petersen",
+        "Klaus Hermann Maier-Hein"
+    ],
+    "year": 2020,
+    "summary": "NnU-Net surpasses most specialised deep learning pipelines in 19 public international competitions and sets a new state of the art in the majority of the 49 tasks. The results demonstrate a vast hidden potential in the systematic adaptation of deep learning methods to different datasets. We make nnu-Net publicly available as an open-source tool that can effectively be used out-of-the-box, rendering state-of the-art segmentationaccessible to non-experts and catalyzing scientiﬁc progress as a framework forautomated method design. Back to Mail Online home. Back To the page you came from."
+}

@@ -1,0 +1,17 @@
+## 📘 AI Research Paper Summary
+
+## 📄 nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation
+**Authors:** Fabian Isensee, P. Jaeger, Simon A. A. Kohl, Jens Petersen, Klaus Hermann Maier-Hein
+**Year:** 2020
+
+NnU-Net surpasses most specialised deep learning pipelines in 19 public international competitions and sets a new state of the art in the majority of the 49 tasks. The results demonstrate a vast hidden potential in the systematic adaptation of deep learning methods to different datasets. We make nnu-Net publicly available as an open-source tool that can effectively be used out-of-the-box, rendering state-of the-art segmentationaccessible to non-experts and catalyzing scientiﬁc progress as a framework forautomated method design. Back to Mail Online home. Back To the page you came from.
+
+---
+
+## 📄 Review of deep learning: concepts, CNN architectures, challenges, applications, future directions
+**Authors:** Laith Alzubaidi, Jinglan Zhang, A. Humaidi, Ayad Al-dujaili, Y. Duan, O. Al-Shamma, José I. Santamaría, M. Fadhel, Muthana Al-Amidie, Laith Farhan
+**Year:** 2021
+
+Deep learning (DL) is the most widely used computational approach in the field of ML. DL has outperformed well-known ML techniques in many domains, including cybersecurity, natural language processing, bioinformatics, robotics and control. This paper outlines the importance of DL, presents the types of DL tech‑niques and networks. It then presents convolutional neural networks (CNNs) which the most utilized DL network type. It describes the development of CNNs architectures together with their main features, e.g., starting with the AlexNet network and closi's.
+
+---

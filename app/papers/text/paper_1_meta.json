@@ -1,0 +1,12 @@
+{
+  "title": "nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation",
+  "year": 2020,
+  "authors": [
+    "Fabian Isensee",
+    "P. Jaeger",
+    "Simon A. A. Kohl",
+    "Jens Petersen",
+    "Klaus Hermann Maier-Hein"
+  ],
+  "url": "https://arxiv.org/pdf/1904.08128"
+}
