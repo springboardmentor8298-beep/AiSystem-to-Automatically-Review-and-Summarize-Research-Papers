@@ -1,5 +1,4 @@
+google-genai
 streamlit
-semanticscholar
-pymupdf4llm
 requests
 python-dotenv
