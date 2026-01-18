@@ -11,51 +11,61 @@ from dotenv import load_dotenv
 load_dotenv()
 GEMINI_KEY = os.getenv("GOOGLE_API_KEY")
 
-# 2026 SETUP: Using v1beta for Gemini 3 Flash Preview access
+# Client setup using v1beta for Gemini 3 Flash Preview
 client = genai.Client(
     api_key=GEMINI_KEY,
     http_options=HttpOptions(api_version="v1beta")
 )
 
-# --- 2. The Stable Search Function (Your exact code) ---
+# --- 2. Professional UI Styling (Removes AI/Streamlit Branding) ---
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            #stDecoration {display:none;}
+            </style>
+            """
+#st.markdown(hide_st_style, unsafe_allow_html=True)
+
+# --- 3. The Stable Search Function ---
 def stable_search(query, limit=5):
     url = f"https://api.semanticscholar.org/graph/v1/paper/search?query={query}&limit={limit}&fields=title,abstract,url,year,tldr"
-    
-    # Use a real browser User-Agent to avoid being flagged as a bot
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    for attempt in range(3): # Try 3 times
+    for attempt in range(3):
         try:
             response = requests.get(url, headers=headers, timeout=15)
             if response.status_code == 200:
                 return response.json().get('data', [])
             elif response.status_code == 429:
-                wait_time = (attempt + 1) * 30 # Wait 30s, then 60s
-                st.warning(f"Rate limited. Waiting {wait_time} seconds before retrying...")
+                wait_time = (attempt + 1) * 30
+                st.warning(f"Rate limited. Retrying in {wait_time}s...")
                 time.sleep(wait_time)
             else:
-                st.error(f"API Error: {response.status_code}")
+                st.error(f"Network Error: {response.status_code}")
                 return []
         except Exception as e:
             st.error(f"Connection failed: {e}")
             return []
     return []
 
-# --- 3. UI Layout ---
-st.set_page_config(page_title="Research Assistant", layout="wide")
-st.title(" Research Assistant ")
+# --- 4. UI Layout ---
+st.title("🔬 Research Synthesis Suite")
 
-tab1, tab2 = st.tabs(["🔍 Search & Preview", "✍️ AI Review"])
+tab1, tab2 = st.tabs(["🔍 Search & Preview", "✍️ Analysis & Gaps"])
 
 with tab1:
-    # Your exact search UI
-    topic = st.text_input("Topic", "Artificial Intelligence")
-    num_papers = st.slider("Papers", 1, 10, 5)
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        topic = st.text_input("Research Topic", "Artificial Intelligence")
+    with col2:
+        num_papers = st.selectbox("Paper Count", [1, 3, 5, 10,13,15,17,20], index=2)
 
-    if st.button(" Start Stable Search"):
-        with st.spinner("Fetching..."):
+    if st.button("🚀 Execute Search", type="primary"):
+        with st.spinner("Accessing Academic Databases..."):
             results = stable_search(topic, limit=num_papers)
             
             if results:
@@ -71,33 +81,51 @@ with tab1:
                     
                     with st.expander(f"📄 {item.get('title')}"):
                         st.write(summary)
+                        st.caption(f"[Source Link]({item.get('url')})")
                 
                 with open("dataset.json", "w") as f:
                     json.dump(papers_data, f)
-                st.success("Fetched successfully! Now go to the 'AI Review' tab.")
+                st.success(f"Successfully cached {len(papers_data)} papers. Proceed to Analysis tab.")
+
+    # Reset Button
+    if os.path.exists("dataset.json"):
+        if st.button("🗑️ Clear Local Cache"):
+            os.remove("dataset.json")
+            st.rerun()
 
 with tab2:
     if os.path.exists("dataset.json"):
         with open("dataset.json", "r") as f:
             data = json.load(f)
         
-        st.subheader("Generate AI Synthesis")
-        if st.button("✨ Write Review with Gemini 3"):
+        st.subheader("Deep Analysis & Research Gap Detection")
+        if st.button("✨ Synthesize & Identify Gaps"):
             if not data:
-                st.warning("No papers found. Search in Tab 1 first.")
+                st.warning("No data found to analyze.")
             else:
-                with st.spinner("Gemini is analyzing the summaries..."):
-                    # We pass the JSON data directly to the prompt
-                    prompt = f"Synthesize these research paper summaries into a formal literature review with citations:\n\n{json.dumps(data)}"
+                with st.spinner("Synthesizing literature and detecting gaps..."):
+                    # The Enhanced Prompt
+                    prompt = f"""
+                    You are a professional academic reviewer. Perform a deep analysis on the following papers:
+                    1. **Literature Review**: Create a formal synthesis of the core findings.
+                    2. **Research Gaps**: Identify 3 specific areas where current knowledge is missing or limited based on these texts.
+                    3. **Future Directions**: Suggest a novel study title to address these gaps.
+                    
+                    Strictly format the output with professional headers. 
+                    Do not mention yourself as an AI or mention Gemini.
+                    
+                    DATASET:
+                    {json.dumps(data)}
+                    """
                     
                     try:
                         response = client.models.generate_content(
                             model="gemini-3-flash-preview", 
                             contents=prompt
                         )
-                        st.markdown("### Literature Review")
+                        st.markdown("---")
                         st.write(response.text)
                     except Exception as e:
-                        st.error(f"AI Error: {e}")
+                        st.error(f"Processing Error: {e}")
     else:
-        st.info("Please fetch papers in the first tab to see the AI options.")
+        st.info("No active dataset. Please complete a search in the first tab.")
