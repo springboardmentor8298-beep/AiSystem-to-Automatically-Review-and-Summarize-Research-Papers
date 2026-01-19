@@ -1,0 +1,591 @@
+results at the top of
+its list. users tend to interact most with the top results and pay little attention to those further down
+the list [92]. the interactions of users with items will then be collected by the web search engine,
+and the data will be used to make future decisions on how information should be presented based
+on popularity and user interest. as a result, results at the top will become more and more popular,
+not because of the nature of the result but due to the biased interaction and placement of results by
+these algorithms [92]. the loop capturing this feedback between biases in data, algorithms, and user
+4
+mehrabi et al.
+data
+algorithm
+user 
+interaction
+behavioral bias
+content production bias
+ranking bias
+emergent bias
+aggregation bias
+longitudinal data fallacy
+fig. 1. examples of bias definitions placed in the data, algorithm, and user interaction feedback loop.
+interaction is illustrated in figure 1. we use this loop to categorize definitions of bias in the section
+below.
+3.1
+types of bias
+bias can exist in many shapes and forms, some of which can lead to unfairness in different down-
+stream learning tasks. in [144], authors talk about sources of bias in machine learning with their
+categorizations and descriptions in order to motivate future solutions to each of the sources of bias
+introduced in the paper. in [120], the authors prepare a complete list of different types of biases with
+their corresponding definitions that exist in different cycles from data origins to its collection and its
+processing. here we will reiterate the most important sources of bias introduced in these two papers
+and also add in some work from other existing research papers. additionally, we will introduce a
+different categorization of these definitions in the paper according to the data, algorithm, and user
+interaction loop.
+3.1.1
+data to algorithm. in this section we talk about biases in data, which, when used by ml
+training algorithms, might result in biased algorithmic outcomes.
+(1) measurement bias. measurement, or reporting, bias arises from how we choose, utilize,
+and measure particular features [144]. an example of this type of bias was observed in the
+recidivism risk prediction tool compas, where prior arrests and friend/family arrests were
+used as proxy variables to measure level of “riskiness” or “crime”—-which on its own can
+be viewed as mismeasured proxies. this is partly due to the fact that minority communities
+are controlled and policed more frequently, so they have higher arrest rates. however, one
+should not conclude that because people coming from minority groups have higher arrest rates
+therefore they are more dangerous as there is a difference in how these groups are assessed
+and controlled [144].
+(2) omitted variable bias. omitted variable bias4 occurs when one or more important variables
+are left out of the model [38, 114, 131]. an example for this case would be when someone
+a survey on bias and fairness in machine learning
+5
+designs a model to predict, with relatively high accuracy, the annual percentage rate at which
+customers will stop subscribing to a service, but soon observes that the majority of users are
+canceling their subscription without receiving any warning from the designed model. now
+imagine that the reason for canceling the subscriptions is appearance of a new strong competitor
+in the market which offers the same solution, but for half the price. the appearance of the
+competitor was something that the model was not ready for; therefore, it is considered to be an
+omitted variable.
+(3) representation bias. representation bias arises from how we sample from a population
+during data collection process [144]. non-representative samples lack the diversity of the
+population, with missing subgroups and other anomalies. lack of geographical diversity in
+datasets like imagenet (as shown in figures 3 and 4) results in demonstrable bias towards
+western cultures.
+(4) aggregation bias. aggregation bias (or ecological fallacy) arises when false conclusions are
+drawn about individuals from observing the entire population. an example of this type of
+bias can be seen in clinical aid tools. consider diabetes patients who have apparent morbidity
+differences across ethnicities and genders. specifically, hba1c levels, that are widely used
+to diagnose and monitor diabetes, differ in complex ways across genders and ethnicities.
+therefore, a model that ignores individual differences will likely not be well-suited for all
+ethnic and gender groups in the population [144]. this is true even when they are represented
+equally in the training data. any general assumptions about subgroups within the population
+can result in aggregation bias.
+0
+50
+100
+150
+200
+250
+300
+x1
+0
+50
+100
+150
+200
+250
+300
+y
+multivariate linear regression
+clusterwise linear regression
+cluster regression
+data
+0
+50
+100
+150
+200
+250
+300
+x1
+0
+50
+100
+150
+200
+250
+300
+y
+multivariate linear regression
+clusterwise linear regression
+cluster regression
+data
+fig. 2. illustration of biases in data. the red line shows the regression (mlr) for the entire population,
+while dashed green lines are regressions for each subgroup, and the solid green line is the unbiased
+regression. (a) when all subgroups are of equal size, then mlr shows a positive relationship between
+the outcome and the independent variable. (b) regression shows almost no relationship in less
+balanced data. the relationships between variables within each subgroup, however, remain the same.
+(credit: nazanin alipourfard)
+(a) simpson’s paradox. simpson’s paradox is a type of aggregation bias that arises in the
+analysis of heterogeneous data [18]. the paradox arises when an association observed
+in aggregated data disappears or reverses when the same data is disaggregated into its
+underlying subgroups (fig. 2(a)). one of the better-known examples of the type of paradox
+arose during the gender bias lawsuit in university admissions against uc berkeley [16]. after
+analyzing graduate school admissions data, it seemed like there was bias toward women,
+a smaller fraction of whom were being admitted to graduate programs compared to their
+male counterparts. however, when admissions data was separated and analyzed over the
+departments, women applicants had equality and in some cases even a small advantage
+6
+mehrabi et al.
+fig. 3. fraction of each country, represented by their two-letter iso codes, in open images and
+imagenet image datasets. in both datasets, us and great britain represent the top locations, from
+[142] © shreya shankar.
+fig. 4. geographic distribution of countries in the open images data set. in their sample, almost one
+third of the data was us-based, and 60% of the data was from the six most represented countries
+across north america and europe, from [142] © shreya shankar.
+over men. the paradox happened as women tended to apply to departments with lower
+admission rates for both genders. simpson’s paradox has been observed in a variety of
+domains, including biology [37], psychology [81], astronomy [109], and computational
+social science [91].
+(b) modifiable areal unit problem is a statistical bias in geospatial analysis, which arises
+when modeling data at different levels of spatial aggregation [56]. this bias results in
+different trends learned when data is aggregated at different spatial scales.
+(5) sampling bias. sampling bias is similar to representation bias, and it arises due to non-
+random sampling of subgroups. as a consequence of sampling bias, the trends estimated for
+one population may not generalize to data collected from a new population. for the intuition,
+consider the example in figure 2. the left plot represents data collected during a study from
+three subgroups, which were uniformly sampled (fig. 2(a)). suppose the next time the study
+was conducted, one of the subgroups was sampled more frequently than the rest (fig. 2(b)). the
+positive trend found by the regression model in the first study almost completely disappears
+(solid red line in plot on the right), although the subgroup trends (dashed green lines) are
+unaffected.
+(6) longitudinal data fallacy. researchers analyzing temporal data must use longitudinal anal-
+ysis to track cohorts over time to learn their behavior. instead, temporal data is often modeled
+a survey on bias and fairness in machine learning
+7
+using cross-sectional analysis, which combines diverse cohorts at a single time point. the
+heterogeneous cohorts can bias cross-sectional analysis, leading to different conclusions than
+longitudinal analysis. as an example, analysis of bulk reddit data [10] revealed that comment
+length decreased over time on average. however, bulk data represented a cross-sectional
+snapshot of the population, which in reality contained different cohorts who joined reddit
+in different years. when data was disaggregated by cohorts, the comment length within each
+cohort was found to increase over time.
+(7) linking bias. linking bias arises when network attributes obtained from user connections,
+activities, or interactions differ and misrepresent the true behavior of the users [120]. in
+[104] authors show how social networks can be biased toward low-degree nodes when only
+considering the links in the network and not considering the content and behavior of users in
+the network. [153] also shows that user interactions are significantly different from social link
+patterns that are based on features, such as
+
+results 
+ search
+tools 
+ public access policy 
+ pids services & dev tools 
+about 
+ faqs 
+ news 
+ sign in create account
+ 
+u.s. department of energy
+office of scientific and technical information
+search terms:
+⏷
+ 
+osti.gov journal article: physics-informed machine learning
+physics-informed machine
+learning
+journal article · mon may 24 00:00:00 edt 2021 · nature reviews
+physics
+doi:https://doi.org/10.1038/s42254-021-00314-5· osti id:2282016
+karniadakis, george em 
+  [1];
+•  search osti.gov for author "karniadakis, george em"
+•  search osti.gov for orcid "0000-0002-9713-7120"
+•  view orcid profile
+kevrekidis, ioannis g. [2]; lu, lu 
+  [3];
+•  search osti.gov for author "lu, lu"
+•  search osti.gov for orcid "0000-0002-5476-5768"
+•  view orcid profile
+perdikaris, paris [4]; wang, sifan [4]; yang, liu 
+  [5]
+•  search osti.gov for author "yang, liu"
+•  search osti.gov for orcid "0000-0002-7476-9168"
+•  view orcid profile
+1. brown university, providence, ri (united states); brown
+university
+2. johns hopkins university, baltimore, md (united states)
+3. massachusetts institute of technology (mit), cambridge, ma
+(united states)
+4. university of pennsylvania, philadelphia, pa (united states)
+5. brown university, providence, ri (united states)
++ show author affiliations
+despite great progress in simulating multiphysics problems using
+the numerical discretization of partial differential equations (pdes),
+one still cannot seamlessly incorporate noisy data into existing
+algorithms, mesh generation remains complex, and high-
+dimensional problems governed by parameterized pdes cannot be
+tackled. moreover, solving inverse problems with hidden physics is
+often prohibitively expensive and requires different formulations and
+elaborate computer codes. machine learning has emerged as a
+promising alternative, but training deep neural networks requires big
+data, not always available for scientific problems. instead, such
+networks can be trained from additional information obtained by
+enforcing the physical laws (for example, at random points in the
+continuous space-time domain). such physics-informed learning
+integrates (noisy) data and mathematical models, and implements
+them through neural networks or other kernel-based regression
+networks. moreover, it may be possible to design specialized
+network architectures that automatically satisfy some of the physical
+invariants for better accuracy, faster training and improved
+generalization. furthermore, we review some of the prevailing
+trends in embedding physics into machine learning, present some of
+the current capabilities and limitations and discuss diverse
+applications of physics-informed learning both for forward and
+inverse problems, including discovering hidden physics and tackling
+high-dimensional problems.
+ view accepted manuscript (doe)
+cite 
+citation formats
+•  mla
+•  apa
+•  chicago
+•  bibtex
+karniadakis, george em, et al. "physics-informed
+machine learning." nature reviews physics, vol. 3,
+no. 6, may. 2021. https://doi.org/10.1038/
+s42254-021-00314-5
+🗎 copy to clipboard
+karniadakis, george em, kevrekidis, ioannis g.,
+lu, lu, perdikaris, paris, wang, sifan, & yang,
+liu (2021). physics-informed machine learning.
+nature reviews physics, 3(6). https://
+doi.org/10.1038/s42254-021-00314-5
+🗎 copy to clipboard
+karniadakis, george em, kevrekidis, ioannis g.,
+lu, lu, et al., "physics-informed machine
+learning," nature reviews physics 3, no. 6 (2021),
+https://doi.org/10.1038/s42254-021-00314-5
+🗎 copy to clipboard
+@article{osti_2282016, author = {karniadakis,
+george em and kevrekidis, ioannis g. and lu, lu
+and perdikaris, paris and wang, sifan and yang,
+liu}, title = {physics-informed machine learning},
+annote = {despite great progress in simulating
+multiphysics problems using the numerical
+discretization of partial differential equations
+(pdes), one still cannot seamlessly incorporate
+noisy data into existing algorithms, mesh
+generation remains complex, and high-dimensional
+problems governed by parameterized pdes cannot be
+tackled. moreover, solving inverse problems with
+hidden physics is often prohibitively expensive
+and requires different formulations and elaborate
+computer codes. machine learning has emerged as a
+promising alternative, but training deep neural
+networks requires big data, not always available
+for scientific problems. instead, such networks
+can be trained from additional information
+obtained by enforcing the physical laws (for
+example, at random points in the continuous space-
+time domain). such physics-informed learning
+integrates (noisy) data and mathematical models,
+and implements them through neural networks or
+other kernel-based regression networks. moreover,
+it may be possible to design specialized network
+architectures that automatically satisfy some of
+the physical invariants for better accuracy,
+faster training and improved generalization.
+furthermore, we review some of the prevailing
+trends in embedding physics into machine learning,
+present some of the current capabilities and
+limitations and discuss diverse applications of
+physics-informed learning both for forward and
+inverse problems, including discovering hidden
+physics and tackling high-dimensional problems.},
+doi = {10.1038/s42254-021-00314-5}, url =
+{https://www.osti.gov/biblio/2282016}, journal =
+{nature reviews physics}, issn = {issn 2522-5820},
+number = {6}, volume = {3}, place = {united
+states}, publisher = {springer nature}, year =
+{2021}, month = {05}}
+🗎 copy to clipboard
+export 
+•  endnote
+•  ris
+•  csv/excel
+•  xml
+•  json
+share 
+•  
+ facebook
+•  
+ twitter / x
+•  
+ linkedin
+•  
+ email
+save 
+you must sign in or create an account in order to save documents
+to your library.
+print 
+details
+references (122)
+cited by (4)
+similar records / subjects
+research organization:
+brown university, providence, ri (united states)
+sponsoring organization:
+usdoe advanced research projects agency - energy
+(arpa-e); air force office of scientific research
+grant/contract number:
+sc0019453
+osti id:
+2282016
+alternate id(s):
+osti id: 1852843
+journal information:
+nature reviews physics, journal name: nature reviews
+physics journal issue: 6 vol. 3; issn 2522-5820
+publisher:
+springer nature
+copyright statement
+country of publication:
+united states
+language:
+english
+ references (122)
+search references:
+resource types preprintjournalconference
+sort by date sort by title
+↺
+metric-based upscaling
+owhadi, houman; zhang, lei
+communications on pure and applied mathematics, vol. 60, issue 5 https:/
+fast parallel algorithms for short-range molecular dynamics
+plimpton, steve
+journal of computational physics, vol. 117, issue 1 https://doi.org/10.1006/
+conditional deep surrogate models for stochastic, high-dimensional, and m
+yang, yibo; perdikaris, paris
+computational mechanics, vol. 64, issue 2 https://doi.org/10.1007/s00466-
+“forget time”: essay written for the fqxi contest on the nature of time
+rovelli, carlo
+foundations of physics, vol. 41, issue 9 https://doi.org/10.1007/s10701-01
+physics-informed neural network for ultrasound nondestructive quantifica
+shukla, khemraj; di leoni, patricio clark; blackshire, james
+journal of nondestructive evaluation, vol. 39, issue 3 https://doi.org/10.100
+mgnet: a unified framework of multigrid and convolutional neural network
+he, juncai; xu, jinchao
+science china mathematics, vol. 62, issue 7 https://doi.org/10.1007/s1142
+why and when can deep-but not shallow-networks avoid the curse of dimen
+poggio, tomaso; mhaskar, hrushikesh; rosasco, lorenzo
+international journal of automation and computing, vol. 14, issue 5 https://
+linking machine learning with multiscale numerics: data-driven discovery
+arbabi, hassan; bunder, judith e.; samaey, giovanni
+jom, vol. 72, issue 12 https://doi.org/10.1007/s11837-020-04399-8
+a proposal on machine learning via dynamical systems
+e., weinan
+communications in mathematics and statistics, vol. 5, issue 1 https://doi.or
+prediction of vegetation dynamics using ndvi time series data and lstm
+reddy, d. sushma; prasad, p. rama chandra
+modeling earth systems and environment, vol. 4, issue 1 https://doi.org/10
+identification of distributed parameter systems: a neural net based approac
+gonzález-garcía, r.; rico-martínez, r.; kevrekidis, i. g.
+computers & chemical engineering, vol. 22 https://doi.org/10.1016/s0098-
+training a 3-node neural network is np-complete
+blum, avrim l.; rivest, ronald l.
+neural networks, vol. 5, issue 1 https://doi.org/10.1016/s0893-6080(05)80
+machine learning in cardiovascular flows modeling: predicting arterial blood
+using physics-informed neural networks
+kissas, georgios; yang, yibo; hwuang, eileen
+computer methods in applied mechanics and engineering, vol. 358 https://
+conservative physics-informed neural networks on discrete domains for con
+inverse problems
+jagtap, ameya d.; kharazmi, ehsan; karniadakis, george em
+computer methods in applied mechanics and engineering, vol. 365 https://
+hp-vpinns: variational physics-informed neural networks with domain deco
+kharazmi, ehsan; zhang, zhongqiang; karniadakis, george e. m.
+computer methods in applied mechanics and engineering, vol. 374 https://
+sciann: a keras/tensorflow wrapper for scientific computations and phys
+networks
+haghighat, ehsan; juanes, ruben
+computer methods in applied mechanics and engineering, vol. 373 https://
+on the eigenvector bias of fourier feature networks: from regression to so
+neural networks
+wang, sifan; wang, hanwen; perdikaris, paris
+computer methods in applied mechanics and engineering, vol. 384 https://
+environmental sensor networks: a revolution in the earth system science?
+hart, jane k.; martinez, kirk
+earth-science reviews, vol. 78, issue 3-4 https://doi.org/10.1016/j.earscire
+stochastic spectral methods for efficient bayesian solution of inverse proble
+marzouk, youssef m.; najm, habib n.; rahn, larry a.
+journal of computational physics, vol. 224, issue 2 https://doi.org/10.1016/
+inferring solutions of differential equations using noisy multi-fidelity data
+raissi, maziar; perdikaris, paris; karniadakis, george em
+journal of computational physics, vol. 335 https://doi.org/10.1016/j.jcp.201
+machine learning of linear differential equations using gaussian processes
+raissi, maziar; perdikaris, paris; karniadakis, george em
+journal of computational physics, vol. 348 https://doi.org/10.1016/j.jcp.201
+dgm: a deep learning algorithm for solving partial differential equations
+sirignano, justin; spiliopoulos, konstantinos
+journal of computational physics, vol. 375 https://doi.org/10.1016/j.jcp.201
+deep uq: learning deep neural network surrogate models for high dimens
+tripathy, rohit k.; bilionis, ilias
+journal of computational physics, vol. 375 https://doi.org/10.1016/j.jcp.201
+physics-informed neural networks: a deep learning framework for solving fo
+partial differential equations
+raissi, m.; perdikaris, p.; karniadakis, g. e.
+journal of computational physics, vol. 378 https://doi.org/10.1016/j.jcp.201
+neural-net-induced gaussian process regression for function approximation
+pang, guofei; yang, liu; karniadakis, george em
+journal of computational physics, vol. 384 https://doi.org/10.1016/j.jcp.201
+kernel flows: from learning kernels from data into the abyss
+owhadi, houman; yoo, gene ryan
+journal of computational physics, vol. 389 https://doi.org/10.1016/j.jcp.201
+physics-constrained deep learning for high-dimensional surrogate modeling
+data
+zhu, yinhao; zabaras, nicholas; koutsourelakis, phaedon-stelios
+journal of computational physics, vol. 394 https://doi.org/10.1016/j.jcp.201
+convpde-uq: convolutional neural networks with quantified uncertainty fo
+equations on varied domains
+winovich, nick; ramani, karthik; lin, guang
+journal of computational physics, vol. 394 https://doi.org/10.1016/j.jcp.201
+adversarial uncertainty quantification in physics-informed neural networks
+yang, yibo; perdikaris, paris
+journal of computational physics, vol. 394 https://doi.org/10.1016/j.jcp.201
+quantifying total uncertainty in physics-informed neural networks for solving
+zhang, dongkun; lu, lu; guo, ling
+journal of computational physics, vol. 397 https://doi.org/10.1016/j.jcp.201
+a composite neural network that learns from multi-fidelity data: application t
+problems
+meng, xuhui; karniadakis, george em
+journal of computational physics, vol. 401 https://doi.org/10.1016/j.jcp.201
+modeling the dynamics of pde systems with physics-constrained deep auto
+geneva, nicholas; zabaras, nicholas
+journal of computational physics, vol. 403 https://doi.org/10.1016/j.jcp.201
+simulator-free solution of high-dimensional stochastic elliptic partial differen
+karumuri, sharmila; tripathy, rohit; bilionis, ilias
+journal of computational physics, vol. 404 https://doi.org/10.1016/j.jcp.201
+enforcing statistical constraints in generative adversarial networks for mode
+wu, jin-long; kashinath, karthik; albert, adrian
+journal of computational physics, vol. 406 https://doi.org/10.1016/j.jcp.201
+dpm: a deep learning pde augmentation
+
+results appear at odds with reality, some say. sacramento bee
+(7 august 2018); https://www.sacbee.com/news/state/
+california/fires/article216227775.html
+3. varshney, k. r. & alemzadeh, h. on the safety of machine
+learning: cyber-physical systems, decision sciences and data
+products. big data 10, 5 (2016).
+google scholar 
+4. freitas, a. a. comprehensible classification models: a position
+paper. acm sigkdd explorations newsletter 15, 1–10 (2014).
+article  google scholar 
+5. kodratoff, y. the comprehensibility manifesto. kdd nugget
+newsletter https://www.kdnuggets.com/news/94/n9.txt
+(1994).
+6. huysmans, j., dejaeger, k., mues, c., vanthienen, j. &
+baesens, b. an empirical evaluation of the comprehensibility
+of decision table, tree and rule based predictive models.
+decision support syst. 51, 141–154 (2011).
+article  google scholar 
+7. rüping, s. learning interpretable models. phd thesis, univ.
+dortmund (2006).
+8. gupta, m. et al. monotonic calibrated interpolated look-up
+tables. j. mach. learn. res. 17, 1–47 (2016).
+mathscinet  math  google scholar 
+9. lou, y., caruana, r., gehrke, j. & hooker, g. accurate
+intelligible models with pairwise interactions. in proceedings
+of 19th acm sigkdd international conference on knowledge
+discovery and data mining 623–631 (acm, 2013).
+10. miller, g. the magical number seven, plus or minus two:
+some limits on our capacity for processing information.
+psychol. rev. 63, 81–97 (1956).
+article  google scholar 
+11. cowan, n. the magical mystery four: how is working
+memory capacity limited, and why? curr. dir. psychol. sci. 19,
+51–57 (2010).
+article  google scholar 
+12. wang, j., oh, j., wang, h. & wiens, j. learning credible
+models. in proceedings of 24th acm sigkdd international
+conference on knowledge discovery and data mining 2417–
+2426 (acm, 2018).
+13. rudin, c. please stop explaining black box models for high
+stakes decisions. in proceedings of neurips 2018 workshop on
+critiquing and correcting trends in machine learning (nips,
+2018).
+14. holte, r. c. very simple classification rules perform well on
+most commonly used datasets. mach. learn. 11, 63–91
+(1993).
+article  google scholar 
+15. fayyad, u., piatetsky-shapiro, g. & smyth, p. from data
+mining to knowledge discovery in databases. ai magazine 17,
+37–54 (1996).
+google scholar 
+16. chapman, p. et al. crisp-dm 1.0—step-by-step data mining
+guide (spss, 2000).
+17. agrawal, d. et al. challenges and opportunities with big data: a
+white paper prepared for the computing community consortium
+committee of the computing research association (ccc, 2012);
+http://cra.org/ccc/resources/ccc-led-whitepapers/
+18. defense advanced research projects agency. broad agency
+announcement, explainable artificial intelligence (xai), darpa-
+baa-16-53 (darpa, 2016); https://www.darpa.mil/
+attachments/darpa-baa-16-53.pdf
+19. hand, d. classifier technology and the illusion of progress.
+statist. sci. 21, 1–14 (2006).
+article  mathscinet  google scholar 
+20. rudin, c. et al. a process for predicting manhole events in
+manhattan. mach. learn. 80, 1–31 (2010).
+article  mathscinet  google scholar 
+21. rudin, c. & ustun, b. optimized scoring systems: toward trust
+in machine learning for healthcare and criminal justice.
+interfaces. 48, 399–486 (2018). special issue: 2017 daniel h.
+wagner prize for excellence in operations research practice
+september–october 2018.
+article  google scholar 
+22. chen, c. et al. an interpretable model with globally
+consistent explanations for credit risk. in proceedings of
+neurips 2018 workshop on challenges and opportunities for ai
+in financial services: the impact of fairness, explainability,
+accuracy, and privacy (nips, 2018).
+23. mittelstadt, b., russell, c. & wachter, s. explaining
+explanations in ai. in proceedings of fairness, accountability,
+and transparency (fat*) (acm, 2019).
+24. flores, a. w., lowenkamp, c. t. & bechtel, k. false positives,
+false negatives, and false analyses: a rejoinder to ‘machine
+bias: there’s software used across the country to predict future
+criminals’. fed. probat. j. 80, 38–46 (2016).
+google scholar 
+25. angwin, j., larson, j., mattu, s. & kirchner, l. machine bias.
+propublica (2016); https://www.propublica.org/article/
+machine-bias-risk-assessments-in-criminal-sentencing
+26. larson, j., mattu, s., kirchner, l. & angwin, j. how we
+analyzed the compas recidivism algorithm. propublica
+(2016); https://www.propublica.org/article/how-we-
+analyzed-the-compas-recidivism-algorithm
+27. rudin, c., wang, c.& coker, b. the age of secrecy and
+unfairness in recidivism prediction. preprint at https://
+arxiv.org/abs/1811.00731 (2018).
+28. brennan, t., dieterich, w. & ehret, b. evaluating the
+predictive validity of the compas risk and needs assessment
+system. crim. justice behav. 36, 21–40 (2009).
+article  google scholar 
+29. zeng, j., ustun, b. & rudin, c. interpretable classification
+models for recidivism prediction. j. r. stat. soc. a stat. soc.
+180, 689–722 (2017).
+article  mathscinet  google scholar 
+30. tollenaar, n. & van der heijden, p. g. m. which
+
+results or (2)
+the problem is suﬃciently well-studied and validated in real applications that we trust the system’s
+decision, even if the system is not perfect.
+so when is explanation necessary and appropriate? we argue that the need for interpretability
+stems from an incompleteness in the problem formalization, creating a fundamental barrier to
+optimization and evaluation.
+note that incompleteness is distinct from uncertainty: the fused
+estimate of a missile location may be uncertain, but such uncertainty can be rigorously quantiﬁed
+and formally reasoned about.
+in machine learning terms, we distinguish between cases where
+unknowns result in quantiﬁed variance—e.g. trying to learn from small data set or with limited
+sensors—and incompleteness that produces some kind of unquantiﬁed bias—e.g.
+the eﬀect of
+including domain knowledge in a model selection process. below are some illustrative scenarios:
+• scientiﬁc understanding: the human’s goal is to gain knowledge. we do not have a complete
+way of stating what knowledge is; thus the best we can do is ask for explanations we can
+convert into knowledge.
+• safety: for complex tasks, the end-to-end system is almost never completely testable; one
+cannot create a complete list of scenarios in which the system may fail. enumerating all
+possible outputs given all possible inputs be computationally or logistically infeasible, and we
+may be unable to ﬂag all undesirable outputs.
+• ethics: the human may want to guard against certain kinds of discrimination, and their
+notion of fairness may be too

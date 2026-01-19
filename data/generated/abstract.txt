@@ -1,0 +1,295 @@
+abstract
+black box machine learning models are currently being used for
+high-stakes decision making throughout society, causing problems
+in healthcare, criminal justice and other domains. some people
+hope that creating methods for explaining these black box models
+will alleviate some of the problems, but trying to explain black box
+models, rather than creating models that are interpretable in the
+first place, is likely to perpetuate bad practice and can potentially
+cause great harm to society. the way forward is to design models
+that are inherently interpretable. this perspective clarifies the
+chasm between explaining black boxes and using inherently
+interpretable models, outlines several key reasons why explainable
+black boxes should be avoided in high-stakes decisions, identifies
+challenges to interpretable machine learning, and provides several
+example applications where interpretable models could potentially
+replace black box models in criminal justice, healthcare and
+computer vision.
+ access through your institution
+buy or subscribe
+this is a preview of subscription content, access via your institution
+access options
+ access through your institution
+access nature and 54 other nature portfolio journals
+get nature+, our best-value online-access subscription
+27,99 € / 30 days
+cancel any time
+learn more
+subscribe to this journal
+receive 12 digital issues and online access to articles
+111,21 € per year
+only 9,27 € per issue
+learn more
+buy this article
+•  purchase on springerlink
+•  instant access to the full article pdf.
+39,95 €
+prices may be subject to local taxes which are calculated during
+checkout
+additional access options:
+•  log in
+•  learn about institutional subscriptions
+•  read our faqs
+•  contact customer support
+fig. 1: a fictional depiction of the accuracy–interpretability
+trade-off.
+[image]
+fig. 2: saliency does not explain anything except where the
+network is looking.
+[image]
+fig. 3: image from the authors of ref. 48, indicating that parts
+of the test image on the left are similar to prototypical parts of
+training examples.
+[image]
+similar content being viewed by others
+[image]
+achieving interpretable machine learning by
+functional decomposition of black-box models into
+explainable predictor effects
+article open access 03 november 2025
+[image]
+thermodynamics-inspired explanations of artificial
+intelligence
+article open access 09 september 2024
+[image]
+black box problem and african views of trust
+article open access 14 october 2023
+references
+1. wexler, r. when a computer program keeps you in jail: how
+computers are harming criminal justice. new york times (13
+june 2017); https://www.nytimes.com/2017/06/13/
+opinion/how-computers-are-harming-criminal-justice.html
+2. mcgough, m. how bad is sacramento’s air, exactly? google
+
+abstract to be completely encoded into the system (e.g., one
+might desire a ‘fair’ classiﬁer for loan approval). even if we can encode protections for speciﬁc
+protected classes into the system, there might be biases that we did not consider a priori (e.g.,
+one may not build gender-biased word embeddings on purpose, but it was a pattern in data
+that became apparent only after the fact).
+• mismatched objectives: the agent’s algorithm may be optimizing an incomplete objective—
+that is, a proxy function for the ultimate goal. for example, a clinical system may be opti-
+mized for cholesterol control, without considering the likelihood of adherence; an automotive
+engineer may be interested in engine data not to make predictions about engine failures but
+to more broadly build a better car.
+3
+• multi-objective trade-oﬀs: two well-deﬁned desiderata in ml systems may compete with
+each other, such as privacy and prediction quality [hardt et al., 2016] or privacy and non-
+discrimination [strahilevitz, 2008]. even if each objectives are fully-speciﬁed, the exact dy-
+namics of the trade-oﬀmay not be fully known, and the decision may have to be case-by-case.
+in the presence of an incompleteness, explanations are one of ways to ensure that eﬀects of gaps in
+problem formalization are visible to us.
+3
+how? a taxonomy of interpretability evaluation
+even in standard ml settings, there exists a taxonomy of evaluation that is considered appropriate.
+in particular, the evaluation should match the claimed contribution. evaluation of applied work
+should demonstrate success in the application: a game-playing agent might best a human player, a
+classiﬁer may correctly identify star types relevant to astronomers. in contrast, core methods work
+should demonstrate generalizability via careful evaluation on a variety of synthetic and standard
+benchmarks.
+in this section we lay out an analogous taxonomy of evaluation approaches for interpretabil-
+ity: application-grounded, human-grounded, and functionally-grounded. these range from task-
+relevant to general, also acknowledge that while human evaluation is essential to assessing in-
+terpretability, human-subject evaluation is not an easy task. a human experiment needs to be
+well-designed to minimize confounding factors, consumed time, and other resources. we discuss
+the trade-oﬀs between each type of evaluation and when each would be appropriate.
+3.1
+application-grounded evaluation: real humans, real tasks
+application-grounded evaluation involves conducting human experiments within a real application.
+if the researcher has a concrete application in mind—such as working with doctors on diagnosing
+patients with a particular disease—the best way to show that the model works is to evaluate it
+with respect to the task: doctors performing diagnoses. this reasoning aligns with the methods of
+evaluation common in the human-computer interaction and visualization communities, where there
+exists a strong ethos around making sure that the system delivers on its intended task [antunes
+et al., 2012, lazar et al., 2010]. for example, a visualization for correcting segmentations from
+microscopy data would be evaluated via user studies on segmentation on the target image task
+[suissa-peleg et al., 2016]; a homework-hint system is evaluated on whether the student achieves
+better post-test performance [williams et al., 2016].
+speciﬁcally, we evaluate the quality of an explanation in the context of its end-task, such as
+whether it results in better identiﬁcation of errors, new facts, or less discrimination. examples of
+experiments include:
+• domain expert experiment with the exact application task.
+• domain expert experiment with a simpler or partial task to shorten experiment time and
+increase the pool of potentially-willing subjects.
+in both cases, an important baseline is how well human-produced explanations assist in other
+humans trying to complete the task. to make high impact in real world applications, it is essential
+that we as a community respect the time and eﬀort involved to do such evaluations, and also demand
+4
+high standards of experimental design when such evaluations are performed. as hci community
+recognizes [antunes et al., 2012], this is not an easy evaluation metric. nonetheless, it directly
+tests the objective that the system is built for, and thus performance with respect to that objective
+gives strong evidence of success.
+3.2
+human-grounded metrics: real humans, simpliﬁed tasks
+human-grounded evaluation is about conducting simpler human-subject experiments that maintain
+the essence of the target application. such an evaluation is appealing when experiments with the
+target community is challenging. these evaluations can be completed with lay humans, allowing
+for both a bigger subject pool and less expenses, since we do not have to compensate highly trained
+domain experts. human-grounded evaluation is most appropriate when one wishes to test more
+general notions of the quality of an explanation. for example, to study what kinds of explanations
+are best understood under severe time constraints, one might create abstract tasks in which other
+factors—such as the overall task complexity—can be controlled [kim et al., 2013, lakkaraju et al.,
+2016]
+the key question, of course, is how we can evaluate the quality of an explanation without a
+speciﬁc end-goal (such as identifying errors in a safety-oriented task or identifying relevant patterns
+in a science-oriented task). ideally, our evaluation approach will depend only on the quality of the
+explanation, regardless of whether the explanation is the model itself or a post-hoc interpretation
+of a black-box model, and regardless of the correctness of the associated prediction. examples of
+potential experiments include:
+• binary forced choice: humans are presented with pairs of explanations, and must choose the
+one that they ﬁnd of higher quality (basic face-validity test made quantitative).
+• forward simulation/prediction: humans are presented with an explanation and an input, and
+must correctly simulate the model’s output (regardless of the true output).
+• counterfactual simulation: humans are presented with an explanation, an input, and an
+output, and are asked what must be changed to change the method’s prediction to a desired
+output (and related variants).
+here is a concrete example. the common intrusion-detection test [chang et al., 2009] in topic
+models is a form of the forward simulation/prediction task: we ask the human to ﬁnd the diﬀerence
+between the model’s true output and some corrupted output as a way to determine whether the
+human has correctly understood what the model’s true output is.
+3.3
+functionally-grounded evaluation: no humans, proxy tasks
+functionally-grounded evaluation requires no human experiments; instead, it uses some formal
+deﬁnition of interpretability as a proxy for explanation quality. such experiments are appealing
+because even general human-subject experiments require time and costs both to perform and to
+get necessary approvals (e.g., irbs), which may be beyond the resources of a machine learning
+researcher. functionally-grounded evaluations are most appropriate once we have a class of models
+or regularizers that have already been validated, e.g. via human-grounded experiments. they may
+also be appropriate when a method is not yet mature or when human subject experiments are
+unethical.
+5
+the challenge, of course, is to determine what proxies to use.
+for example, decision trees
+have been considered interpretable in many situations [freitas, 2014]. in section 4, we describe
+open problems in determining what proxies are reasonable. once a proxy has been formalized,
+the challenge is squarely an optimization problem, as the model class or regularizer is likely to be
+discrete, non-convex and often non-diﬀerentiable. examples of experiments include
+• show the improvement of prediction performance of a model that is already proven to be
+interpretable (assumes that someone has run human experiments to show that the model
+class is interpretable).
+• show that one’s method performs better with respect to certain regularizers—for example, is
+more sparse—compared to other baselines (assumes someone has run human experiments to
+show that the regularizer is appropriate).
+4
+open problems in the science of interpretability, theory and
+practice
+it is essential that the three types of evaluation in the previous section inform each other: the
+factors that capture the essential needs of real world tasks should inform what kinds of simpliﬁed
+tasks we perform, and the performance of our methods with respect to functional proxies should
+reﬂect their performance in real-world settings. in this section, we describe some important open
+problems for creating these links between the three types of evaluations:
+1. what proxies are best for what real-world applications? (functionally to application-grounded)
+2. what are the important factors to consider when designing simpler tasks that maintain the
+essence of the real end-task? (human to application-grounded)
+3. what are the important factors to consider when characterizing proxies for explanation qual-
+ity? (human to functionally-grounded)
+below, we describe a path to answering each of these questions.
+4.1
+data-driven approach to discover factors of interpretability
+imagine a matrix where rows are speciﬁc real-world tasks, columns are speciﬁc methods, and the
+entries are the performance of the method on the end-task. for example, one could represent how
+well a decision tree of depth less than 4 worked in assisting doctors in identifying pneumonia patients
+under age 30 in us. once constructed, methods in machine learning could be used to identify latent
+dimensions that represent factors that are important to interpretability. this approach is similar to
+eﬀorts to characterize classiﬁcation [ho and basu, 2002] and clustering problems [garg and kalai,
+2016]. for example, one might perform matrix factorization to embed both tasks and methods
+respectively in low-dimensional spaces (which we can then seek to interpret), as shown in figure 2.
+these embeddings could help predict what methods would be most promising for a new problem,
+similarly to collaborative ﬁltering.
+the challenge, of course, is in creating this matrix. for example, one could imagine creating a
+repository of clinical cases in which the ml system has access to the patient’s record but not certain
+6
+figure 2: an example of data-driven approach to discover factors in interpretability
+current features that are only accessible to the clinician, or a repository of discrimination-in-loan
+cases where the ml system must provide outputs that assist a lawyer in their decision. ideally
+these would be linked to domain experts who have agreed to be employed to evaluate methods when
+applied to their domain of expertise. just as there are now large open repositories for problems
+in classiﬁcation, regression, and reinforcement learning [blake and merz, 1998, brockman et al.,
+2016, vanschoren et al., 2014], we advocate for the creation of repositories that contain problems
+corresponding to real-world tasks in which human-input is required. creating such repositories will
+be more challenging than creating collections of standard machine learning datasets because they
+must include a system for human assessment, but with the availablity of crowdsourcing tools these
+technical challenges can be surmounted.
+in practice, constructing such a matrix will be expensive since each cell must be evaluated in
+the context of a real application, and interpreting the latent dimensions will be an iterative eﬀort
+of hypothesizing why certain tasks or methods share dimensions and then checking whether our
+hypotheses are true. in the next two open problems, we lay out some hypotheses about what latent
+dimensions may correspond to; these hypotheses can be tested via much less expensive human-
+grounded evaluations on simulated tasks.
+4.2
+hypothesis: task-related latent dimensions of interpretability
+disparate-seeming applications may share common categories: an application involving preventing
+medical error at the bedside and an application involving support for identifying inappropriate
+language on social media might be similar in that they involve making a decision about a speciﬁc
+case—a patient, a post—in a relatively short period of time. however, when it comes to time
+constraints, the needs in those scenarios might be diﬀerent from an application involving the un-
+derstanding of the main characteristics of a large omics data set, where the goal—science—is much
+more abstract and the scientist may have hours or days to inspect the model outputs.
+below, we list a (non-exhaustive!) set of hypotheses about what might make tasks similar in
+their explanation needs:
+• global vs. local. global interpretability implies knowing what patterns are present in general
+(such as key features governing galaxy formation), while local interpretability implies knowing
+the reasons for a speciﬁc decision (such as why a particular loan application was rejected).
+the former may be important for when scientiﬁc understanding or bias detection is the goal;
+the latter when one needs a justiﬁcation for a speciﬁc decision.
+• area, severity of incompleteness. what part of the problem formulation is incomplete, and
+how incomplete is it? we hypothesize that the types of explanations needed may vary de-
+pending on whether the source of concern is due to incompletely speciﬁed inputs, constraints,
+7
+domains, internal model structure, costs, or even in the need to understand the training al-
+gorithm. the severity of the incompleteness may also aﬀect explanation needs. for example,
+one can imagine a spectrum of questions about the safety of self-driving cars. on one end,
+one may have general curiosity about how autonomous cars make decisions. at the other, one
+may wish to check a speciﬁc list of scenarios (e.g., sets of sensor inputs that causes the car to
+drive oﬀof the road by 10cm). in between, one might want to check a general property—safe
+urban driving—without an exhaustive list of scenarios and safety criteria.
+• time constraints. how long can the user aﬀord to spend to understand the explanation? a
+decision that needs to be made at the bedside or during the operation of a plant must be
+understood quickly, while in scientiﬁc or anti-discrimination applications, the end-user may
+be willing to spend hours trying to fully understand an explanation.
+• nature of user expertise. how experienced is the user in the task? the user’s experience will
+aﬀect what kind of cognitive chunks they have, that is, how they organize individual elements
+of information into collections [neath and surprenant, 2003]. for example, a clinician may
+have a notion that autism and adhd are both developmental diseases. the nature of the
+user’s expertise will also inﬂuence what level of sophistication they expect in their explana-
+tions. for example, domain experts may expect or prefer a somewhat larger and sophisticated
+model—which conﬁrms facts they know—over a smaller, more opaque one. these preferences
+may be quite diﬀerent from hospital ethicist who may be more narrowly concerned about
+whether decisions are being made in an ethical manner. more broadly, decison-makers, sci-
+entists, compliance and safety engineers, data scientists, and machine learning researchers all
+come with diﬀerent background knowledge and communication styles.
+each of these factors can be isolated in human-grounded experiments in simulated tasks to deter-
+mine which methods work best when they are present.
+4.3
+hypothesis: method-related latent dimensions of interpretability
+just as disparate applications may share common categories, disparate methods may share common
+qualities that correlate to their utility as explanation. as before, we provide a (non-exhaustive!)
+set of factors that may correspond to diﬀerent explanation needs: here, we deﬁne cognitive chunks
+to be the basic units of explanation.
+• form of cognitive chunks. what are the basic units of the explanation? are they raw features?
+derived features that have some semantic meaning to the expert (e.g. “neurological disorder”
+for a collection of diseases or “chair” for a collection of pixels)? prototypes?
+• number of cognitive chunks. how many cognitive chunks does the explanation contain? how
+does the quantity interact with the type: for example, a prototype can contain a lot more
+information than a feature; can we handle them in similar quantities?
+• level of compositionality. are the cognitive chunks organized in a structured way? rules,
+hierarchies, and other abstractions can limit what a human needs to process at one time. for
+example, part of an explanation may involve deﬁning a new unit (a chunk) that is a function
+of raw units, and then providing an explanation in terms of that new unit.
+8
+• monotonicity and other interactions between cognitive chunks. does it matter if the cognitive
+chunks are combined in linear or nonlinear ways? in monotone ways [gupta et al., 2016]?
+are some functions more natural to humans than others [wilson et al., 2015, schulz et al.,
+2016]?
+• uncertainty and stochasticity. how well do people understand uncertainty measures? to
+what extent is stochasticity understood by humans?
+5
