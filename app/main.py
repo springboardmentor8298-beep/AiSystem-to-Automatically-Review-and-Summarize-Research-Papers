@@ -10,77 +10,74 @@ from modules.review import review_draft
 load_dotenv()
 
 
-def full_pipeline(topic):
-    """
-    Runs the complete AI research summarization pipeline.
-    """
-    try:
-        if not topic or not topic.strip():
-            return "❌ Please enter a research topic."
+def full_pipeline(topic, progress=gr.Progress()):
+    if not topic.strip():
+        return "❌ Please enter a research topic."
 
-        print(f"\n🔍 USER SELECTED TOPIC → {topic}")
+    progress(0.1, desc="🔍 Understanding topic...")
+    print(f"\nUSER SELECTED TOPIC → {topic}")
 
-        # Step 1: Retrieve paper URLs + metadata
-        print("📥 Fetching research papers...")
-        papers= download_papers(topic)
+    progress(0.25, desc="📥 Fetching research papers...")
+    papers = download_papers(topic)
+    if not papers:
+        return "❌ No open-access papers found."
 
-        if not papers:
-            return "❌ No open-access papers found."
+    progress(0.45, desc="📄 Extracting paper content...")
+    extract_all_papers(papers)
 
-        # Step 2: Extract text from PDFs
-        print("📄 Extracting paper content...")
-        extract_all_papers(papers)
+    progress(0.65, desc="🧠 Analyzing & summarizing papers...")
+    analyze_all()
 
-        # Step 3: Analyze papers (summary + metadata)
-        print("🧠 Analyzing papers...")
-        analyze_all()
+    progress(0.85, desc="📝 Generating structured draft...")
+    draft = generate_draft()
 
-        # Step 4: Generate structured draft
-        print("📝 Generating draft...")
-        draft = generate_draft()
+    progress(0.95, desc="🤖 Reviewing & refining draft...")
+    reviewed = review_draft(draft)
 
-        # Step 5: Review & refine
-        print("🤖 Reviewing draft...")
-        reviewed = review_draft(draft)
-
-        print("✅ Pipeline Completed Successfully!")
-        return reviewed
-
-    except Exception as e:
-        return f"❌ Pipeline Error: {e}"
+    progress(1.0, desc="✅ Completed")
+    return reviewed
 
 
 def launch_app():
-    with gr.Blocks() as demo:
-        gr.Markdown("## 🧠 AI Research Paper Summarizer")
+    with gr.Blocks(theme=gr.themes.Soft()) as demo:
 
         gr.Markdown("""
-        **Pipeline Flow**
-        1. Topic-based paper retrieval  
-        2. PDF URL processing (no local downloads)  
-        3. Text extraction  
-        4. AI-based summarization  
-        5. Structured draft generation  
-        6. Academic review  
+        # 🧠 AI Research Paper Summarizer  
+        ### Automatically fetch, analyze, and summarize research papers using AI
+
+        **How it works:**  
+        1️⃣ Enter a research topic  
+        2️⃣ System fetches open-access papers  
+        3️⃣ AI summarizes key insights  
+        4️⃣ Final reviewed draft is generated  
         """)
 
-        topic_input = gr.Textbox(
-            label="Enter Research Topic",
-            placeholder="Example: Deep Learning in Healthcare"
-        )
+        with gr.Row():
+            topic_input = gr.Textbox(
+                label="📌 Research Topic",
+                placeholder="Example: Deep Learning in Healthcare",
+                lines=1
+            )
+
+        run_btn = gr.Button("🚀 Run Analysis", variant="primary")
 
         output_box = gr.Textbox(
-            label="Final Reviewed Research Draft",
-            lines=30
+            label="📄 Final Reviewed Research Draft",
+            lines=25,
+            interactive=False
         )
-
-        run_btn = gr.Button("Run Pipeline 🚀")
 
         run_btn.click(
             fn=full_pipeline,
             inputs=topic_input,
             outputs=output_box
         )
+
+        gr.Markdown("""
+        ---
+        🔒 *Only open-access research papers are used.*  
+        ⚡ *No PDFs are stored permanently — URL-based processing for efficiency.*
+        """)
 
     demo.launch()
 
