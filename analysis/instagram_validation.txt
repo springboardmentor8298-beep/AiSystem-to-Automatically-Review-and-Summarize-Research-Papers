@@ -1,0 +1,4 @@
+paper2.pdf ✅ All sections extracted
+paper4.pdf ❌ Missing: abstract, introduction, methodology, conclusion
+paper5.pdf ❌ Missing: abstract, introduction, methodology, conclusion
+paper6.pdf ❌ Missing: abstract, introduction, methodology, conclusion

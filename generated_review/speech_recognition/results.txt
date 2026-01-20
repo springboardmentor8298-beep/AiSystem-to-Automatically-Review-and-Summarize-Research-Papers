@@ -1,0 +1,6 @@
+
+Write the Results section of a literature review on speech_recognition.
+Studies reviewed (2013–2023): Conformer: Convolution-augmented Transformer for Speech Recognition; SpecAugment: A Simple Data Augmentation Method for Automatic Speech Recognition; Speech recognition with deep recurrent neural networks; Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages
+
+
+This article is part of a series of articles that appear in the British Journal of Speech Recognition: Neural Networks and the New Language

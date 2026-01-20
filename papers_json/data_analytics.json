@@ -1,0 +1,332 @@
+[
+    {
+        "paperId": "41d4e093d5f7ed5aae1aaa9eb6c037742e4cf9b1",
+        "url": "https://www.semanticscholar.org/paper/41d4e093d5f7ed5aae1aaa9eb6c037742e4cf9b1",
+        "title": "The use of Big Data Analytics in healthcare",
+        "year": 2022,
+        "openAccessPdf": {
+            "url": "https://journalofbigdata.springeropen.com/counter/pdf/10.1186/s40537-021-00553-4",
+            "status": "GOLD",
+            "license": "CCBY",
+            "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC8733917, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2416504",
+                "name": "Kornelia M. Batko"
+            },
+            {
+                "authorId": "2079538975",
+                "name": "A. \u015al\u0119zak"
+            }
+        ],
+        "abstract": "The introduction of Big Data Analytics (BDA) in healthcare will allow to use new technologies both in treatment of patients and health management. The paper aims at analyzing the possibilities of using Big Data Analytics in healthcare. The research is based on a critical analysis of the literature, as well as the presentation of selected results of direct research on the use of Big Data Analytics in medical facilities. The direct research was carried out based on research questionnaire and conducted on a sample of 217 medical facilities in Poland. Literature studies have shown that the use of Big Data Analytics can bring many benefits to medical facilities, while direct research has shown that medical facilities in Poland are moving towards data-based healthcare because they use structured and unstructured data, reach for analytics in the administrative, business and clinical area. The research positively confirmed that medical facilities are working on both structural data and unstructured data. The following kinds and sources of data can be distinguished: from databases, transaction data, unstructured content of emails and documents, data from devices and sensors. However, the use of data from social media is lower as in their activity they reach for analytics, not only in the administrative and business but also in the clinical area. It clearly shows that the decisions made in medical facilities are highly data-driven. The results of the study confirm what has been analyzed in the literature that medical facilities are moving towards data-based healthcare, together with its benefits."
+    },
+    {
+        "paperId": "f17fabd53bccc1ee7360dbb72e050b4a347d4304",
+        "url": "https://www.semanticscholar.org/paper/f17fabd53bccc1ee7360dbb72e050b4a347d4304",
+        "title": "AI-big data analytics for building automation and management systems: a survey, actual challenges and future perspectives",
+        "year": 2022,
+        "openAccessPdf": {
+            "url": "https://link.springer.com/content/pdf/10.1007/s10462-022-10286-2.pdf",
+            "status": "HYBRID",
+            "license": "CCBY",
+            "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC9568938, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2130461741",
+                "name": "Yassine Himeur"
+            },
+            {
+                "authorId": "32424055",
+                "name": "Mariam Elnour"
+            },
+            {
+                "authorId": "47647355",
+                "name": "F. Fadli"
+            },
+            {
+                "authorId": "1919083",
+                "name": "N. Meskin"
+            },
+            {
+                "authorId": "48585368",
+                "name": "I. Petri"
+            },
+            {
+                "authorId": "1757067",
+                "name": "Y. Rezgui"
+            },
+            {
+                "authorId": "3090801",
+                "name": "F. Bensaali"
+            },
+            {
+                "authorId": "144730155",
+                "name": "A. Amira"
+            }
+        ],
+        "abstract": "In theory, building automation and management systems (BAMSs) can provide all the components and functionalities required for analyzing and operating buildings. However, in reality, these systems can only ensure the control of heating ventilation and air conditioning system systems. Therefore, many other tasks are left to the operator, e.g. evaluating buildings\u2019 performance, detecting abnormal energy consumption, identifying the changes needed to improve efficiency, ensuring the security and privacy of end-users, etc. To that end, there has been a movement for developing artificial intelligence (AI) big data analytic tools as they offer various new and tailor-made solutions that are incredibly appropriate for practical buildings\u2019 management. Typically, they can help the operator in (i) analyzing the tons of connected equipment data; and; (ii) making intelligent, efficient, and on-time decisions to improve the buildings\u2019 performance. This paper presents a comprehensive systematic survey on using AI-big data analytics in BAMSs. It covers various AI-based tasks, e.g. load forecasting, water management, indoor environmental quality monitoring, occupancy detection, etc. The first part of this paper adopts a well-designed taxonomy to overview existing frameworks. A comprehensive review is conducted about different aspects, including the learning process, building environment, computing platforms, and application scenario. Moving on, a critical discussion is performed to identify current challenges. The second part aims at providing the reader with insights into the real-world application of AI-big data analytics. Thus, three case studies that demonstrate the use of AI-big data analytics in BAMSs are presented, focusing on energy anomaly detection in residential and office buildings and energy and performance optimization in sports facilities. Lastly, future directions and valuable recommendations are identified to improve the performance and reliability of BAMSs in intelligent buildings."
+    },
+    {
+        "paperId": "d983427574a41bf485e31ab983acc1c742e9e24c",
+        "url": "https://www.semanticscholar.org/paper/d983427574a41bf485e31ab983acc1c742e9e24c",
+        "title": "Response to COVID-19 in Taiwan: Big Data Analytics, New Technology, and Proactive Testing.",
+        "year": 2020,
+        "openAccessPdf": {
+            "url": "",
+            "status": "CLOSED",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1001/jama.2020.3151?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1001/jama.2020.3151, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2247408324",
+                "name": "C. J. Wang"
+            },
+            {
+                "authorId": "2247408324",
+                "name": "C. J. Wang"
+            },
+            {
+                "authorId": "2230234351",
+                "name": "Chun Y. Ng"
+            },
+            {
+                "authorId": "2247441477",
+                "name": "Robert H. Brook"
+            },
+            {
+                "authorId": "2247441477",
+                "name": "Robert H. Brook"
+            }
+        ],
+        "abstract": "COVID-19 occurred just before the Lunar New Year during which time millions of Chinese and Taiwanese were expected to travel for the holidays Taiwan quickly mobilized and instituted specific approaches for case identification, containment, and resource allocation to protect the public health Taiwan enhanced COVID-19 case finding by proactively seeking out patients with severe respiratory symptoms (based on information from the National Health Insurance [NHI] database) who had tested negative for influenza and retested them for COVID-19;1 was found of 113 cases The toll-free number 1922 served as a hotline for citizens to report suspicious symptoms or cases in themselves or others;as the disease progressed, this hotline has reached full capacity, so each major city was asked to create its own hotline as an alternative It is not known how often this hotline has been used The government addressed the issue of disease stigma and compassion for those affected by providing food, frequent health checks, and encouragement for those under quarantine This rapid response included hundreds of action items Taiwan's government learned from its 2003 SARS experience and established a public health response mechanism for enabling rapid actions for the next crisis Well-trained and experienced teams of officials were quick to recognize the crisis and activated emergency management structures to address the emerging outbreak In a crisis, governments often make difficult decisions under uncertainty and time constraints These decisions must be both culturally appropriate and sensitive to the population Through early recognition of the crisis, daily briefings to the public, and simple health messaging, the government was able to reassure the public by delivering timely, accurate, and transparent information regarding the evolving epidemic Taiwan is an example of how a society can respond quickly to a crisis and protect the interests of its citizens"
+    },
+    {
+        "paperId": "85328b4a8132bf4299f8cd7f8e79e850d561c8fc",
+        "url": "https://www.semanticscholar.org/paper/85328b4a8132bf4299f8cd7f8e79e850d561c8fc",
+        "title": "Big Data Analytics: A Survey",
+        "year": 2022,
+        "openAccessPdf": {
+            "url": "https://ijci.uoitc.edu.iq/index.php/ijci/article/download/384/203",
+            "status": "GOLD",
+            "license": "CCBY",
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.25195/ijci.v49i1.384?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.25195/ijci.v49i1.384, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2269971203",
+                "name": "Wasnaa Kadhim Jawad"
+            },
+            {
+                "authorId": "2261850659",
+                "name": "Abbas M. Al-Bakry"
+            }
+        ],
+        "abstract": "Internet-based programs and communication techniques have become widely used and respected in the IT industry recently. A persistent source of \"big data,\" or data that is enormous in volume, diverse in type, and has a complicated multidimensional structure, is internet applications and communications. Today, several measures are routinely performed with no assurance that any of them will be helpful in understanding the phenomenon of interest in an era of automatic, large-scale data collection. Online transactions that involve buying, selling, or even investing are all examples of e-commerce. As a result, they generate data that has a complex structure and a high dimension. The usual data storage techniques cannot handle those enormous volumes of data. There is a lot of work being done to find ways to minimize the dimensionality of big data in order to provide analytics reports that are even more accurate and data visualizations that are more interesting. As a result, the purpose of this survey study is to give an overview of big data analytics along with related problems and issues that go beyond technology."
+    },
+    {
+        "paperId": "eb98f44efd7404aea7c06a7be49092d28fa55ea5",
+        "url": "https://www.semanticscholar.org/paper/eb98f44efd7404aea7c06a7be49092d28fa55ea5",
+        "title": "DATA-ANALYTICS",
+        "year": 2024,
+        "openAccessPdf": {
+            "url": "https://gurukuljournal.com/wp-content/uploads/2024/06/Issue\u2013IVI-Volume\u2013XII-038.pdf",
+            "status": "HYBRID",
+            "license": "CCBY",
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.69758/pibz2194?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.69758/pibz2194, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2308057351",
+                "name": "Suryakant Bawankule"
+            }
+        ],
+        "abstract": "ABSTRACT\u2013 The exponential growth of data in the modern world presents both challenges and opportunities for researchers. This paper explores the field of data analytics, focusing on the methods and tools used to extract valuable insights from large and diverse datasets. We discuss the challenges associated with handling big data, including its volume, variety, and velocity, and how data engineering and cleaning techniques are crucial for preparing data for analysis. We then delve into various data analysis approaches, such as exploratory data analysis, predictive modeling, and machine learning, highlighting their strengths and applications. Finally, we emphasize the importance of ethical considerations and responsible use of data analytics in research. Index Terms- Component, formatting, style, styling, insert."
+    },
+    {
+        "paperId": "0dfcee14c2b529d2b39faf0dd4210a70f1904d1a",
+        "url": "https://www.semanticscholar.org/paper/0dfcee14c2b529d2b39faf0dd4210a70f1904d1a",
+        "title": "BUSINESS INTELLIGENCE TRANSFORMATION THROUGH AI AND DATA ANALYTICS",
+        "year": 2023,
+        "openAccessPdf": {
+            "url": "https://fepbl.com/index.php/estj/article/download/616/782",
+            "status": "HYBRID",
+            "license": "CCBYNC",
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.51594/estj.v4i5.616?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.51594/estj.v4i5.616, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2269062654",
+                "name": "Emmanuel Osamuyimen Eboigbe"
+            },
+            {
+                "authorId": "2269060309",
+                "name": "Oluwatoyin Ajoke Farayola"
+            },
+            {
+                "authorId": "2269060305",
+                "name": "Funmilola Olatundun Olatoye"
+            },
+            {
+                "authorId": "2269062507",
+                "name": "Obiageli Chinwe Nnabugwu"
+            },
+            {
+                "authorId": "2269266544",
+                "name": "Chibuike Daraojimba"
+            }
+        ],
+        "abstract": "This paper delves into the transformative role of Artificial Intelligence (AI) and Data Analytics in the realm of Business Intelligence (BI), marking a significant shift in the landscape of business decision-making and strategic planning. The study's purpose was to comprehensively explore the evolution of BI, underscored by the integration of AI and advanced data analytics, and to project the future trajectory of these technologies within the business context. Adopting a systematic literature review as its methodology, the study meticulously analyzed a wide array of scholarly articles and industry reports. This approach facilitated a deep understanding of the historical development of BI, the current synergy between AI, Data Analytics, and BI, and the emerging trends shaping their future. The inclusion and exclusion criteria for sources were rigorously applied to ensure the relevance and quality of the information gathered. The findings of the study highlighted a paradigm shift from traditional data processing methods to AI-driven predictive analytics, significantly enhancing the efficiency, accuracy, and predictive capabilities of BI tools. This evolution has redefined business operations, offering unprecedented insights and fostering more informed decision-making processes. Conclusively, the study posits that the integration of AI and Data Analytics into BI is a fundamental, rather than a transient, shift in business operations. It recommends further exploration into the ethical implications of AI in BI, the development of user-friendly AI tools for non-technical users, and an examination of the long-term impacts of AI-driven BI across various industries. The study's classical and engaging tone aims to captivate and inform a diverse audience, from academic researchers to industry practitioners. \nKeywords: Artificial Intelligence, Business Intelligence, Data Analytics, Predictive Analytics."
+    },
+    {
+        "paperId": "cb1c1fdb8464a409f05624d6247cfdf38e47de42",
+        "url": "https://www.semanticscholar.org/paper/cb1c1fdb8464a409f05624d6247cfdf38e47de42",
+        "title": "Factors Influencing the Adoption of Big Data Analytics in the Digital Transformation Era: Case Study of Jordanian SMEs",
+        "year": 2022,
+        "openAccessPdf": {
+            "url": "https://www.mdpi.com/2071-1050/14/3/1802/pdf?version=1644414189",
+            "status": "GOLD",
+            "license": "CCBY",
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/su14031802?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/su14031802, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "1885047399",
+                "name": "Abdalwali Lutfi"
+            },
+            {
+                "authorId": "50858498",
+                "name": "Adi Alsyouf"
+            },
+            {
+                "authorId": "3251080",
+                "name": "Mohammed Amin Almaiah"
+            },
+            {
+                "authorId": "2266934880",
+                "name": "Mahmoud Alrawad"
+            },
+            {
+                "authorId": "2148753962",
+                "name": "Ahmed Abdullah Khalil Abdo"
+            },
+            {
+                "authorId": "1402847932",
+                "name": "Akif Al-Khasawneh"
+            },
+            {
+                "authorId": "2052763416",
+                "name": "Nahla Ibrahim"
+            },
+            {
+                "authorId": "1380923842",
+                "name": "M. Saad"
+            }
+        ],
+        "abstract": "Big data (BD) analytics has been increasingly gaining attraction in both practice and theory in light of its opportunities, barriers and expected benefits. In particular, emerging economics view big data analytics as having great importance despite the fact that it has been in a constant struggle with the barriers that prevent its adoption. Thus, this study primarily attempted to determine the drivers of big data analytics in the context of a developing economy, Jordan. The study examined the influence of technological, organizational and environmental factors on big data adoption in the Jordanian SMEs context, using PLS-SEM for the analysis. The empirical results revealed that the relative advantage, complexity, security, top management support, organizational readiness and government support influence the adoption of BD, whilst pressure of competition and compatibility appeared to be of insignificant influence. The findings are expected to contribute to enterprise management and strategic use of data analytics in the present dynamic market environment, for both researcher and practitioner circles concerned with the adoption of big data in developing countries."
+    },
+    {
+        "paperId": "7c6ac9afb7b4ff753379c40064385b6fc563c969",
+        "url": "https://www.semanticscholar.org/paper/7c6ac9afb7b4ff753379c40064385b6fc563c969",
+        "title": "Determinants of big data analytics adoption in small and medium-sized enterprises (SMEs)",
+        "year": 2022,
+        "openAccessPdf": {
+            "url": "",
+            "status": "CLOSED",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1108/imds-11-2021-0695?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1108/imds-11-2021-0695, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "98850091",
+                "name": "Parisa Maroufkhani"
+            },
+            {
+                "authorId": "77058429",
+                "name": "M. Iranmanesh"
+            },
+            {
+                "authorId": "2730162",
+                "name": "Morteza Ghobakhloo"
+            }
+        ],
+        "abstract": "PurposeThe study challenges the assumption of independence among Technological, Organizational and Environmental (TOE) factors and investigates the influence of TOE factors on Big Data Analytics (BDA) adoption among Small and Medium Enterprises (SMEs). Top management support was proposed as a mediator between technological and organizational factors and BDA adoption. Furthermore, the moderating effect of environmental factors on the association between relative advantage, compatibility, competitiveness, organizational readiness and BDA adoption was evaluated.Design/methodology/approachData were collected from 171 SME manufacturing firms and analyzed using the partial least squares technique.FindingsThe findings confirmed the interrelationships among the TOE factors. The effects of compatibility, competitiveness and organizational readiness on BDA adoption were mediated by top management support. Furthermore, environmental factors moderate the influences of compatibility and organizational readiness on top management support.Originality/valueThe findings contribute to the TOE model by challenging the assumption of independence among TOE factors, and future studies should use this model with more caution and consider the potential relationships between TOE factors."
+    },
+    {
+        "paperId": "dac7344737cb824634f757aede2dd46a6eed204b",
+        "url": "https://www.semanticscholar.org/paper/dac7344737cb824634f757aede2dd46a6eed204b",
+        "title": "Big data analytics in healthcare: promise and potential",
+        "year": 2014,
+        "openAccessPdf": {
+            "url": "https://link.springer.com/content/pdf/10.1186%2F2047-2501-2-3.pdf",
+            "status": "HYBRID",
+            "license": "CCBY",
+            "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC4341817, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "1696238",
+                "name": "W. Raghupathi"
+            },
+            {
+                "authorId": "2742266",
+                "name": "V. Raghupathi"
+            }
+        ],
+        "abstract": "To describe the promise and potential of big data analytics in healthcare. The paper describes the nascent field of big data analytics in healthcare, discusses the benefits, outlines an architectural framework and methodology, describes examples reported in the literature, briefly discusses the challenges, and offers conclusions. The paper provides a broad overview of big data analytics for healthcare researchers and practitioners. Big data analytics in healthcare is evolving into a promising field for providing insight from very large data sets and improving outcomes while reducing costs. Its potential is great; however there remain challenges to overcome."
+    },
+    {
+        "paperId": "5767ed28f1f6f90e4302f47f4e821d1225e7ad2c",
+        "url": "https://www.semanticscholar.org/paper/5767ed28f1f6f90e4302f47f4e821d1225e7ad2c",
+        "title": "Innovations in Genomics and Big Data Analytics for Personalized Medicine and Health Care: A Review",
+        "year": 2022,
+        "openAccessPdf": {
+            "url": "https://www.mdpi.com/1422-0067/23/9/4645/pdf?version=1650960289",
+            "status": "GOLD",
+            "license": "CCBY",
+            "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC9104788, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2148763932",
+                "name": "Mubashir Hassan"
+            },
+            {
+                "authorId": "4641393",
+                "name": "F. Awan"
+            },
+            {
+                "authorId": "5548574",
+                "name": "Anam Naz"
+            },
+            {
+                "authorId": "1398958797",
+                "name": "Enrique J. deAndr\u00e9s-Galiana"
+            },
+            {
+                "authorId": "2061527562",
+                "name": "\u00d3scar \u00c1lvarez"
+            },
+            {
+                "authorId": "1948326",
+                "name": "A. Cernea"
+            },
+            {
+                "authorId": "2122050504",
+                "name": "Lucas Fern\u00e1ndez-Brillet"
+            },
+            {
+                "authorId": "1401492864",
+                "name": "J. Fern\u00e1ndez-Mart\u00ednez"
+            },
+            {
+                "authorId": "1826290",
+                "name": "A. Kloczkowski"
+            }
+        ],
+        "abstract": "Big data in health care is a fast-growing field and a new paradigm that is transforming case-based studies to large-scale, data-driven research. As big data is dependent on the advancement of new data standards, technology, and relevant research, the future development of big data applications holds foreseeable promise in the modern day health care revolution. Enormously large, rapidly growing collections of biomedical omics-data (genomics, proteomics, transcriptomics, metabolomics, glycomics, etc.) and clinical data create major challenges and opportunities for their analysis and interpretation and open new computational gateways to address these issues. The design of new robust algorithms that are most suitable to properly analyze this big data by taking into account individual variability in genes has enabled the creation of precision (personalized) medicine. We reviewed and highlighted the significance of big data analytics for personalized medicine and health care by focusing mostly on machine learning perspectives on personalized medicine, genomic data models with respect to personalized medicine, the application of data mining algorithms for personalized medicine as well as the challenges we are facing right now in big data analytics."
+    }
+]

@@ -1,30 +1,32 @@
 import json
-import re
-from collections import Counter
+import re 
+from collections import Counter 
+import sys
 
-INPUT_FILE = "extracted_text/section_wise_text.json"
-OUTPUT_FILE = "analysis/keywords.json"
+topic = sys.argv[1].strip().replace(" ", "_").lower() 
 
-STOPWORDS = {"the","and","is","to","of","in","for","with","we","our","that"}
+INPUT_FILE = f"extracted_text/{topic}_section_text.json" 
+OUTPUT_FILE = f"analysis/{topic}_keywords.json" 
 
-with open(INPUT_FILE, "r", encoding="utf-8") as f:
-    papers = json.load(f)
+STOPWORDS = {
+"the","and","is","to","of","in","for","with","we","our","that"} 
 
-output = []
+with open(INPUT_FILE, "r", encoding="utf-8") as f: 
+    papers = json.load(f) 
 
-for paper in papers:
-    text = " ".join(paper["sections"].values()).lower()
-    words = re.findall(r"\b[a-z]{4,}\b", text)
-    words = [w for w in words if w not in STOPWORDS]
+    output = [] 
+    for paper in papers: 
+        text = " ".join(paper["sections"].values()).lower() 
+        words = re.findall(r"\b[a-z]{4,}\b", text) 
+        words = [w for w in words if w not in STOPWORDS]
 
-    keywords = [w for w, _ in Counter(words).most_common(10)]
+        keywords = [w for w, _ in 
+                    Counter(words).most_common(10)] 
+        output.append({ 
+            "pdf_file": paper["pdf_file"], 
+            "keywords": keywords }) 
 
-    output.append({
-        "pdf_file": paper["pdf_file"],
-        "keywords": keywords
-    })
-
-with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    json.dump(output, f, indent=4)
-
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f: 
+            json.dump(output, f, indent=4) 
+            
 print("✅ Keywords extracted")

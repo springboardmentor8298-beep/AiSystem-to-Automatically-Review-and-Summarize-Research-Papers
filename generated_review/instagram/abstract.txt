@@ -1,0 +1,11 @@
+Write a concise academic abstract for a literature review on instagram.
+
+Keywords: machine learning, social media analytics, user behavior
+
+Context:
+Recent research on Instagram focuses on engagement prediction, content recommendation, user behavior modeling, and sentiment analysis.
+
+Summarize trends, methods, and findings in formal academic tone.
+Keywords: data scientist, social media analytics, user behavior, social media analytics, user behavior, and sentiment analysis.
+This post is part of the ongoing discussion about the role of social media analytics in decision making. This post is part of the ongoing discussion about the role of social media analytics in decision making.
+Please note that this post was originally published by the Authors Association of America.

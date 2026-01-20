@@ -1,0 +1,884 @@
+[
+    {
+        "paperId": "133bcd7488a3c07cb0f493a87564c30e5433768c",
+        "url": "https://www.semanticscholar.org/paper/133bcd7488a3c07cb0f493a87564c30e5433768c",
+        "title": "Reproducible, interactive, scalable and extensible microbiome data science using QIIME 2",
+        "year": 2019,
+        "openAccessPdf": {
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7015180",
+            "status": "GREEN",
+            "license": null,
+            "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1038/s41587-019-0209-9?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1038/s41587-019-0209-9, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "6391996",
+                "name": "Evan Bolyen"
+            },
+            {
+                "authorId": "6307534",
+                "name": "J. Rideout"
+            },
+            {
+                "authorId": "40950692",
+                "name": "Matthew R. Dillon"
+            },
+            {
+                "authorId": "4230536",
+                "name": "Nicholas A. Bokulich"
+            },
+            {
+                "authorId": "5538503",
+                "name": "C. Abnet"
+            },
+            {
+                "authorId": "1402012502",
+                "name": "Gabriel A. Al-Ghalith"
+            },
+            {
+                "authorId": "39168440",
+                "name": "Harriet Alexander"
+            },
+            {
+                "authorId": "1777308",
+                "name": "E. Alm"
+            },
+            {
+                "authorId": "144893958",
+                "name": "Manimozhiyan Arumugam"
+            },
+            {
+                "authorId": "3088847",
+                "name": "F. Asnicar"
+            },
+            {
+                "authorId": "2115297093",
+                "name": "Yang Bai"
+            },
+            {
+                "authorId": "39497753",
+                "name": "J. Bisanz"
+            },
+            {
+                "authorId": "2027458",
+                "name": "K. Bittinger"
+            },
+            {
+                "authorId": "4347079",
+                "name": "A. Brejnrod"
+            },
+            {
+                "authorId": "4373110",
+                "name": "Colin J. Brislawn"
+            },
+            {
+                "authorId": "2107517217",
+                "name": "C. T. Brown"
+            },
+            {
+                "authorId": "2923325",
+                "name": "B. Callahan"
+            },
+            {
+                "authorId": "1401984320",
+                "name": "A. Caraballo-Rodr\u00edguez"
+            },
+            {
+                "authorId": "4011830",
+                "name": "John H. Chase"
+            },
+            {
+                "authorId": "36248090",
+                "name": "Emily K. Cope"
+            },
+            {
+                "authorId": "39269675",
+                "name": "R. D. da Silva"
+            },
+            {
+                "authorId": "48958834",
+                "name": "C. Diener"
+            },
+            {
+                "authorId": "2975900",
+                "name": "P. Dorrestein"
+            },
+            {
+                "authorId": "144528092",
+                "name": "G. Douglas"
+            },
+            {
+                "authorId": "5307931",
+                "name": "D. Durall"
+            },
+            {
+                "authorId": "32381467",
+                "name": "C. Duvallet"
+            },
+            {
+                "authorId": "31909725",
+                "name": "C. Edwardson"
+            },
+            {
+                "authorId": "144110054",
+                "name": "Madeleine Ernst"
+            },
+            {
+                "authorId": "6199292",
+                "name": "M. Estaki"
+            },
+            {
+                "authorId": "4324350",
+                "name": "Jennifer T. Fouquier"
+            },
+            {
+                "authorId": "147069795",
+                "name": "J. Gauglitz"
+            },
+            {
+                "authorId": "6533031",
+                "name": "S. Gibbons"
+            },
+            {
+                "authorId": "2252110423",
+                "name": "D. Gibson"
+            },
+            {
+                "authorId": "144359100",
+                "name": "Antonio Gonzalez"
+            },
+            {
+                "authorId": "84717638",
+                "name": "Kestrel Gorlick"
+            },
+            {
+                "authorId": "5409083",
+                "name": "Jiarong Guo"
+            },
+            {
+                "authorId": "32326419",
+                "name": "Benjamin M Hillmann"
+            },
+            {
+                "authorId": "32750186",
+                "name": "S. Holmes"
+            },
+            {
+                "authorId": "51357334",
+                "name": "H. Holste"
+            },
+            {
+                "authorId": "2194791",
+                "name": "C. Huttenhower"
+            },
+            {
+                "authorId": "2306305",
+                "name": "G. Huttley"
+            },
+            {
+                "authorId": "1938854376",
+                "name": "Stefan Janssen"
+            },
+            {
+                "authorId": "4376295",
+                "name": "A. Jarmusch"
+            },
+            {
+                "authorId": "14215968",
+                "name": "Lingjing Jiang"
+            },
+            {
+                "authorId": "51396990",
+                "name": "Benjamin D. Kaehler"
+            },
+            {
+                "authorId": "144664874",
+                "name": "K. Kang"
+            },
+            {
+                "authorId": "1410118534",
+                "name": "Christopher R. Keefe"
+            },
+            {
+                "authorId": "1978283",
+                "name": "P. Keim"
+            },
+            {
+                "authorId": "2654622",
+                "name": "S. Kelley"
+            },
+            {
+                "authorId": "144064820",
+                "name": "D. Knights"
+            },
+            {
+                "authorId": "48888354",
+                "name": "I. Koester"
+            },
+            {
+                "authorId": "2395456",
+                "name": "T. Kosci\u00f3lek"
+            },
+            {
+                "authorId": "1410137287",
+                "name": "Jorden Kreps"
+            },
+            {
+                "authorId": "144015417",
+                "name": "M. Langille"
+            },
+            {
+                "authorId": "48174487",
+                "name": "Joslynn S. Lee"
+            },
+            {
+                "authorId": "145061660",
+                "name": "R. Ley"
+            },
+            {
+                "authorId": "2186737813",
+                "name": "Yong-xin Liu"
+            },
+            {
+                "authorId": "4244834",
+                "name": "E. Loftfield"
+            },
+            {
+                "authorId": "2345044",
+                "name": "C. Lozupone"
+            },
+            {
+                "authorId": "8504175",
+                "name": "Massoud Maher"
+            },
+            {
+                "authorId": "3968465",
+                "name": "C. Marotz"
+            },
+            {
+                "authorId": "152943696",
+                "name": "Bryan D. Martin"
+            },
+            {
+                "authorId": "145345295",
+                "name": "Daniel McDonald"
+            },
+            {
+                "authorId": "1854342",
+                "name": "L. McIver"
+            },
+            {
+                "authorId": "145073266",
+                "name": "A. Melnik"
+            },
+            {
+                "authorId": "47746992",
+                "name": "J. Metcalf"
+            },
+            {
+                "authorId": "32552772",
+                "name": "S. C. Morgan"
+            },
+            {
+                "authorId": "34024444",
+                "name": "James T. Morton"
+            },
+            {
+                "authorId": "1410137379",
+                "name": "Ahmad Turan Naimey"
+            },
+            {
+                "authorId": "1401282143",
+                "name": "Jose A Navas-Molina"
+            },
+            {
+                "authorId": "10790574",
+                "name": "Louis-F\u00e9lix Nothias"
+            },
+            {
+                "authorId": "51403558",
+                "name": "Stephanie B. Orchanian"
+            },
+            {
+                "authorId": "21366050",
+                "name": "Talima R. Pearson"
+            },
+            {
+                "authorId": "1414102859",
+                "name": "Samuel L. Peoples"
+            },
+            {
+                "authorId": "4019733",
+                "name": "D. Petr\u00e1\u0161"
+            },
+            {
+                "authorId": "6845076",
+                "name": "M. Preuss"
+            },
+            {
+                "authorId": "2079716",
+                "name": "E. Pruesse"
+            },
+            {
+                "authorId": "84419869",
+                "name": "Lasse Buur Rasmussen"
+            },
+            {
+                "authorId": "6103924",
+                "name": "A. Rivers"
+            },
+            {
+                "authorId": "31808306",
+                "name": "M. Robeson"
+            },
+            {
+                "authorId": "145394064",
+                "name": "P. Rosenthal"
+            },
+            {
+                "authorId": "47429813",
+                "name": "N. Segata"
+            },
+            {
+                "authorId": "49576568",
+                "name": "Michael Shaffer"
+            },
+            {
+                "authorId": "4379902",
+                "name": "A. Shiffer"
+            },
+            {
+                "authorId": "145604360",
+                "name": "R. Sinha"
+            },
+            {
+                "authorId": "3931190",
+                "name": "Se Jin Song"
+            },
+            {
+                "authorId": "5725804",
+                "name": "J. Spear"
+            },
+            {
+                "authorId": "5084447",
+                "name": "Austin D. Swafford"
+            },
+            {
+                "authorId": "24195448",
+                "name": "Luke R. Thompson"
+            },
+            {
+                "authorId": "47263947",
+                "name": "P. Torres"
+            },
+            {
+                "authorId": "49368223",
+                "name": "Pauline Trinh"
+            },
+            {
+                "authorId": "143863611",
+                "name": "A. Tripathi"
+            },
+            {
+                "authorId": "2404698",
+                "name": "P. Turnbaugh"
+            },
+            {
+                "authorId": "1404856444",
+                "name": "Sabah Ul-Hasan"
+            },
+            {
+                "authorId": "5460194",
+                "name": "J. V. D. van der Hooft"
+            },
+            {
+                "authorId": "123107351",
+                "name": "Fernando Vargas"
+            },
+            {
+                "authorId": "1398440330",
+                "name": "Y. V\u00e1zquez-Baeza"
+            },
+            {
+                "authorId": "6346734",
+                "name": "E. Vogtmann"
+            },
+            {
+                "authorId": "150237239",
+                "name": "Max von Hippel"
+            },
+            {
+                "authorId": "47178580",
+                "name": "William Walters"
+            },
+            {
+                "authorId": "38899048",
+                "name": "Yunhu Wan"
+            },
+            {
+                "authorId": "1949898",
+                "name": "Mingxun Wang"
+            },
+            {
+                "authorId": "50294532",
+                "name": "Jonathan Warren"
+            },
+            {
+                "authorId": "51914702",
+                "name": "Kyle C. Weber"
+            },
+            {
+                "authorId": "36633883",
+                "name": "C. H. Williamson"
+            },
+            {
+                "authorId": "145511581",
+                "name": "A. Willis"
+            },
+            {
+                "authorId": "31733281",
+                "name": "Z. Xu"
+            },
+            {
+                "authorId": "48348200",
+                "name": "Jesse R. Zaneveld"
+            },
+            {
+                "authorId": "48380236",
+                "name": "Yilong Zhang"
+            },
+            {
+                "authorId": "47713290",
+                "name": "Qiyun Zhu"
+            },
+            {
+                "authorId": "2235761188",
+                "name": "R. Knight"
+            },
+            {
+                "authorId": "143865612",
+                "name": "J. Caporaso"
+            }
+        ],
+        "abstract": null
+    },
+    {
+        "paperId": "fa5853fdef7d2f6bb68203d187ddacbbddc63a8b",
+        "url": "https://www.semanticscholar.org/paper/fa5853fdef7d2f6bb68203d187ddacbbddc63a8b",
+        "title": "High-Dimensional Probability: An Introduction with Applications in Data Science",
+        "year": 2020,
+        "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1080/14697688.2020.1813475?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1080/14697688.2020.1813475, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2660689",
+                "name": "O. Papaspiliopoulos"
+            }
+        ],
+        "abstract": "\u00a9 2018, Cambridge University Press Let us summarize our findings. A random projection of a set T in R n onto an m-dimensional subspace approximately preserves the geometry of T if m \u2a86 d ( T ) . For..."
+    },
+    {
+        "paperId": "29ff532501bbcc97404811ba375454e54690a454",
+        "url": "https://www.semanticscholar.org/paper/29ff532501bbcc97404811ba375454e54690a454",
+        "title": "Spatial Data Science",
+        "year": 2023,
+        "openAccessPdf": {
+            "url": "",
+            "status": "CLOSED",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1201/9780429459016?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1201/9780429459016, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "1896068",
+                "name": "E. Pebesma"
+            },
+            {
+                "authorId": "1788000",
+                "name": "R. Bivand"
+            }
+        ],
+        "abstract": null
+    },
+    {
+        "paperId": "01e863776846ebd1a9a7acc4a9ca24217f953aa2",
+        "url": "https://www.semanticscholar.org/paper/01e863776846ebd1a9a7acc4a9ca24217f953aa2",
+        "title": "Data Interpreter: An LLM Agent For Data Science",
+        "year": 2024,
+        "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2402.18679, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2004160930",
+                "name": "Sirui Hong"
+            },
+            {
+                "authorId": "2289032497",
+                "name": "Yizhang Lin"
+            },
+            {
+                "authorId": "2288274546",
+                "name": "Bangbang Liu"
+            },
+            {
+                "authorId": "2288345971",
+                "name": "Binhao Wu"
+            },
+            {
+                "authorId": "2288702968",
+                "name": "Danyang Li"
+            },
+            {
+                "authorId": "2288200541",
+                "name": "Jiaqi Chen"
+            },
+            {
+                "authorId": "2288348676",
+                "name": "Jiayi Zhang"
+            },
+            {
+                "authorId": "2267427792",
+                "name": "Jinlin Wang"
+            },
+            {
+                "authorId": "2289125198",
+                "name": "Lingyao Zhang"
+            },
+            {
+                "authorId": "1722264111",
+                "name": "Mingchen Zhuge"
+            },
+            {
+                "authorId": "2179710545",
+                "name": "Taicheng Guo"
+            },
+            {
+                "authorId": "2289635501",
+                "name": "Tuo Zhou"
+            },
+            {
+                "authorId": "2112528845",
+                "name": "Wei Tao"
+            },
+            {
+                "authorId": "2287878279",
+                "name": "Wenyi Wang"
+            },
+            {
+                "authorId": "47274259",
+                "name": "Xiangru Tang"
+            },
+            {
+                "authorId": "2288164486",
+                "name": "Xiangtao Lu"
+            },
+            {
+                "authorId": "2288163160",
+                "name": "Xinbing Liang"
+            },
+            {
+                "authorId": "2288180253",
+                "name": "Yaying Fei"
+            },
+            {
+                "authorId": "2153513408",
+                "name": "Yuheng Cheng"
+            },
+            {
+                "authorId": "1797090",
+                "name": "Zhibin Gou"
+            },
+            {
+                "authorId": "2288306702",
+                "name": "Zongze Xu"
+            },
+            {
+                "authorId": "2867893",
+                "name": "Chenglin Wu"
+            },
+            {
+                "authorId": "2266160753",
+                "name": "Li Zhang"
+            },
+            {
+                "authorId": "2288975082",
+                "name": "Min Yang"
+            },
+            {
+                "authorId": "2307829388",
+                "name": "Xiawu Zheng"
+            }
+        ],
+        "abstract": "Large Language Model (LLM)-based agents have shown effectiveness across many applications. However, their use in data science scenarios requiring solving long-term interconnected tasks, dynamic data adjustments and domain expertise remains challenging. Previous approaches primarily focus on individual tasks, making it difficult to assess the complete data science workflow. Moreover, they struggle to handle real-time changes in intermediate data and fail to adapt dynamically to evolving task dependencies inherent to data science problems. In this paper, we present Data Interpreter, an LLM-based agent designed to automatically solve various data science problems end-to-end. Our Data Interpreter incorporates two key modules: 1) Hierarchical Graph Modeling, which breaks down complex problems into manageable subproblems, enabling dynamic node generation and graph optimization; and 2) Programmable Node Generation, a technique that refines and verifies each subproblem to iteratively improve code generation results and robustness. Extensive experiments consistently demonstrate the superiority of Data Interpreter. On InfiAgent-DABench, it achieves a 25% performance boost, raising accuracy from 75.9% to 94.9%. For machine learning and open-ended tasks, it improves performance from 88% to 95%, and from 60% to 97%, respectively. Moreover, on the MATH dataset, Data Interpreter achieves remarkable performance with a 26% improvement compared to state-of-the-art baselines. The code is available at https://github.com/geekan/MetaGPT."
+    },
+    {
+        "paperId": "4dc6bc8f5c78497470cc2e427a9bda1d49ba50a0",
+        "url": "https://www.semanticscholar.org/paper/4dc6bc8f5c78497470cc2e427a9bda1d49ba50a0",
+        "title": "A review of random forest-based feature selection methods for data science education and applications",
+        "year": 2024,
+        "openAccessPdf": {
+            "url": "",
+            "status": "CLOSED",
+            "license": null,
+            "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1007/s41060-024-00509-w?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1007/s41060-024-00509-w, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2047398586",
+                "name": "Reza Iranzad"
+            },
+            {
+                "authorId": "2283259864",
+                "name": "Xiao Liu"
+            }
+        ],
+        "abstract": null
+    },
+    {
+        "paperId": "1d214355642847f8c5b9fb6806a4c3f0da0a84c8",
+        "url": "https://www.semanticscholar.org/paper/1d214355642847f8c5b9fb6806a4c3f0da0a84c8",
+        "title": "AutoKaggle: A Multi-Agent Framework for Autonomous Data Science Competitions",
+        "year": 2024,
+        "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2410.20424, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2295397263",
+                "name": "Ziming Li"
+            },
+            {
+                "authorId": "2320725244",
+                "name": "Qianbo Zang"
+            },
+            {
+                "authorId": "2358893802",
+                "name": "David Ma"
+            },
+            {
+                "authorId": "2279519760",
+                "name": "Jiawei Guo"
+            },
+            {
+                "authorId": "2300091474",
+                "name": "Tuney Zheng"
+            },
+            {
+                "authorId": "2307832296",
+                "name": "Minghao Liu"
+            },
+            {
+                "authorId": "2290184043",
+                "name": "Xinyao Niu"
+            },
+            {
+                "authorId": "2295087412",
+                "name": "Yue Wang"
+            },
+            {
+                "authorId": "2308240515",
+                "name": "Jian Yang"
+            },
+            {
+                "authorId": "2294523552",
+                "name": "Jiaheng Liu"
+            },
+            {
+                "authorId": "2290075391",
+                "name": "Wanjun Zhong"
+            },
+            {
+                "authorId": "2284803168",
+                "name": "Wangchunshu Zhou"
+            },
+            {
+                "authorId": "2325124981",
+                "name": "Wenhao Huang"
+            },
+            {
+                "authorId": "2237947174",
+                "name": "Ge Zhang"
+            }
+        ],
+        "abstract": "Data science tasks involving tabular data present complex challenges that require sophisticated problem-solving approaches. We propose AutoKaggle, a powerful and user-centric framework that assists data scientists in completing daily data pipelines through a collaborative multi-agent system. AutoKaggle implements an iterative development process that combines code execution, debugging, and comprehensive unit testing to ensure code correctness and logic consistency. The framework offers highly customizable workflows, allowing users to intervene at each phase, thus integrating automated intelligence with human expertise. Our universal data science toolkit, comprising validated functions for data cleaning, feature engineering, and modeling, forms the foundation of this solution, enhancing productivity by streamlining common tasks. We selected 8 Kaggle competitions to simulate data processing workflows in real-world application scenarios. Evaluation results demonstrate that AutoKaggle achieves a validation submission rate of 0.85 and a comprehensive score of 0.82 in typical data science pipelines, fully proving its effectiveness and practicality in handling complex data science tasks."
+    },
+    {
+        "paperId": "395c978221a21ee47c84a40a2ef11fb4d012fca1",
+        "url": "https://www.semanticscholar.org/paper/395c978221a21ee47c84a40a2ef11fb4d012fca1",
+        "title": "DSBench: How Far Are Data Science Agents from Becoming Data Science Experts?",
+        "year": 2024,
+        "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2409.07703, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2257043219",
+                "name": "Liqiang Jing"
+            },
+            {
+                "authorId": "2320838217",
+                "name": "Zhehui Huang"
+            },
+            {
+                "authorId": "2250363276",
+                "name": "Xiaoyang Wang"
+            },
+            {
+                "authorId": "2087264100",
+                "name": "Wenlin Yao"
+            },
+            {
+                "authorId": "2265843326",
+                "name": "Wenhao Yu"
+            },
+            {
+                "authorId": "2311458574",
+                "name": "Kaixin Ma"
+            },
+            {
+                "authorId": "2254831297",
+                "name": "Hongming Zhang"
+            },
+            {
+                "authorId": "2265463653",
+                "name": "Xinya Du"
+            },
+            {
+                "authorId": "2261392681",
+                "name": "Dong Yu"
+            }
+        ],
+        "abstract": "Large Language Models (LLMs) and Large Vision-Language Models (LVLMs) have demonstrated impressive language/vision reasoning abilities, igniting the recent trend of building agents for targeted applications such as shopping assistants or AI software engineers. Recently, many data science benchmarks have been proposed to investigate their performance in the data science domain. However, existing data science benchmarks still fall short when compared to real-world data science applications due to their simplified settings. To bridge this gap, we introduce DSBench, a comprehensive benchmark designed to evaluate data science agents with realistic tasks. This benchmark includes 466 data analysis tasks and 74 data modeling tasks, sourced from Eloquence and Kaggle competitions. DSBench offers a realistic setting by encompassing long contexts, multimodal task backgrounds, reasoning with large data files and multi-table structures, and performing end-to-end data modeling tasks. Our evaluation of state-of-the-art LLMs, LVLMs, and agents shows that they struggle with most tasks, with the best agent solving only 34.12% of data analysis tasks and achieving a 34.74% Relative Performance Gap (RPG). These findings underscore the need for further advancements in developing more practical, intelligent, and autonomous data science agents."
+    },
+    {
+        "paperId": "eda28b2d1e761eaaa2f5cd6528579bf65b7bf1ac",
+        "url": "https://www.semanticscholar.org/paper/eda28b2d1e761eaaa2f5cd6528579bf65b7bf1ac",
+        "title": "Embracing data science in catalysis research",
+        "year": 2024,
+        "openAccessPdf": {
+            "url": "",
+            "status": "CLOSED",
+            "license": null,
+            "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1038/s41929-024-01150-3?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1038/s41929-024-01150-3, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "1999582610",
+                "name": "Manu Suvarna"
+            },
+            {
+                "authorId": "2247842953",
+                "name": "J. P\u00e9rez\u2010Ram\u00edrez"
+            }
+        ],
+        "abstract": null
+    },
+    {
+        "paperId": "8a4fc5f00cd4aca61e148e46a2125c3a406719f1",
+        "url": "https://www.semanticscholar.org/paper/8a4fc5f00cd4aca61e148e46a2125c3a406719f1",
+        "title": "DS-1000: A Natural and Reliable Benchmark for Data Science Code Generation",
+        "year": 2022,
+        "openAccessPdf": {
+            "url": "https://arxiv.org/pdf/2211.11501",
+            "status": "GREEN",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2211.11501, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2191638875",
+                "name": "Yuhang Lai"
+            },
+            {
+                "authorId": "2343465044",
+                "name": "Chengxi Li"
+            },
+            {
+                "authorId": null,
+                "name": "Yiming Wang"
+            },
+            {
+                "authorId": "2146331419",
+                "name": "Tianyi Zhang"
+            },
+            {
+                "authorId": "51011000",
+                "name": "Ruiqi Zhong"
+            },
+            {
+                "authorId": "1982950",
+                "name": "Luke Zettlemoyer"
+            },
+            {
+                "authorId": "3156075",
+                "name": "S. Yih"
+            },
+            {
+                "authorId": "47070750",
+                "name": "Daniel Fried"
+            },
+            {
+                "authorId": "2128046669",
+                "name": "Si-yi Wang"
+            },
+            {
+                "authorId": "48881008",
+                "name": "Tao Yu"
+            }
+        ],
+        "abstract": "We introduce DS-1000, a code generation benchmark with a thousand data science problems spanning seven Python libraries, such as NumPy and Pandas. Compared to prior works, DS-1000 incorporates three core features. First, our problems reflect diverse, realistic, and practical use cases since we collected them from StackOverflow. Second, our automatic evaluation is highly specific (reliable) -- across all Codex-002-predicted solutions that our evaluation accept, only 1.8% of them are incorrect; we achieve this with multi-criteria metrics, checking both functional correctness by running test cases and surface-form constraints by restricting API usages or keywords. Finally, we proactively defend against memorization by slightly modifying our problems to be different from the original StackOverflow source; consequently, models cannot answer them correctly by memorizing the solutions from pre-training. The current best public system (Codex-002) achieves 43.3% accuracy, leaving ample room for improvement. We release our benchmark at https://ds1000-code-gen.github.io."
+    },
+    {
+        "paperId": "612a8b0172d3eccc945762bfa5aed6e0ee7a6680",
+        "url": "https://www.semanticscholar.org/paper/612a8b0172d3eccc945762bfa5aed6e0ee7a6680",
+        "title": "Benchmarking Data Science Agents",
+        "year": 2024,
+        "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2402.17168, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2287832599",
+                "name": "Yuge Zhang"
+            },
+            {
+                "authorId": "2287999152",
+                "name": "Qiyang Jiang"
+            },
+            {
+                "authorId": "2288367508",
+                "name": "Xingyu Han"
+            },
+            {
+                "authorId": "2287928015",
+                "name": "Nan Chen"
+            },
+            {
+                "authorId": "2287875381",
+                "name": "Yuqing Yang"
+            },
+            {
+                "authorId": "2287840829",
+                "name": "Kan Ren"
+            }
+        ],
+        "abstract": "In the era of data-driven decision-making, the complexity of data analysis necessitates advanced expertise and tools of data science, presenting significant challenges even for specialists. Large Language Models (LLMs) have emerged as promising aids as data science agents, assisting humans in data analysis and processing. Yet their practical efficacy remains constrained by the varied demands of real-world applications and complicated analytical process. In this paper, we introduce DSEval -- a novel evaluation paradigm, as well as a series of innovative benchmarks tailored for assessing the performance of these agents throughout the entire data science lifecycle. Incorporating a novel bootstrapped annotation method, we streamline dataset preparation, improve the evaluation coverage, and expand benchmarking comprehensiveness. Our findings uncover prevalent obstacles and provide critical insights to inform future advancements in the field."
+    }
+]

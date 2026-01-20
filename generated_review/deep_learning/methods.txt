@@ -1,0 +1,6 @@
+
+Write the Methods section of a literature review on deep learning.
+Describe commonly used models, datasets, and training techniques
+in an academic and formal tone.
+Write the Advanced Methods section of a literature review on deep learning.
+Describe

@@ -55,162 +55,327 @@
         "abstract": null
     },
     {
-        "paperId": "c0b454e0a6aa51ff3ba56778787d0c43932ef6ba",
-        "url": "https://www.semanticscholar.org/paper/c0b454e0a6aa51ff3ba56778787d0c43932ef6ba",
-        "title": "Yi: Open Foundation Models by 01.AI",
-        "year": 2024,
+        "paperId": "b95baf93d1cfb406b50aa370ce5ba18788b5891d",
+        "url": "https://www.semanticscholar.org/paper/b95baf93d1cfb406b50aa370ce5ba18788b5891d",
+        "title": "Cosmos World Foundation Model Platform for Physical AI",
+        "year": 2025,
         "openAccessPdf": {
             "url": "",
             "status": null,
             "license": null,
-            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2403.04652, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2501.03575, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
         },
         "authors": [
             {
-                "authorId": "2290178701",
-                "name": "01.AI Alex Young"
+                "authorId": "2338889954",
+                "name": "Nvidia Niket Agarwal"
             },
             {
-                "authorId": "2290245800",
-                "name": "Bei Chen"
+                "authorId": "2338974434",
+                "name": "Arslan Ali"
             },
             {
-                "authorId": "2290286218",
-                "name": "Chao Li"
+                "authorId": "2330191272",
+                "name": "Maciej Bala"
             },
             {
-                "authorId": "2290360747",
-                "name": "Chengen Huang"
+                "authorId": "2310337201",
+                "name": "Yogesh Balaji"
             },
             {
-                "authorId": "2143853895",
-                "name": "Ge Zhang"
+                "authorId": "2338890412",
+                "name": "Erik Barker"
             },
             {
-                "authorId": "2290272624",
-                "name": "Guanwei Zhang"
+                "authorId": "2330193931",
+                "name": "Tiffany Cai"
             },
             {
-                "authorId": "2290228500",
-                "name": "Heng Li"
+                "authorId": "40424000",
+                "name": "Prithvijit Chattopadhyay"
             },
             {
-                "authorId": "2290357307",
-                "name": "Jiangcheng Zhu"
+                "authorId": "2221031822",
+                "name": "Yongxin Chen"
             },
             {
-                "authorId": "2290238645",
-                "name": "Jianqun Chen"
+                "authorId": "2299115514",
+                "name": "Yin Cui"
             },
             {
-                "authorId": "2290366789",
-                "name": "Jing Chang"
+                "authorId": "2263775555",
+                "name": "Yifan Ding"
             },
             {
-                "authorId": "2290937601",
-                "name": "Kaidong Yu"
+                "authorId": "2338890333",
+                "name": "Daniel Dworakowski"
             },
             {
-                "authorId": "2290396077",
-                "name": "Peng Liu"
+                "authorId": "2328007579",
+                "name": "Jiaojiao Fan"
             },
             {
-                "authorId": "2288025062",
-                "name": "Qiang Liu"
+                "authorId": "1779415",
+                "name": "Michele Fenzi"
             },
             {
-                "authorId": "2282979169",
-                "name": "Shawn Yue"
+                "authorId": "2260336030",
+                "name": "Francesco Ferroni"
             },
             {
-                "authorId": "2290243755",
-                "name": "Senbin Yang"
+                "authorId": "2261282058",
+                "name": "Sanja Fidler"
             },
             {
-                "authorId": "2282346328",
-                "name": "Shiming Yang"
+                "authorId": "2257169746",
+                "name": "Dieter Fox"
             },
             {
-                "authorId": "2260292688",
-                "name": "Tao Yu"
+                "authorId": "2338889811",
+                "name": "Songwei Ge"
             },
             {
-                "authorId": "2290361800",
-                "name": "Wen Xie"
+                "authorId": "2299104362",
+                "name": "Yunhao Ge"
             },
             {
-                "authorId": "2239245627",
-                "name": "Wenhao Huang"
+                "authorId": "2338980231",
+                "name": "Jinwei Gu"
             },
             {
-                "authorId": "2290209190",
-                "name": "Xiaohui Hu"
+                "authorId": "3454904",
+                "name": "Siddharth Gururani"
             },
             {
-                "authorId": "2290242669",
-                "name": "Xiaoyi Ren"
+                "authorId": "2338890507",
+                "name": "Ethan He"
             },
             {
-                "authorId": "2290184043",
-                "name": "Xinyao Niu"
+                "authorId": "2244137145",
+                "name": "Jiahui Huang"
             },
             {
-                "authorId": "2290181171",
-                "name": "Pengcheng Nie"
+                "authorId": "2298965422",
+                "name": "J. Huffman"
             },
             {
-                "authorId": "2156553010",
-                "name": "Yuchi Xu"
+                "authorId": "2313203519",
+                "name": "Pooya Jannaty"
             },
             {
-                "authorId": "2242966052",
-                "name": "Yudong Liu"
+                "authorId": "2313473772",
+                "name": "Jingyi Jin"
             },
             {
-                "authorId": "2238545529",
-                "name": "Yue Wang"
+                "authorId": "2262213592",
+                "name": "Seung Wook Kim"
             },
             {
-                "authorId": "2290246478",
-                "name": "Yuxuan Cai"
+                "authorId": "2338890422",
+                "name": "Gergely Kl'ar"
             },
             {
-                "authorId": "2291013721",
-                "name": "Zhenyu Gu"
+                "authorId": "2330190570",
+                "name": "Grace Lam"
             },
             {
-                "authorId": "2266805830",
-                "name": "Zhiyuan Liu"
+                "authorId": "2338890616",
+                "name": "Shiyi Lan"
             },
             {
-                "authorId": "83732784",
-                "name": "Zonghong Dai"
+                "authorId": "1388407684",
+                "name": "L. Leal-Taix\u00e9"
+            },
+            {
+                "authorId": "2338944869",
+                "name": "Anqi Li"
+            },
+            {
+                "authorId": "2313218585",
+                "name": "Zhaoshuo Li"
+            },
+            {
+                "authorId": "2313497801",
+                "name": "Chen-Hsuan Lin"
+            },
+            {
+                "authorId": "2300141490",
+                "name": "Tsung-Yi Lin"
+            },
+            {
+                "authorId": "18900686",
+                "name": "Huan Ling"
+            },
+            {
+                "authorId": "2299018949",
+                "name": "Ming-Yu Liu"
+            },
+            {
+                "authorId": "2323079661",
+                "name": "Xian Liu"
+            },
+            {
+                "authorId": "2330185830",
+                "name": "Alice Luo"
+            },
+            {
+                "authorId": "2313310048",
+                "name": "Qianli Ma"
+            },
+            {
+                "authorId": "2313167739",
+                "name": "Hanzi Mao"
+            },
+            {
+                "authorId": "2261042152",
+                "name": "Kaichun Mo"
+            },
+            {
+                "authorId": "3040583",
+                "name": "A. Mousavian"
+            },
+            {
+                "authorId": "40648435",
+                "name": "Seungjun Nah"
+            },
+            {
+                "authorId": "2338889490",
+                "name": "Sriharsha Niverty"
+            },
+            {
+                "authorId": "2338890044",
+                "name": "David Page"
+            },
+            {
+                "authorId": "2328977814",
+                "name": "Despoina Paschalidou"
+            },
+            {
+                "authorId": "2338890341",
+                "name": "Zeeshan Patel"
+            },
+            {
+                "authorId": "2338890844",
+                "name": "Lindsey Pavao"
+            },
+            {
+                "authorId": "2338890557",
+                "name": "Morteza Ramezanali"
+            },
+            {
+                "authorId": "3291967",
+                "name": "F. Reda"
+            },
+            {
+                "authorId": "2201343711",
+                "name": "Xiao-Shuai Ren"
+            },
+            {
+                "authorId": "2306951791",
+                "name": "Vasanth Rao Naik Sabavat"
+            },
+            {
+                "authorId": "2286298438",
+                "name": "Ed Schmerling"
+            },
+            {
+                "authorId": "2330236588",
+                "name": "Stella Shi"
+            },
+            {
+                "authorId": "2338889798",
+                "name": "Bartosz Stefaniak"
+            },
+            {
+                "authorId": "2338977747",
+                "name": "Shitao Tang"
+            },
+            {
+                "authorId": "26917145",
+                "name": "Lyne P. Tchapmi"
+            },
+            {
+                "authorId": "2338890568",
+                "name": "Przemek Tredak"
+            },
+            {
+                "authorId": "2321873035",
+                "name": "Wei-Cheng Tseng"
+            },
+            {
+                "authorId": "145853825",
+                "name": "J. Varghese"
+            },
+            {
+                "authorId": "2339536289",
+                "name": "Hao Wang"
+            },
+            {
+                "authorId": "2338962955",
+                "name": "Haoxiang Wang"
+            },
+            {
+                "authorId": "2298494612",
+                "name": "Hengyi Wang"
+            },
+            {
+                "authorId": "2322488670",
+                "name": "Tingwei Wang"
+            },
+            {
+                "authorId": "2330307301",
+                "name": "Fangyin Wei"
+            },
+            {
+                "authorId": "2336255140",
+                "name": "Xinyue Wei"
+            },
+            {
+                "authorId": "2167473942",
+                "name": "Jay Zhangjie Wu"
+            },
+            {
+                "authorId": "2301402981",
+                "name": "Jiashu Xu"
+            },
+            {
+                "authorId": "2336525939",
+                "name": "Wei Yang"
+            },
+            {
+                "authorId": "1485124622",
+                "name": "Lin Yen-Chen"
+            },
+            {
+                "authorId": "2152293554",
+                "name": "Xiaohui Zeng"
+            },
+            {
+                "authorId": "2313482950",
+                "name": "Yuan Zeng"
+            },
+            {
+                "authorId": "2339986899",
+                "name": "Jing Zhang"
+            },
+            {
+                "authorId": "2288856236",
+                "name": "Qinsheng Zhang"
+            },
+            {
+                "authorId": "2339352559",
+                "name": "Yuxuan Zhang"
+            },
+            {
+                "authorId": "2258609525",
+                "name": "Qingqing Zhao"
+            },
+            {
+                "authorId": "2338890689",
+                "name": "Artur Zolkowski"
             }
         ],
-        "abstract": "We introduce the Yi model family, a series of language and multimodal models that demonstrate strong multi-dimensional capabilities. The Yi model family is based on 6B and 34B pretrained language models, then we extend them to chat models, 200K long context models, depth-upscaled models, and vision-language models. Our base models achieve strong performance on a wide range of benchmarks like MMLU, and our finetuned chat models deliver strong human preference rate on major evaluation platforms like AlpacaEval and Chatbot Arena. Building upon our scalable super-computing infrastructure and the classical transformer architecture, we attribute the performance of Yi models primarily to its data quality resulting from our data-engineering efforts. For pretraining, we construct 3.1 trillion tokens of English and Chinese corpora using a cascaded data deduplication and quality filtering pipeline. For finetuning, we polish a small scale (less than 10K) instruction dataset over multiple iterations such that every single instance has been verified directly by our machine learning engineers. For vision-language, we combine the chat language model with a vision transformer encoder and train the model to align visual representations to the semantic space of the language model. We further extend the context length to 200K through lightweight continual pretraining and demonstrate strong needle-in-a-haystack retrieval performance. We show that extending the depth of the pretrained checkpoint through continual pretraining further improves performance. We believe that given our current results, continuing to scale up model parameters using thoroughly optimized data will lead to even stronger frontier models."
-    },
-    {
-        "paperId": "7b6a8c6d44e0f77bf930484e438d77b7465a69fb",
-        "url": "https://www.semanticscholar.org/paper/7b6a8c6d44e0f77bf930484e438d77b7465a69fb",
-        "title": "Education in the Era of Generative Artificial Intelligence (AI): Understanding the Potential Benefits of ChatGPT in Promoting Teaching and Learning",
-        "year": 2023,
-        "openAccessPdf": {
-            "url": "",
-            "status": null,
-            "license": null,
-            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.2139/ssrn.4337484?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.2139/ssrn.4337484, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
-        },
-        "authors": [
-            {
-                "authorId": "1411783122",
-                "name": "David Baidoo-Anu"
-            },
-            {
-                "authorId": "2203232571",
-                "name": "Leticia Owusu Ansah"
-            }
-        ],
-        "abstract": "Since its maiden release into the public domain on November 30, 2022, ChatGPT garnered more than one million subscribers within a week. The generative AI tool \u23bcChatGPT took the world by surprise with it sophisticated capacity to carry out remarkably complex tasks. The extraordinary abilities of ChatGPT to perform complex tasks within the field of education has caused mixed feelings among educators, as this advancement in AI seems to revolutionize existing educational praxis. This is an exploratory study that synthesizes recent extant literature to offer some potential benefits and drawbacks of ChatGPT in promoting teaching and learning. Benefits of ChatGPT include but are not limited to promotion of personalized and interactive learning, generating prompts for formative assessment activities that provide ongoing feedback to inform teaching and learning etc. The paper also highlights some inherent limitations in the ChatGPT such as generating wrong information, biases in data training, which may augment existing biases, privacy issues etc. The study offers recommendations on how ChatGPT could be leveraged to maximize teaching and learning. Policy makers, researchers, educators and technology experts could work together and start conversations on how these evolving generative AI tools could be used safely and constructively to improve education and support students\u2019 learning."
+        "abstract": "Physical AI needs to be trained digitally first. It needs a digital twin of itself, the policy model, and a digital twin of the world, the world model. In this paper, we present the Cosmos World Foundation Model Platform to help developers build customized world models for their Physical AI setups. We position a world foundation model as a general-purpose world model that can be fine-tuned into customized world models for downstream applications. Our platform covers a video curation pipeline, pre-trained world foundation models, examples of post-training of pre-trained world foundation models, and video tokenizers. To help Physical AI builders solve the most critical problems of our society, we make Cosmos open-source and our models open-weight with permissive licenses available via https://github.com/nvidia-cosmos/cosmos-predict1."
     },
     {
         "paperId": "3936fd3c6187f606c6e4e2e20b196dbc41cc4654",
@@ -432,105 +597,73 @@
         "abstract": "As AI systems become more capable, we would like to enlist their help to supervise other AIs. We experiment with methods for training a harmless AI assistant through self-improvement, without any human labels identifying harmful outputs. The only human oversight is provided through a list of rules or principles, and so we refer to the method as 'Constitutional AI'. The process involves both a supervised learning and a reinforcement learning phase. In the supervised phase we sample from an initial model, then generate self-critiques and revisions, and then finetune the original model on revised responses. In the RL phase, we sample from the finetuned model, use a model to evaluate which of the two samples is better, and then train a preference model from this dataset of AI preferences. We then train with RL using the preference model as the reward signal, i.e. we use 'RL from AI Feedback' (RLAIF). As a result we are able to train a harmless but non-evasive AI assistant that engages with harmful queries by explaining its objections to them. Both the SL and RL methods can leverage chain-of-thought style reasoning to improve the human-judged performance and transparency of AI decision making. These methods make it possible to control AI behavior more precisely and with far fewer human labels."
     },
     {
-        "paperId": "33161a5a9b5dcb635b5a97475e6a6209a69ada7d",
-        "url": "https://www.semanticscholar.org/paper/33161a5a9b5dcb635b5a97475e6a6209a69ada7d",
-        "title": "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery",
-        "year": 2024,
+        "paperId": "7b6a8c6d44e0f77bf930484e438d77b7465a69fb",
+        "url": "https://www.semanticscholar.org/paper/7b6a8c6d44e0f77bf930484e438d77b7465a69fb",
+        "title": "Education in the Era of Generative Artificial Intelligence (AI): Understanding the Potential Benefits of ChatGPT in Promoting Teaching and Learning",
+        "year": 2023,
         "openAccessPdf": {
             "url": "",
             "status": null,
             "license": null,
-            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2408.06292, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.2139/ssrn.4337484?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.2139/ssrn.4337484, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
         },
         "authors": [
             {
-                "authorId": "2315946369",
-                "name": "Chris Lu"
+                "authorId": "1411783122",
+                "name": "David Baidoo-Anu"
             },
             {
-                "authorId": "2110752472",
-                "name": "Cong Lu"
-            },
-            {
-                "authorId": "2266838849",
-                "name": "R. T. Lange"
-            },
-            {
-                "authorId": "2275156099",
-                "name": "J. Foerster"
-            },
-            {
-                "authorId": "2303255568",
-                "name": "Jeff Clune"
-            },
-            {
-                "authorId": "2315921540",
-                "name": "David Ha"
+                "authorId": "2203232571",
+                "name": "Leticia Owusu Ansah"
             }
         ],
-        "abstract": "One of the grand challenges of artificial general intelligence is developing agents capable of conducting scientific research and discovering new knowledge. While frontier models have already been used as aides to human scientists, e.g. for brainstorming ideas, writing code, or prediction tasks, they still conduct only a small part of the scientific process. This paper presents the first comprehensive framework for fully automatic scientific discovery, enabling frontier large language models to perform research independently and communicate their findings. We introduce The AI Scientist, which generates novel research ideas, writes code, executes experiments, visualizes results, describes its findings by writing a full scientific paper, and then runs a simulated review process for evaluation. In principle, this process can be repeated to iteratively develop ideas in an open-ended fashion, acting like the human scientific community. We demonstrate its versatility by applying it to three distinct subfields of machine learning: diffusion modeling, transformer-based language modeling, and learning dynamics. Each idea is implemented and developed into a full paper at a cost of less than $15 per paper. To evaluate the generated papers, we design and validate an automated reviewer, which we show achieves near-human performance in evaluating paper scores. The AI Scientist can produce papers that exceed the acceptance threshold at a top machine learning conference as judged by our automated reviewer. This approach signifies the beginning of a new era in scientific discovery in machine learning: bringing the transformative benefits of AI agents to the entire research process of AI itself, and taking us closer to a world where endless affordable creativity and innovation can be unleashed on the world's most challenging problems. Our code is open-sourced at https://github.com/SakanaAI/AI-Scientist"
+        "abstract": "Since its maiden release into the public domain on November 30, 2022, ChatGPT garnered more than one million subscribers within a week. The generative AI tool \u23bcChatGPT took the world by surprise with it sophisticated capacity to carry out remarkably complex tasks. The extraordinary abilities of ChatGPT to perform complex tasks within the field of education has caused mixed feelings among educators, as this advancement in AI seems to revolutionize existing educational praxis. This is an exploratory study that synthesizes recent extant literature to offer some potential benefits and drawbacks of ChatGPT in promoting teaching and learning. Benefits of ChatGPT include but are not limited to promotion of personalized and interactive learning, generating prompts for formative assessment activities that provide ongoing feedback to inform teaching and learning etc. The paper also highlights some inherent limitations in the ChatGPT such as generating wrong information, biases in data training, which may augment existing biases, privacy issues etc. The study offers recommendations on how ChatGPT could be leveraged to maximize teaching and learning. Policy makers, researchers, educators and technology experts could work together and start conversations on how these evolving generative AI tools could be used safely and constructively to improve education and support students\u2019 learning."
     },
     {
-        "paperId": "49b66b980c91f989637b089c2e8284af443aaa25",
-        "url": "https://www.semanticscholar.org/paper/49b66b980c91f989637b089c2e8284af443aaa25",
-        "title": "Students\u2019 voices on generative AI: perceptions, benefits, and challenges in higher education",
-        "year": 2023,
+        "paperId": "cce6e863d5408244284d97f5a13e8c9ab103ad01",
+        "url": "https://www.semanticscholar.org/paper/cce6e863d5408244284d97f5a13e8c9ab103ad01",
+        "title": "AI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking",
+        "year": 2025,
         "openAccessPdf": {
-            "url": "https://educationaltechnologyjournal.springeropen.com/counter/pdf/10.1186/s41239-023-00411-8",
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/soc15010006?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/soc15010006, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2238511627",
+                "name": "Michael Gerlich"
+            }
+        ],
+        "abstract": "The proliferation of artificial intelligence (AI) tools has transformed numerous aspects of daily life, yet its impact on critical thinking remains underexplored. This study investigates the relationship between AI tool usage and critical thinking skills, focusing on cognitive offloading as a mediating factor. Utilising a mixed-method approach, we conducted surveys and in-depth interviews with 666 participants across diverse age groups and educational backgrounds. Quantitative data were analysed using ANOVA and correlation analysis, while qualitative insights were obtained through thematic analysis of interview transcripts. The findings revealed a significant negative correlation between frequent AI tool usage and critical thinking abilities, mediated by increased cognitive offloading. Younger participants exhibited higher dependence on AI tools and lower critical thinking scores compared to older participants. Furthermore, higher educational attainment was associated with better critical thinking skills, regardless of AI usage. These results highlight the potential cognitive costs of AI tool reliance, emphasising the need for educational strategies that promote critical engagement with AI technologies. This study contributes to the growing discourse on AI\u2019s cognitive implications, offering practical recommendations for mitigating its adverse effects on critical thinking. The findings underscore the importance of fostering critical thinking in an AI-driven world, making this research essential reading for educators, policymakers, and technologists."
+    },
+    {
+        "paperId": "09d8841eeb362a2c04f055f70f16d634093c83bc",
+        "url": "https://www.semanticscholar.org/paper/09d8841eeb362a2c04f055f70f16d634093c83bc",
+        "title": "Agentic AI: Autonomous Intelligence for Complex Goals\u2014A Comprehensive Survey",
+        "year": 2025,
+        "openAccessPdf": {
+            "url": "https://doi.org/10.1109/access.2025.3532853",
             "status": "GOLD",
             "license": "CCBY",
-            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2305.00290, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ACCESS.2025.3532853?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ACCESS.2025.3532853, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
         },
         "authors": [
             {
-                "authorId": "40588014",
-                "name": "C. Chan"
+                "authorId": "2064564791",
+                "name": "D. Acharya"
             },
             {
-                "authorId": "2110231364",
-                "name": "Wenjie Hu"
+                "authorId": "2327269983",
+                "name": "Karthigeyan Kuppan"
+            },
+            {
+                "authorId": "2329573117",
+                "name": "Divya Bhaskaracharya"
             }
         ],
-        "abstract": "This study explores university students\u2019 perceptions of generative AI (GenAI) technologies, such as ChatGPT, in higher education, focusing on familiarity, their willingness to engage, potential benefits and challenges, and effective integration. A survey of 399 undergraduate and postgraduate students from various disciplines in Hong Kong revealed a generally positive attitude towards GenAI in teaching and learning. Students recognized the potential for personalized learning support, writing and brainstorming assistance, and research and analysis capabilities. However, concerns about accuracy, privacy, ethical issues, and the impact on personal development, career prospects, and societal values were also expressed. According to John Biggs\u2019 3P model, student perceptions significantly influence learning approaches and outcomes. By understanding students\u2019 perceptions, educators and policymakers can tailor GenAI technologies to address needs and concerns while promoting effective learning outcomes. Insights from this study can inform policy development around the integration of GenAI technologies into higher education. By understanding students\u2019 perceptions and addressing their concerns, policymakers can create well-informed guidelines and strategies for the responsible and effective implementation of GenAI tools, ultimately enhancing teaching and learning experiences in higher education. This study focuses on the integration of generative AI (GenAI) technologies, like ChatGPT, into higher education settings. University students\u2019 perceptions of generative AI technologies in higher education were explored, including familiarity, potential benefits, and challenges. A survey of 399 undergraduate and postgraduate students from various disciplines in Hong Kong revealed a generally positive attitude towards GenAI in teaching and learning. Insights from this study can inform policy development around the integration of GenAI technologies into higher education, helping to create well-informed guidelines and strategies for responsible and effective implementation. This study focuses on the integration of generative AI (GenAI) technologies, like ChatGPT, into higher education settings. University students\u2019 perceptions of generative AI technologies in higher education were explored, including familiarity, potential benefits, and challenges. A survey of 399 undergraduate and postgraduate students from various disciplines in Hong Kong revealed a generally positive attitude towards GenAI in teaching and learning. Insights from this study can inform policy development around the integration of GenAI technologies into higher education, helping to create well-informed guidelines and strategies for responsible and effective implementation."
-    },
-    {
-        "paperId": "d1120d67b700e4dfe8b39eb1e48fbdea4e1a0c43",
-        "url": "https://www.semanticscholar.org/paper/d1120d67b700e4dfe8b39eb1e48fbdea4e1a0c43",
-        "title": "HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face",
-        "year": 2023,
-        "openAccessPdf": {
-            "url": "http://arxiv.org/pdf/2303.17580",
-            "status": "GREEN",
-            "license": null,
-            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2303.17580, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
-        },
-        "authors": [
-            {
-                "authorId": "1471660296",
-                "name": "Yongliang Shen"
-            },
-            {
-                "authorId": "50982078",
-                "name": "Kaitao Song"
-            },
-            {
-                "authorId": "48391466",
-                "name": "Xu Tan"
-            },
-            {
-                "authorId": "2330364101",
-                "name": "Dongsheng Li"
-            },
-            {
-                "authorId": "1776903",
-                "name": "Weiming Lu"
-            },
-            {
-                "authorId": "2056432541",
-                "name": "Y. Zhuang"
-            }
-        ],
-        "abstract": "Solving complicated AI tasks with different domains and modalities is a key step toward artificial general intelligence. While there are numerous AI models available for various domains and modalities, they cannot handle complicated AI tasks autonomously. Considering large language models (LLMs) have exhibited exceptional abilities in language understanding, generation, interaction, and reasoning, we advocate that LLMs could act as a controller to manage existing AI models to solve complicated AI tasks, with language serving as a generic interface to empower this. Based on this philosophy, we present HuggingGPT, an LLM-powered agent that leverages LLMs (e.g., ChatGPT) to connect various AI models in machine learning communities (e.g., Hugging Face) to solve AI tasks. Specifically, we use ChatGPT to conduct task planning when receiving a user request, select models according to their function descriptions available in Hugging Face, execute each subtask with the selected AI model, and summarize the response according to the execution results. By leveraging the strong language capability of ChatGPT and abundant AI models in Hugging Face, HuggingGPT can tackle a wide range of sophisticated AI tasks spanning different modalities and domains and achieve impressive results in language, vision, speech, and other challenging tasks, which paves a new way towards the realization of artificial general intelligence."
+        "abstract": "Agentic AI, an emerging paradigm in artificial intelligence, refers to autonomous systems designed to pursue complex goals with minimal human intervention. Unlike traditional AI, which depends on structured instructions and close oversight, Agentic AI demonstrates adaptability, advanced decision-making capabilities and self-sufficiency, enabling it to operate dynamically in evolving environments. This survey thoroughly explores the foundational concepts, unique characteristics, and core methodologies driving the development of Agentic AI. We examine its current and potential applications across various fields, including healthcare, finance, and adaptive software systems, emphasizing the advantages of deploying agentic systems in real-world scenarios. The paper also addresses the ethical challenges posed by Agentic AI, proposing solutions for goal alignment, resource constraints, and environmental adaptability. We outline a framework for safely and effectively integrating Agentic AI into society, highlighting the need for further research on ethical considerations to ensure beneficial societal impacts. This survey serves as a comprehensive introduction to Agentic AI, guiding researchers, developers, and policymakers in engaging with its transformative potential responsibly and creatively."
     },
     {
         "paperId": "6b0570e66cdf79704461e1f8a07dc761ac10d6b6",
@@ -684,45 +817,200 @@
         "abstract": "The TRIPOD (Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis) statement was published in 2015 to provide the minimum reporting recommendations for studies developing or evaluating the performance of a prediction model. Methodological advances in the field of prediction have since included the widespread use of artificial intelligence (AI) powered by machine learning methods to develop prediction models. An update to the TRIPOD statement is thus needed. TRIPOD+AI provides harmonised guidance for reporting prediction model studies, irrespective of whether regression modelling or machine learning methods have been used. The new checklist supersedes the TRIPOD 2015 checklist, which should no longer be used. This article describes the development of TRIPOD+AI and presents the expanded 27 item checklist with more detailed explanation of each reporting recommendation, and the TRIPOD+AI for Abstracts checklist. TRIPOD+AI aims to promote the complete, accurate, and transparent reporting of studies that develop a prediction model or evaluate its performance. Complete reporting will facilitate study appraisal, model evaluation, and model implementation."
     },
     {
-        "paperId": "b767c165e7e9621c38c98c247856087f76e9f340",
-        "url": "https://www.semanticscholar.org/paper/b767c165e7e9621c38c98c247856087f76e9f340",
-        "title": "Embracing the future of Artificial Intelligence in the classroom: the relevance of AI literacy, prompt engineering, and critical thinking in modern education",
-        "year": 2024,
+        "paperId": "49b66b980c91f989637b089c2e8284af443aaa25",
+        "url": "https://www.semanticscholar.org/paper/49b66b980c91f989637b089c2e8284af443aaa25",
+        "title": "Students\u2019 voices on generative AI: perceptions, benefits, and challenges in higher education",
+        "year": 2023,
         "openAccessPdf": {
-            "url": "https://educationaltechnologyjournal.springeropen.com/counter/pdf/10.1186/s41239-024-00448-3",
+            "url": "https://educationaltechnologyjournal.springeropen.com/counter/pdf/10.1186/s41239-023-00411-8",
             "status": "GOLD",
             "license": "CCBY",
-            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1186/s41239-024-00448-3?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1186/s41239-024-00448-3, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2305.00290, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
         },
         "authors": [
             {
-                "authorId": "2286339655",
-                "name": "Yoshija Walter"
-            }
-        ],
-        "abstract": "The present discussion examines the transformative impact of Artificial Intelligence (AI) in educational settings, focusing on the necessity for AI literacy, prompt engineering proficiency, and enhanced critical thinking skills. The introduction of AI into education marks a significant departure from conventional teaching methods, offering personalized learning and support for diverse educational requirements, including students with special needs. However, this integration presents challenges, including the need for comprehensive educator training and curriculum adaptation to align with societal structures. AI literacy is identified as crucial, encompassing an understanding of AI technologies and their broader societal impacts. Prompt engineering is highlighted as a key skill for eliciting specific responses from AI systems, thereby enriching educational experiences and promoting critical thinking. There is detailed analysis of strategies for embedding these skills within educational curricula and pedagogical practices. This is discussed through a case-study based on a Swiss university and a narrative literature review, followed by practical suggestions of how to implement AI in the classroom."
-    },
-    {
-        "paperId": "9472e198f790cb396c088c8e98bd4c5f5134cf62",
-        "url": "https://www.semanticscholar.org/paper/9472e198f790cb396c088c8e98bd4c5f5134cf62",
-        "title": "Intelligent Clinical Documentation: Harnessing Generative AI for Patient-Centric Clinical Note Generation",
-        "year": 2024,
-        "openAccessPdf": {
-            "url": "https://doi.org/10.38124/ijisrt/ijisrt24may1483",
-            "status": "GOLD",
-            "license": "CCBYNC",
-            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2405.18346, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
-        },
-        "authors": [
-            {
-                "authorId": "2303465887",
-                "name": "Anjanava Biswas"
+                "authorId": "40588014",
+                "name": "C. Chan"
             },
             {
-                "authorId": "2303464555",
-                "name": "Wrick Talukdar"
+                "authorId": "2110231364",
+                "name": "Wenjie Hu"
             }
         ],
-        "abstract": "Comprehensive clinical documentation is crucial for effective healthcare delivery, yet it poses a significant burden on healthcare professionals, leading to burnout, increased medical errors, and compromised patient safety. This paper explores the potential of generative AI (Artificial Intelligence) to streamline the clinical documentation process, specifically focusing on generating SOAP (Subjective, Objective, Assessment, Plan) and BIRP (Behavior, Intervention, Response, Plan) notes. We present a case study demonstrating the application of natural language processing (NLP) and automatic speech recognition (ASR) technologies to transcribe patient-clinician interactions, coupled with advanced prompting techniques to generate draft clinical notes using large language models (LLMs). The study highlights the benefits of this approach, including time savings, improved documentation quality, and enhanced patient-centered care. Additionally, we discuss ethical considerations, such as maintaining patient confidentiality and addressing model biases, underscoring the need for responsible deployment of generative AI in healthcare settings. The findings suggest that generative AI has the potential to revolutionize clinical documentation practices, alleviating administrative burdens and enabling healthcare professionals to focus more on direct patient care."
+        "abstract": "This study explores university students\u2019 perceptions of generative AI (GenAI) technologies, such as ChatGPT, in higher education, focusing on familiarity, their willingness to engage, potential benefits and challenges, and effective integration. A survey of 399 undergraduate and postgraduate students from various disciplines in Hong Kong revealed a generally positive attitude towards GenAI in teaching and learning. Students recognized the potential for personalized learning support, writing and brainstorming assistance, and research and analysis capabilities. However, concerns about accuracy, privacy, ethical issues, and the impact on personal development, career prospects, and societal values were also expressed. According to John Biggs\u2019 3P model, student perceptions significantly influence learning approaches and outcomes. By understanding students\u2019 perceptions, educators and policymakers can tailor GenAI technologies to address needs and concerns while promoting effective learning outcomes. Insights from this study can inform policy development around the integration of GenAI technologies into higher education. By understanding students\u2019 perceptions and addressing their concerns, policymakers can create well-informed guidelines and strategies for the responsible and effective implementation of GenAI tools, ultimately enhancing teaching and learning experiences in higher education. This study focuses on the integration of generative AI (GenAI) technologies, like ChatGPT, into higher education settings. University students\u2019 perceptions of generative AI technologies in higher education were explored, including familiarity, potential benefits, and challenges. A survey of 399 undergraduate and postgraduate students from various disciplines in Hong Kong revealed a generally positive attitude towards GenAI in teaching and learning. Insights from this study can inform policy development around the integration of GenAI technologies into higher education, helping to create well-informed guidelines and strategies for responsible and effective implementation. This study focuses on the integration of generative AI (GenAI) technologies, like ChatGPT, into higher education settings. University students\u2019 perceptions of generative AI technologies in higher education were explored, including familiarity, potential benefits, and challenges. A survey of 399 undergraduate and postgraduate students from various disciplines in Hong Kong revealed a generally positive attitude towards GenAI in teaching and learning. Insights from this study can inform policy development around the integration of GenAI technologies into higher education, helping to create well-informed guidelines and strategies for responsible and effective implementation."
+    },
+    {
+        "paperId": "c0b454e0a6aa51ff3ba56778787d0c43932ef6ba",
+        "url": "https://www.semanticscholar.org/paper/c0b454e0a6aa51ff3ba56778787d0c43932ef6ba",
+        "title": "Yi: Open Foundation Models by 01.AI",
+        "year": 2024,
+        "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2403.04652, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2290178701",
+                "name": "01.AI Alex Young"
+            },
+            {
+                "authorId": "2290245800",
+                "name": "Bei Chen"
+            },
+            {
+                "authorId": "2290286218",
+                "name": "Chao Li"
+            },
+            {
+                "authorId": "2290360747",
+                "name": "Chengen Huang"
+            },
+            {
+                "authorId": "2143853895",
+                "name": "Ge Zhang"
+            },
+            {
+                "authorId": "2290272624",
+                "name": "Guanwei Zhang"
+            },
+            {
+                "authorId": "2290228500",
+                "name": "Heng Li"
+            },
+            {
+                "authorId": "2290357307",
+                "name": "Jiangcheng Zhu"
+            },
+            {
+                "authorId": "2290238645",
+                "name": "Jianqun Chen"
+            },
+            {
+                "authorId": "2290366789",
+                "name": "Jing Chang"
+            },
+            {
+                "authorId": "2290937601",
+                "name": "Kaidong Yu"
+            },
+            {
+                "authorId": "2290396077",
+                "name": "Peng Liu"
+            },
+            {
+                "authorId": "2288025062",
+                "name": "Qiang Liu"
+            },
+            {
+                "authorId": "2282979169",
+                "name": "Shawn Yue"
+            },
+            {
+                "authorId": "2290243755",
+                "name": "Senbin Yang"
+            },
+            {
+                "authorId": "2282346328",
+                "name": "Shiming Yang"
+            },
+            {
+                "authorId": "2260292688",
+                "name": "Tao Yu"
+            },
+            {
+                "authorId": "2290361800",
+                "name": "Wen Xie"
+            },
+            {
+                "authorId": "2239245627",
+                "name": "Wenhao Huang"
+            },
+            {
+                "authorId": "2290209190",
+                "name": "Xiaohui Hu"
+            },
+            {
+                "authorId": "2290242669",
+                "name": "Xiaoyi Ren"
+            },
+            {
+                "authorId": "2290184043",
+                "name": "Xinyao Niu"
+            },
+            {
+                "authorId": "2290181171",
+                "name": "Pengcheng Nie"
+            },
+            {
+                "authorId": "2156553010",
+                "name": "Yuchi Xu"
+            },
+            {
+                "authorId": "2242966052",
+                "name": "Yudong Liu"
+            },
+            {
+                "authorId": "2238545529",
+                "name": "Yue Wang"
+            },
+            {
+                "authorId": "2290246478",
+                "name": "Yuxuan Cai"
+            },
+            {
+                "authorId": "2291013721",
+                "name": "Zhenyu Gu"
+            },
+            {
+                "authorId": "2266805830",
+                "name": "Zhiyuan Liu"
+            },
+            {
+                "authorId": "83732784",
+                "name": "Zonghong Dai"
+            }
+        ],
+        "abstract": "We introduce the Yi model family, a series of language and multimodal models that demonstrate strong multi-dimensional capabilities. The Yi model family is based on 6B and 34B pretrained language models, then we extend them to chat models, 200K long context models, depth-upscaled models, and vision-language models. Our base models achieve strong performance on a wide range of benchmarks like MMLU, and our finetuned chat models deliver strong human preference rate on major evaluation platforms like AlpacaEval and Chatbot Arena. Building upon our scalable super-computing infrastructure and the classical transformer architecture, we attribute the performance of Yi models primarily to its data quality resulting from our data-engineering efforts. For pretraining, we construct 3.1 trillion tokens of English and Chinese corpora using a cascaded data deduplication and quality filtering pipeline. For finetuning, we polish a small scale (less than 10K) instruction dataset over multiple iterations such that every single instance has been verified directly by our machine learning engineers. For vision-language, we combine the chat language model with a vision transformer encoder and train the model to align visual representations to the semantic space of the language model. We further extend the context length to 200K through lightweight continual pretraining and demonstrate strong needle-in-a-haystack retrieval performance. We show that extending the depth of the pretrained checkpoint through continual pretraining further improves performance. We believe that given our current results, continuing to scale up model parameters using thoroughly optimized data will lead to even stronger frontier models."
+    },
+    {
+        "paperId": "d1120d67b700e4dfe8b39eb1e48fbdea4e1a0c43",
+        "url": "https://www.semanticscholar.org/paper/d1120d67b700e4dfe8b39eb1e48fbdea4e1a0c43",
+        "title": "HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face",
+        "year": 2023,
+        "openAccessPdf": {
+            "url": "http://arxiv.org/pdf/2303.17580",
+            "status": "GREEN",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2303.17580, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "1471660296",
+                "name": "Yongliang Shen"
+            },
+            {
+                "authorId": "50982078",
+                "name": "Kaitao Song"
+            },
+            {
+                "authorId": "48391466",
+                "name": "Xu Tan"
+            },
+            {
+                "authorId": "2330364101",
+                "name": "Dongsheng Li"
+            },
+            {
+                "authorId": "1776903",
+                "name": "Weiming Lu"
+            },
+            {
+                "authorId": "2056432541",
+                "name": "Y. Zhuang"
+            }
+        ],
+        "abstract": "Solving complicated AI tasks with different domains and modalities is a key step toward artificial general intelligence. While there are numerous AI models available for various domains and modalities, they cannot handle complicated AI tasks autonomously. Considering large language models (LLMs) have exhibited exceptional abilities in language understanding, generation, interaction, and reasoning, we advocate that LLMs could act as a controller to manage existing AI models to solve complicated AI tasks, with language serving as a generic interface to empower this. Based on this philosophy, we present HuggingGPT, an LLM-powered agent that leverages LLMs (e.g., ChatGPT) to connect various AI models in machine learning communities (e.g., Hugging Face) to solve AI tasks. Specifically, we use ChatGPT to conduct task planning when receiving a user request, select models according to their function descriptions available in Hugging Face, execute each subtask with the selected AI model, and summarize the response according to the execution results. By leveraging the strong language capability of ChatGPT and abundant AI models in Hugging Face, HuggingGPT can tackle a wide range of sophisticated AI tasks spanning different modalities and domains and achieve impressive results in language, vision, speech, and other challenging tasks, which paves a new way towards the realization of artificial general intelligence."
     }
 ]

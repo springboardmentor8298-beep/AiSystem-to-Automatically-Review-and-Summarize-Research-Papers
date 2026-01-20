@@ -224,33 +224,6 @@
         "abstract": "Recent work has demonstrated that deep neural networks are vulnerable to adversarial examples---inputs that are almost indistinguishable from natural data and yet classified incorrectly by the network. In fact, some of the latest findings suggest that the existence of adversarial attacks may be an inherent weakness of deep learning models. To address this problem, we study the adversarial robustness of neural networks through the lens of robust optimization. This approach provides us with a broad and unifying view on much of the prior work on this topic. Its principled nature also enables us to identify methods for both training and attacking neural networks that are reliable and, in a certain sense, universal. In particular, they specify a concrete security guarantee that would protect against any adversary. These methods let us train networks with significantly improved resistance to a wide range of adversarial attacks. They also suggest the notion of security against a first-order adversary as a natural and broad security guarantee. We believe that robustness against such well-defined classes of adversaries is an important stepping stone towards fully resistant deep learning models. Code and pre-trained models are available at this https URL and this https URL."
     },
     {
-        "paperId": "d86084808994ac54ef4840ae65295f3c0ec4decd",
-        "url": "https://www.semanticscholar.org/paper/d86084808994ac54ef4840ae65295f3c0ec4decd",
-        "title": "Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations",
-        "year": 2019,
-        "openAccessPdf": {
-            "url": "http://manuscript.elsevier.com/S0021999118307125/pdf/S0021999118307125.pdf",
-            "status": "BRONZE",
-            "license": "publisher-specific-oa",
-            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/J.JCP.2018.10.045?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/J.JCP.2018.10.045, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
-        },
-        "authors": [
-            {
-                "authorId": "145401977",
-                "name": "M. Raissi"
-            },
-            {
-                "authorId": "3410970",
-                "name": "P. Perdikaris"
-            },
-            {
-                "authorId": "1720124",
-                "name": "G. Karniadakis"
-            }
-        ],
-        "abstract": null
-    },
-    {
         "paperId": "ff7bcaa4556cb13fc7bf03e477172493546172cd",
         "url": "https://www.semanticscholar.org/paper/ff7bcaa4556cb13fc7bf03e477172493546172cd",
         "title": "What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision?",
@@ -297,47 +270,31 @@
         "abstract": "Deep convolutional neural networks have performed remarkably well on many Computer Vision tasks. However, these networks are heavily reliant on big data to avoid overfitting. Overfitting refers to the phenomenon when a network learns a function with very high variance such as to perfectly model the training data. Unfortunately, many application domains do not have access to big data, such as medical image analysis. This survey focuses on Data Augmentation, a data-space solution to the problem of limited data. Data Augmentation encompasses a suite of techniques that enhance the size and quality of training datasets such that better Deep Learning models can be built using them. The image augmentation algorithms discussed in this survey include geometric transformations, color space augmentations, kernel filters, mixing images, random erasing, feature space augmentation, adversarial training, generative adversarial networks, neural style transfer, and meta-learning. The application of augmentation methods based on GANs are heavily covered in this survey. In addition to augmentation techniques, this paper will briefly discuss other characteristics of Data Augmentation such as test-time augmentation, resolution impact, final dataset size, and curriculum learning. This survey will present existing methods for Data Augmentation, promising developments, and meta-level decisions for implementing Data Augmentation. Readers will understand how Data Augmentation can improve the performance of their models and expand limited datasets to take advantage of the capabilities of big data."
     },
     {
-        "paperId": "e9a986c8ff6c2f381d026fe014f6aaa865f34da7",
-        "url": "https://www.semanticscholar.org/paper/e9a986c8ff6c2f381d026fe014f6aaa865f34da7",
-        "title": "Deep Learning with Differential Privacy",
-        "year": 2016,
+        "paperId": "d86084808994ac54ef4840ae65295f3c0ec4decd",
+        "url": "https://www.semanticscholar.org/paper/d86084808994ac54ef4840ae65295f3c0ec4decd",
+        "title": "Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations",
+        "year": 2019,
         "openAccessPdf": {
-            "url": "https://arxiv.org/pdf/1607.00133",
-            "status": "GREEN",
-            "license": null,
-            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1607.00133, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            "url": "http://manuscript.elsevier.com/S0021999118307125/pdf/S0021999118307125.pdf",
+            "status": "BRONZE",
+            "license": "publisher-specific-oa",
+            "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/J.JCP.2018.10.045?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/J.JCP.2018.10.045, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
         },
         "authors": [
             {
-                "authorId": "2057642721",
-                "name": "Mart\u00edn Abadi"
+                "authorId": "145401977",
+                "name": "M. Raissi"
             },
             {
-                "authorId": "1396184193",
-                "name": "Andy Chu"
+                "authorId": "3410970",
+                "name": "P. Perdikaris"
             },
             {
-                "authorId": "153440022",
-                "name": "I. Goodfellow"
-            },
-            {
-                "authorId": "145057514",
-                "name": "H. B. McMahan"
-            },
-            {
-                "authorId": "145591745",
-                "name": "Ilya Mironov"
-            },
-            {
-                "authorId": "35210462",
-                "name": "Kunal Talwar"
-            },
-            {
-                "authorId": "2152832173",
-                "name": "Li Zhang"
+                "authorId": "1720124",
+                "name": "G. Karniadakis"
             }
         ],
-        "abstract": "Machine learning techniques based on neural networks are achieving remarkable results in a wide variety of domains. Often, the training of models requires large, representative datasets, which may be crowdsourced and contain sensitive information. The models should not expose private information in these datasets. Addressing this goal, we develop new algorithmic techniques for learning and a refined analysis of privacy costs within the framework of differential privacy. Our implementation and experiments demonstrate that we can train deep neural networks with non-convex objectives, under a modest privacy budget, and at a manageable cost in software complexity, training efficiency, and model quality."
+        "abstract": null
     },
     {
         "paperId": "7998468d99ab07bb982294d1c9b53a3bf3934fa6",
@@ -371,76 +328,50 @@
         "abstract": "Due to object detection\u2019s close relationship with video analysis and image understanding, it has attracted much research attention in recent years. Traditional object detection methods are built on handcrafted features and shallow trainable architectures. Their performance easily stagnates by constructing complex ensembles that combine multiple low-level image features with high-level context from object detectors and scene classifiers. With the rapid development in deep learning, more powerful tools, which are able to learn semantic, high-level, deeper features, are introduced to address the problems existing in traditional architectures. These models behave differently in network architecture, training strategy, and optimization function. In this paper, we provide a review of deep learning-based object detection frameworks. Our review begins with a brief introduction on the history of deep learning and its representative tool, namely, the convolutional neural network. Then, we focus on typical generic object detection architectures along with some modifications and useful tricks to improve detection performance further. As distinct specific detection tasks exhibit different characteristics, we also briefly survey several specific tasks, including salient object detection, face detection, and pedestrian detection. Experimental analyses are also provided to compare various methods and draw some meaningful conclusions. Finally, several promising directions and tasks are provided to serve as guidelines for future work in both object detection and relevant neural network-based learning systems."
     },
     {
-        "paperId": "5c45a5d05ac564adb67811eeb9d41d6460c70135",
-        "url": "https://www.semanticscholar.org/paper/5c45a5d05ac564adb67811eeb9d41d6460c70135",
-        "title": "Development and Validation of a Deep Learning Algorithm for Detection of Diabetic Retinopathy in Retinal Fundus Photographs.",
-        "year": 2016,
+        "paperId": "f35de4f9b1a7c4d3fa96a0d2ab1bf8937671f6b6",
+        "url": "https://www.semanticscholar.org/paper/f35de4f9b1a7c4d3fa96a0d2ab1bf8937671f6b6",
+        "title": "Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning",
+        "year": 2015,
         "openAccessPdf": {
-            "url": "https://jamanetwork.com/journals/jama/articlepdf/2588763/joi160132.pdf",
-            "status": "BRONZE",
+            "url": "",
+            "status": null,
             "license": null,
-            "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1001/jama.2016.17216?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1001/jama.2016.17216, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1506.02142, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
         },
         "authors": [
             {
-                "authorId": "3236386",
-                "name": "Varun Gulshan"
+                "authorId": "2681954",
+                "name": "Y. Gal"
             },
             {
-                "authorId": "49506408",
-                "name": "L. Peng"
+                "authorId": "1744700",
+                "name": "Zoubin Ghahramani"
+            }
+        ],
+        "abstract": "Deep learning tools have gained tremendous attention in applied machine learning. However such tools for regression and classification do not capture model uncertainty. In comparison, Bayesian models offer a mathematically grounded framework to reason about model uncertainty, but usually come with a prohibitive computational cost. In this paper we develop a new theoretical framework casting dropout training in deep neural networks (NNs) as approximate Bayesian inference in deep Gaussian processes. A direct result of this theory gives us tools to model uncertainty with dropout NNs -- extracting information from existing models that has been thrown away so far. This mitigates the problem of representing uncertainty in deep learning without sacrificing either computational complexity or test accuracy. We perform an extensive study of the properties of dropout's uncertainty. Various network architectures and non-linearities are assessed on tasks of regression and classification, using MNIST as an example. We show a considerable improvement in predictive log-likelihood and RMSE compared to existing state-of-the-art methods, and finish by using dropout's uncertainty in deep reinforcement learning."
+    },
+    {
+        "paperId": "2913c2bf3f92b5ae369400a42b2d27cc5bc05ecb",
+        "url": "https://www.semanticscholar.org/paper/2913c2bf3f92b5ae369400a42b2d27cc5bc05ecb",
+        "title": "Deep Learning",
+        "year": 2015,
+        "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null
+        },
+        "authors": [
+            {
+                "authorId": "1688882",
+                "name": "Yann LeCun"
             },
             {
-                "authorId": "2229081",
-                "name": "Marc Coram"
+                "authorId": "1751762",
+                "name": "Yoshua Bengio"
             },
             {
-                "authorId": "2924473",
-                "name": "Martin C. Stumpe"
-            },
-            {
-                "authorId": "97874426",
-                "name": "Derek J. Wu"
-            },
-            {
-                "authorId": "50484974",
-                "name": "Arunachalam Narayanaswamy"
-            },
-            {
-                "authorId": "1811430",
-                "name": "Subhashini Venugopalan"
-            },
-            {
-                "authorId": "10777941",
-                "name": "Kasumi Widner"
-            },
-            {
-                "authorId": "10688956",
-                "name": "T. Madams"
-            },
-            {
-                "authorId": "50162175",
-                "name": "Jorge A Cuadros"
-            },
-            {
-                "authorId": "3423678",
-                "name": "R. Kim"
-            },
-            {
-                "authorId": "2035210",
-                "name": "R. Raman"
-            },
-            {
-                "authorId": "2057376568",
-                "name": "Philip Nelson"
-            },
-            {
-                "authorId": "5791678",
-                "name": "J. Mega"
-            },
-            {
-                "authorId": "47191829",
-                "name": "D. Webster"
+                "authorId": "1695689",
+                "name": "Geoffrey E. Hinton"
             }
         ],
         "abstract": null

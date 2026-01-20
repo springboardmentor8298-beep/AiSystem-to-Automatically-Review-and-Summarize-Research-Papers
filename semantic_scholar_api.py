@@ -3,6 +3,7 @@ import requests
 import json
 import os
 import time
+import sys
 
 load_dotenv()
 # --------------------------------------------------
@@ -24,7 +25,7 @@ BASE_URL = "https://api.semanticscholar.org/graph/v1/paper/search"
 # --------------------------------------------------
 # Take topic input
 # --------------------------------------------------
-topic = input("Enter research topic: ").strip()
+topic = sys.argv[1].strip()
 topic_name = topic.replace(" ", "_").lower()
 
 # --------------------------------------------------
@@ -105,3 +106,5 @@ with open(dataset_path, "w", encoding="utf-8") as f:
     json.dump(final_dataset, f, indent=4)
 
 print(f"\n✅ Dataset prepared successfully: {dataset_path}")
+
+

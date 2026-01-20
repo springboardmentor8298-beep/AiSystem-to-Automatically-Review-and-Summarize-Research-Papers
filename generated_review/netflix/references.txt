@@ -1,0 +1,1 @@
+Yuhang Lai, Chengxi Li, Yiming Wang, Tianyi Zhang, Ruiqi Zhong, Luke Zettlemoyer, S. Yih, Daniel Fried, Si-yi Wang, Tao Yu (2022). DS-1000: A Natural and Reliable Benchmark for Data Science Code Generation. Retrieved from https://www.semanticscholar.org/paper/8a4fc5f00cd4aca61e148e46a2125c3a406719f1

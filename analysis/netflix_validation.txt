@@ -1,0 +1,5 @@
+paper2.pdf ❌ Missing: abstract
+paper4.pdf ✅ All sections extracted
+paper5.pdf ❌ Missing: abstract
+paper6.pdf ✅ All sections extracted
+paper7.pdf ✅ All sections extracted

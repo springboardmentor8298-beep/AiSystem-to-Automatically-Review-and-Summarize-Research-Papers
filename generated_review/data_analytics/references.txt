@@ -1,0 +1,7 @@
+Kornelia M. Batko, A. Ślęzak (2022). The use of Big Data Analytics in healthcare. Retrieved from https://www.semanticscholar.org/paper/41d4e093d5f7ed5aae1aaa9eb6c037742e4cf9b1
+
+Yassine Himeur, Mariam Elnour, F. Fadli, N. Meskin, I. Petri, Y. Rezgui, F. Bensaali, A. Amira (2022). AI-big data analytics for building automation and management systems: a survey, actual challenges and future perspectives. Retrieved from https://www.semanticscholar.org/paper/f17fabd53bccc1ee7360dbb72e050b4a347d4304
+
+Wasnaa Kadhim Jawad, Abbas M. Al-Bakry (2022). Big Data Analytics: A Survey. Retrieved from https://www.semanticscholar.org/paper/85328b4a8132bf4299f8cd7f8e79e850d561c8fc
+
+W. Raghupathi, V. Raghupathi (2014). Big data analytics in healthcare: promise and potential. Retrieved from https://www.semanticscholar.org/paper/dac7344737cb824634f757aede2dd46a6eed204b

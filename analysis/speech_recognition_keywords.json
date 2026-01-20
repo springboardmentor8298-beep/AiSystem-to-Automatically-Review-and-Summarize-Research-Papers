@@ -1,0 +1,542 @@
+[
+    {
+        "pdf_file": "paper1.pdf",
+        "keywords": [
+            "model",
+            "transformer",
+            "convolution",
+            "neural",
+            "based",
+            "models",
+            "speech",
+            "recognition",
+            "networks",
+            "global"
+        ]
+    },
+    {
+        "pdf_file": "paper1.pdf",
+        "keywords": [
+            "model",
+            "transformer",
+            "convolution",
+            "neural",
+            "based",
+            "models",
+            "speech",
+            "recognition",
+            "networks",
+            "global"
+        ]
+    },
+    {
+        "pdf_file": "paper1.pdf",
+        "keywords": [
+            "model",
+            "module",
+            "convolution",
+            "attention",
+            "self",
+            "conformer",
+            "feed",
+            "forward",
+            "layer",
+            "transformer"
+        ]
+    },
+    {
+        "pdf_file": "paper1.pdf",
+        "keywords": [
+            "model",
+            "convolution",
+            "conformer",
+            "attention",
+            "module",
+            "self",
+            "transformer",
+            "block",
+            "feed",
+            "forward"
+        ]
+    },
+    {
+        "pdf_file": "paper1.pdf",
+        "keywords": [
+            "model",
+            "attention",
+            "convolution",
+            "conformer",
+            "transformer",
+            "arxiv",
+            "module",
+            "self",
+            "speech",
+            "block"
+        ]
+    },
+    {
+        "pdf_file": "paper2.pdf",
+        "keywords": [
+            "data",
+            "been",
+            "augmentation",
+            "speech",
+            "recognition",
+            "specaugment",
+            "state",
+            "time",
+            "achieve",
+            "tasks"
+        ]
+    },
+    {
+        "pdf_file": "paper2.pdf",
+        "keywords": [
+            "data",
+            "been",
+            "augmentation",
+            "speech",
+            "recognition",
+            "specaugment",
+            "state",
+            "time",
+            "achieve",
+            "tasks"
+        ]
+    },
+    {
+        "pdf_file": "paper2.pdf",
+        "keywords": [
+            "data",
+            "been",
+            "augmentation",
+            "speech",
+            "recognition",
+            "specaugment",
+            "state",
+            "time",
+            "achieve",
+            "tasks"
+        ]
+    },
+    {
+        "pdf_file": "paper2.pdf",
+        "keywords": [
+            "data",
+            "been",
+            "augmentation",
+            "speech",
+            "specaugment",
+            "recognition",
+            "state",
+            "time",
+            "tasks",
+            "achieve"
+        ]
+    },
+    {
+        "pdf_file": "paper2.pdf",
+        "keywords": [
+            "speech",
+            "recognition",
+            "neural",
+            "data",
+            "networks",
+            "augmentation",
+            "been",
+            "deep",
+            "icassp",
+            "arxiv"
+        ]
+    },
+    {
+        "pdf_file": "paper2.pdf",
+        "keywords": [
+            "speech",
+            "recognition",
+            "neural",
+            "data",
+            "networks",
+            "augmentation",
+            "icassp",
+            "deep",
+            "been",
+            "models"
+        ]
+    },
+    {
+        "pdf_file": "paper3.pdf",
+        "keywords": [
+            "rnns",
+            "networks",
+            "deep",
+            "recognition",
+            "long",
+            "speech",
+            "recurrent",
+            "neural",
+            "short",
+            "term"
+        ]
+    },
+    {
+        "pdf_file": "paper3.pdf",
+        "keywords": [
+            "rnns",
+            "networks",
+            "deep",
+            "recognition",
+            "long",
+            "speech",
+            "recurrent",
+            "neural",
+            "short",
+            "term"
+        ]
+    },
+    {
+        "pdf_file": "paper3.pdf",
+        "keywords": [
+            "rnns",
+            "networks",
+            "deep",
+            "recognition",
+            "long",
+            "speech",
+            "recurrent",
+            "neural",
+            "short",
+            "term"
+        ]
+    },
+    {
+        "pdf_file": "paper3.pdf",
+        "keywords": [
+            "deep",
+            "networks",
+            "rnns",
+            "recognition",
+            "long",
+            "speech",
+            "this",
+            "neural",
+            "short",
+            "term"
+        ]
+    },
+    {
+        "pdf_file": "paper3.pdf",
+        "keywords": [
+            "networks",
+            "neural",
+            "recognition",
+            "speech",
+            "deep",
+            "recurrent",
+            "rnns",
+            "long",
+            "short",
+            "term"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "model",
+            "languages",
+            "training",
+            "multilingual",
+            "large",
+            "recognition",
+            "across",
+            "dataset",
+            "labeled"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "model",
+            "languages",
+            "training",
+            "multilingual",
+            "large",
+            "recognition",
+            "across",
+            "dataset",
+            "labeled"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "model",
+            "languages",
+            "training",
+            "multilingual",
+            "large",
+            "recognition",
+            "across",
+            "dataset",
+            "labeled"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    },
+    {
+        "pdf_file": "paper4.pdf",
+        "keywords": [
+            "speech",
+            "training",
+            "models",
+            "languages",
+            "data",
+            "model",
+            "text",
+            "trained",
+            "large",
+            "this"
+        ]
+    }
+]

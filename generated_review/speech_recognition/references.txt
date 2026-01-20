@@ -1,0 +1,7 @@
+Anmol Gulati, James Qin, Chung-Cheng Chiu, Niki Parmar, Yu Zhang, Jiahui Yu, Wei Han, Shibo Wang, Zhengdong Zhang, Yonghui Wu, Ruoming Pang (2020). Conformer: Convolution-augmented Transformer for Speech Recognition. Retrieved from https://www.semanticscholar.org/paper/0170fc76e934ee643f869df18fb617d5357e8b4e
+
+Daniel S. Park, William Chan, Yu Zhang, Chung-Cheng Chiu, Barret Zoph, E. D. Cubuk, Quoc V. Le (2019). SpecAugment: A Simple Data Augmentation Method for Automatic Speech Recognition. Retrieved from https://www.semanticscholar.org/paper/b0fae9fbb4e580d92395eabafe73e317ae6510e3
+
+Alex Graves, Abdel-rahman Mohamed, Geoffrey E. Hinton (2013). Speech recognition with deep recurrent neural networks. Retrieved from https://www.semanticscholar.org/paper/4177ec52d1b80ed57f2e72b0f9a42365f1a8598d
+
+Yu Zhang, Wei Han, James Qin, Yongqiang Wang, Ankur Bapna, Zhehuai Chen, Nanxin Chen, Bo Li, Vera Axelrod, Gary Wang, Zhong Meng, Ke Hu, A. Rosenberg, Rohit Prabhavalkar, Daniel S. Park, Parisa Haghani, Jason Riesa, Ginger Perng, H. Soltau, Trevor Strohman, B. Ramabhadran, Tara N. Sainath, P. Moreno, Chung-Cheng Chiu, J. Schalkwyk, Franccoise Beaufays, Yonghui Wu (2023). Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages. Retrieved from https://www.semanticscholar.org/paper/777317e5af8742b30408e98778fa067750e69f78

@@ -1,0 +1,466 @@
+[
+    {
+        "paperId": "a02fbaf22237a1aedacb1320b6007cd70c1fe6ec",
+        "url": "https://www.semanticscholar.org/paper/a02fbaf22237a1aedacb1320b6007cd70c1fe6ec",
+        "title": "Robust Speech Recognition via Large-Scale Weak Supervision",
+        "year": 2022,
+        "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2212.04356, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "38909097",
+                "name": "Alec Radford"
+            },
+            {
+                "authorId": "2110935237",
+                "name": "Jong Wook Kim"
+            },
+            {
+                "authorId": "2118717067",
+                "name": "Tao Xu"
+            },
+            {
+                "authorId": "2065151121",
+                "name": "Greg Brockman"
+            },
+            {
+                "authorId": "3028785",
+                "name": "Christine McLeavey"
+            },
+            {
+                "authorId": "1701686",
+                "name": "I. Sutskever"
+            }
+        ],
+        "abstract": "We study the capabilities of speech processing systems trained simply to predict large amounts of transcripts of audio on the internet. When scaled to 680,000 hours of multilingual and multitask supervision, the resulting models generalize well to standard benchmarks and are often competitive with prior fully supervised results but in a zero-shot transfer setting without the need for any fine-tuning. When compared to humans, the models approach their accuracy and robustness. We are releasing models and inference code to serve as a foundation for further work on robust speech processing."
+    },
+    {
+        "paperId": "0170fc76e934ee643f869df18fb617d5357e8b4e",
+        "url": "https://www.semanticscholar.org/paper/0170fc76e934ee643f869df18fb617d5357e8b4e",
+        "title": "Conformer: Convolution-augmented Transformer for Speech Recognition",
+        "year": 2020,
+        "openAccessPdf": {
+            "url": "https://arxiv.org/pdf/2005.08100",
+            "status": "GREEN",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2005.08100, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "4478284",
+                "name": "Anmol Gulati"
+            },
+            {
+                "authorId": "47901308",
+                "name": "James Qin"
+            },
+            {
+                "authorId": "145039780",
+                "name": "Chung-Cheng Chiu"
+            },
+            {
+                "authorId": "3877127",
+                "name": "Niki Parmar"
+            },
+            {
+                "authorId": "2153632494",
+                "name": "Yu Zhang"
+            },
+            {
+                "authorId": "2338016291",
+                "name": "Jiahui Yu"
+            },
+            {
+                "authorId": "143911112",
+                "name": "Wei Han"
+            },
+            {
+                "authorId": "2108553866",
+                "name": "Shibo Wang"
+            },
+            {
+                "authorId": "2148905602",
+                "name": "Zhengdong Zhang"
+            },
+            {
+                "authorId": "48607963",
+                "name": "Yonghui Wu"
+            },
+            {
+                "authorId": "34320634",
+                "name": "Ruoming Pang"
+            }
+        ],
+        "abstract": "Recently Transformer and Convolution neural network (CNN) based models have shown promising results in Automatic Speech Recognition (ASR), outperforming Recurrent neural networks (RNNs). Transformer models are good at capturing content-based global interactions, while CNNs exploit local features effectively. In this work, we achieve the best of both worlds by studying how to combine convolution neural networks and transformers to model both local and global dependencies of an audio sequence in a parameter-efficient way. To this regard, we propose the convolution-augmented transformer for speech recognition, named Conformer. Conformer significantly outperforms the previous Transformer and CNN based models achieving state-of-the-art accuracies. On the widely used LibriSpeech benchmark, our model achieves WER of 2.1%/4.3% without using a language model and 1.9%/3.9% with an external language model on test/testother. We also observe competitive performance of 2.7%/6.3% with a small model of only 10M parameters."
+    },
+    {
+        "paperId": "b0fae9fbb4e580d92395eabafe73e317ae6510e3",
+        "url": "https://www.semanticscholar.org/paper/b0fae9fbb4e580d92395eabafe73e317ae6510e3",
+        "title": "SpecAugment: A Simple Data Augmentation Method for Automatic Speech Recognition",
+        "year": 2019,
+        "openAccessPdf": {
+            "url": "https://arxiv.org/pdf/1904.08779",
+            "status": "GREEN",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1904.08779, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2122903358",
+                "name": "Daniel S. Park"
+            },
+            {
+                "authorId": "144333684",
+                "name": "William Chan"
+            },
+            {
+                "authorId": "2153632494",
+                "name": "Yu Zhang"
+            },
+            {
+                "authorId": "145039780",
+                "name": "Chung-Cheng Chiu"
+            },
+            {
+                "authorId": "2368067",
+                "name": "Barret Zoph"
+            },
+            {
+                "authorId": "8132903",
+                "name": "E. D. Cubuk"
+            },
+            {
+                "authorId": "2827616",
+                "name": "Quoc V. Le"
+            }
+        ],
+        "abstract": "We present SpecAugment, a simple data augmentation method for speech recognition. SpecAugment is applied directly to the feature inputs of a neural network (i.e., filter bank coefficients). The augmentation policy consists of warping the features, masking blocks of frequency channels, and masking blocks of time steps. We apply SpecAugment on Listen, Attend and Spell networks for end-to-end speech recognition tasks. We achieve state-of-the-art performance on the LibriSpeech 960h and Swichboard 300h tasks, outperforming all prior work. On LibriSpeech, we achieve 6.8% WER on test-other without the use of a language model, and 5.8% WER with shallow fusion with a language model. This compares to the previous state-of-the-art hybrid system of 7.5% WER. For Switchboard, we achieve 7.2%/14.6% on the Switchboard/CallHome portion of the Hub5'00 test set without the use of a language model, and 6.8%/14.1% with shallow fusion, which compares to the previous state-of-the-art hybrid system at 8.3%/17.3% WER."
+    },
+    {
+        "paperId": "8fe2ea0a67954f1380b3387e3262f1cdb9f9b3e5",
+        "url": "https://www.semanticscholar.org/paper/8fe2ea0a67954f1380b3387e3262f1cdb9f9b3e5",
+        "title": "A tutorial on hidden Markov models and selected applications in speech recognition",
+        "year": 1989,
+        "openAccessPdf": {
+            "url": "",
+            "status": "CLOSED",
+            "license": null,
+            "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1109/5.18626?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/5.18626, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "1712517",
+                "name": "L. Rabiner"
+            }
+        ],
+        "abstract": null
+    },
+    {
+        "paperId": "4177ec52d1b80ed57f2e72b0f9a42365f1a8598d",
+        "url": "https://www.semanticscholar.org/paper/4177ec52d1b80ed57f2e72b0f9a42365f1a8598d",
+        "title": "Speech recognition with deep recurrent neural networks",
+        "year": 2013,
+        "openAccessPdf": {
+            "url": "https://arxiv.org/pdf/1303.5778",
+            "status": "GREEN",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1303.5778, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "1753223",
+                "name": "Alex Graves"
+            },
+            {
+                "authorId": "40360972",
+                "name": "Abdel-rahman Mohamed"
+            },
+            {
+                "authorId": "1695689",
+                "name": "Geoffrey E. Hinton"
+            }
+        ],
+        "abstract": "Recurrent neural networks (RNNs) are a powerful model for sequential data. End-to-end training methods such as Connectionist Temporal Classification make it possible to train RNNs for sequence labelling problems where the input-output alignment is unknown. The combination of these methods with the Long Short-term Memory RNN architecture has proved particularly fruitful, delivering state-of-the-art results in cursive handwriting recognition. However RNN performance in speech recognition has so far been disappointing, with better results returned by deep feedforward networks. This paper investigates deep recurrent neural networks, which combine the multiple levels of representation that have proved so effective in deep networks with the flexible use of long range context that empowers RNNs. When trained end-to-end with suitable regularisation, we find that deep Long Short-term Memory RNNs achieve a test set error of 17.7% on the TIMIT phoneme recognition benchmark, which to our knowledge is the best recorded score."
+    },
+    {
+        "paperId": "3a1a2cff2b70fb84a7ca7d97f8adcc5855851795",
+        "url": "https://www.semanticscholar.org/paper/3a1a2cff2b70fb84a7ca7d97f8adcc5855851795",
+        "title": "The Kaldi Speech Recognition Toolkit",
+        "year": 2011,
+        "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null
+        },
+        "authors": [
+            {
+                "authorId": "1792214",
+                "name": "Daniel Povey"
+            },
+            {
+                "authorId": "2268620",
+                "name": "Arnab Ghoshal"
+            },
+            {
+                "authorId": "2541218",
+                "name": "Gilles Boulianne"
+            },
+            {
+                "authorId": "1816892",
+                "name": "L. Burget"
+            },
+            {
+                "authorId": "3075141",
+                "name": "O. Glembek"
+            },
+            {
+                "authorId": "46356878",
+                "name": "N. Goel"
+            },
+            {
+                "authorId": "2592983",
+                "name": "M. Hannemann"
+            },
+            {
+                "authorId": "2745667",
+                "name": "P. Motl\u00edcek"
+            },
+            {
+                "authorId": "2480051",
+                "name": "Y. Qian"
+            },
+            {
+                "authorId": "35455336",
+                "name": "Petr Schwarz"
+            },
+            {
+                "authorId": "3330139",
+                "name": "J. Silovsk\u00fd"
+            },
+            {
+                "authorId": "1708033",
+                "name": "G. Stemmer"
+            },
+            {
+                "authorId": "2459598",
+                "name": "Karel Vesel\u00fd"
+            }
+        ],
+        "abstract": null
+    },
+    {
+        "paperId": "49a049dc85e2380dde80501a984878341dd8efdf",
+        "url": "https://www.semanticscholar.org/paper/49a049dc85e2380dde80501a984878341dd8efdf",
+        "title": "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
+        "year": 2020,
+        "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2006.11477, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "51428394",
+                "name": "Alexei Baevski"
+            },
+            {
+                "authorId": "2110147709",
+                "name": "Henry Zhou"
+            },
+            {
+                "authorId": "40360972",
+                "name": "Abdel-rahman Mohamed"
+            },
+            {
+                "authorId": "2325985",
+                "name": "Michael Auli"
+            }
+        ],
+        "abstract": "We show for the first time that learning powerful representations from speech audio alone followed by fine-tuning on transcribed speech can outperform the best semi-supervised methods while being conceptually simpler. wav2vec 2.0 masks the speech input in the latent space and solves a contrastive task defined over a quantization of the latent representations which are jointly learned. Experiments using all labeled data of Librispeech achieve 1.8/3.3 WER on the clean/other test sets. When lowering the amount of labeled data to one hour, wav2vec 2.0 outperforms the previous state of the art on the 100 hour subset while using 100 times less labeled data. Using just ten minutes of labeled data and pre-training on 53k hours of unlabeled data still achieves 4.8/8.2 WER. This demonstrates the feasibility of speech recognition with limited amounts of labeled data."
+    },
+    {
+        "paperId": "2392e94df520e707e8b1422311bfdc552954dea9",
+        "url": "https://www.semanticscholar.org/paper/2392e94df520e707e8b1422311bfdc552954dea9",
+        "title": "Fundamentals of speech recognition",
+        "year": 1993,
+        "openAccessPdf": {
+            "url": "",
+            "status": null,
+            "license": null
+        },
+        "authors": [
+            {
+                "authorId": "2288561718",
+                "name": "Prof. Homayoon Beigi"
+            },
+            {
+                "authorId": "2387294899",
+                "name": "H. Beigi"
+            }
+        ],
+        "abstract": null
+    },
+    {
+        "paperId": "777317e5af8742b30408e98778fa067750e69f78",
+        "url": "https://www.semanticscholar.org/paper/777317e5af8742b30408e98778fa067750e69f78",
+        "title": "Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages",
+        "year": 2023,
+        "openAccessPdf": {
+            "url": "https://arxiv.org/pdf/2303.01037",
+            "status": "GREEN",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2303.01037, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2153632494",
+                "name": "Yu Zhang"
+            },
+            {
+                "authorId": "143911112",
+                "name": "Wei Han"
+            },
+            {
+                "authorId": "47901308",
+                "name": "James Qin"
+            },
+            {
+                "authorId": "49416592",
+                "name": "Yongqiang Wang"
+            },
+            {
+                "authorId": "12295226",
+                "name": "Ankur Bapna"
+            },
+            {
+                "authorId": "2188489",
+                "name": "Zhehuai Chen"
+            },
+            {
+                "authorId": "34507928",
+                "name": "Nanxin Chen"
+            },
+            {
+                "authorId": "2165243118",
+                "name": "Bo Li"
+            },
+            {
+                "authorId": "82840075",
+                "name": "Vera Axelrod"
+            },
+            {
+                "authorId": "2117910157",
+                "name": "Gary Wang"
+            },
+            {
+                "authorId": "134905390",
+                "name": "Zhong Meng"
+            },
+            {
+                "authorId": "2055735396",
+                "name": "Ke Hu"
+            },
+            {
+                "authorId": "3998980",
+                "name": "A. Rosenberg"
+            },
+            {
+                "authorId": "2557391",
+                "name": "Rohit Prabhavalkar"
+            },
+            {
+                "authorId": "2122903358",
+                "name": "Daniel S. Park"
+            },
+            {
+                "authorId": "2059866453",
+                "name": "Parisa Haghani"
+            },
+            {
+                "authorId": "2909504",
+                "name": "Jason Riesa"
+            },
+            {
+                "authorId": "2210265479",
+                "name": "Ginger Perng"
+            },
+            {
+                "authorId": "38940652",
+                "name": "H. Soltau"
+            },
+            {
+                "authorId": "2985957",
+                "name": "Trevor Strohman"
+            },
+            {
+                "authorId": "1720857",
+                "name": "B. Ramabhadran"
+            },
+            {
+                "authorId": "1784851",
+                "name": "Tara N. Sainath"
+            },
+            {
+                "authorId": "47690405",
+                "name": "P. Moreno"
+            },
+            {
+                "authorId": "145039780",
+                "name": "Chung-Cheng Chiu"
+            },
+            {
+                "authorId": "1698491",
+                "name": "J. Schalkwyk"
+            },
+            {
+                "authorId": "146687622",
+                "name": "Franccoise Beaufays"
+            },
+            {
+                "authorId": "48607963",
+                "name": "Yonghui Wu"
+            }
+        ],
+        "abstract": "We introduce the Universal Speech Model (USM), a single large model that performs automatic speech recognition (ASR) across 100+ languages. This is achieved by pre-training the encoder of the model on a large unlabeled multilingual dataset of 12 million (M) hours spanning over 300 languages, and fine-tuning on a smaller labeled dataset. We use multilingual pre-training with random-projection quantization and speech-text modality matching to achieve state-of-the-art performance on downstream multilingual ASR and speech-to-text translation tasks. We also demonstrate that despite using a labeled training set 1/7-th the size of that used for the Whisper model, our model exhibits comparable or better performance on both in-domain and out-of-domain speech recognition tasks across many languages."
+    },
+    {
+        "paperId": "e25f6a60211aa74ecfde8001a5939ff206102de4",
+        "url": "https://www.semanticscholar.org/paper/e25f6a60211aa74ecfde8001a5939ff206102de4",
+        "title": "End-to-End Speech Recognition: A Survey",
+        "year": 2023,
+        "openAccessPdf": {
+            "url": "https://ieeexplore.ieee.org/ielx7/6570655/6633080/10301513.pdf",
+            "status": "BRONZE",
+            "license": null,
+            "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2303.03329, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+        },
+        "authors": [
+            {
+                "authorId": "2557391",
+                "name": "Rohit Prabhavalkar"
+            },
+            {
+                "authorId": "145443186",
+                "name": "Takaaki Hori"
+            },
+            {
+                "authorId": "1784851",
+                "name": "Tara N. Sainath"
+            },
+            {
+                "authorId": "121979316",
+                "name": "R. Schluter"
+            },
+            {
+                "authorId": "1746678",
+                "name": "Shinji Watanabe"
+            }
+        ],
+        "abstract": "In the last decade of automatic speech recognition (ASR) research, the introduction of deep learning has brought considerable reductions in word error rate of more than 50% relative, compared to modeling without deep learning. In the wake of this transition, a number of all-neural ASR architectures have been introduced. These so-called end-to-end (E2E) models provide highly integrated, completely neural ASR models, which rely strongly on general machine learning knowledge, learn more consistently from data, with lower dependence on ASR domain-specific experience. The success and enthusiastic adoption of deep learning, accompanied by more generic model architectures has led to E2E models now becoming the prominent ASR approach. The goal of this survey is to provide a taxonomy of E2E ASR models and corresponding improvements, and to discuss their properties and their relationship to classical hidden Markov model (HMM) based ASR architectures. All relevant aspects of E2E ASR are covered in this work: modeling, training, decoding, and external language model integration, discussions of performance and deployment opportunities, as well as an outlook into potential future developments."
+    }
+]

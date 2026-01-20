@@ -1,0 +1,1 @@
+Results across the reviewed papers show substantial improvements in performance. Studies published between 2022 and 2022 report lower error rates and improved generalization. Transformer-based and self-supervised models consistently outperform traditional architectures.

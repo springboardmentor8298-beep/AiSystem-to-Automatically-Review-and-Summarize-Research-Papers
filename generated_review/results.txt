@@ -1,0 +1,1 @@
+Results across the reviewed papers show substantial improvements in speech recognition performance. Studies published between 2023 and 2024 report reductions in word error rates and improved generalization across languages and accents. Transformer-based and self-supervised models consistently outperform traditional architectures.
