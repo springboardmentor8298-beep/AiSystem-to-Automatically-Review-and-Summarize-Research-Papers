@@ -1,0 +1,111 @@
+[
+  {
+    "title": "The Java Virtual Machine Specification",
+    "year": 1996,
+    "authors": [
+      "Tim Lindholm",
+      "Frank Yellin"
+    ],
+    "abstract": null,
+    "url": "https://www.semanticscholar.org/paper/9c08eff8b9f3591cdb6bff607fd53b96c9c06c52",
+    "citations": 3424,
+    "externalIds": {
+      "DBLP": "books/aw/LindholmY97",
+      "MAG": "4015096",
+      "CorpusId": 10630180
+    },
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null
+    }
+  },
+  {
+    "title": "Java Treeview - extensible visualization of microarray data",
+    "year": 2004,
+    "authors": [
+      "A. Saldanha"
+    ],
+    "abstract": null,
+    "url": "https://www.semanticscholar.org/paper/cb19024f90d759cad27ca1301311d3c250c62a49",
+    "citations": 3103,
+    "externalIds": {
+      "DBLP": "journals/bioinformatics/Saldanha04",
+      "MAG": "2159686118",
+      "DOI": "10.1093/bioinformatics/bth349",
+      "CorpusId": 206339921,
+      "PubMed": "15180930"
+    },
+    "openAccessPdf": {
+      "url": "https://academic.oup.com/bioinformatics/article-pdf/20/17/3246/48906391/bioinformatics_20_17_3246.pdf",
+      "status": "BRONZE",
+      "license": null,
+      "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1093/bioinformatics/bth349?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1093/bioinformatics/bth349, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    }
+  },
+  {
+    "title": "The Java Language Specification",
+    "year": 1996,
+    "authors": [
+      "James Gosling",
+      "William N. Joy",
+      "Guy L. Steele"
+    ],
+    "abstract": null,
+    "url": "https://www.semanticscholar.org/paper/3ef87e07d6ffc3c58cad602f792f96fe48fb0b8f",
+    "citations": 2651,
+    "externalIds": {
+      "MAG": "1644882639",
+      "DBLP": "books/aw/GoslingJS96",
+      "CorpusId": 5445732
+    },
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null
+    }
+  },
+  {
+    "title": "Data Mining Practical Machine Learning Tools And Techniques With Java Implementations",
+    "year": 2016,
+    "authors": [
+      "Marcel Abendroth"
+    ],
+    "abstract": null,
+    "url": "https://www.semanticscholar.org/paper/528ecb0f88a9ea6110ba309b98cc2f0678f257c9",
+    "citations": 1601,
+    "externalIds": {
+      "MAG": "2466512847",
+      "CorpusId": 64259583
+    },
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null
+    }
+  },
+  {
+    "title": "Defects4J: a database of existing faults to enable controlled testing studies for Java programs",
+    "year": 2014,
+    "authors": [
+      "Ren\u00e9 Just",
+      "D. Jalali",
+      "Michael D. Ernst"
+    ],
+    "abstract": null,
+    "url": "https://www.semanticscholar.org/paper/37e2106bebd02f4ac9c410941fde7f358279e4a4",
+    "citations": 1492,
+    "externalIds": {
+      "DBLP": "conf/issta/JustJE14",
+      "MAG": "2156723666",
+      "DOI": "10.1145/2610384.2628055",
+      "CorpusId": 12796895
+    },
+    "openAccessPdf": {
+      "url": "http://homes.cs.washington.edu/~mernst/pubs/bug-database-issta2014.pdf",
+      "status": "GREEN",
+      "license": null,
+      "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1145/2610384.2628055?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/2610384.2628055, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    }
+  }
+]
