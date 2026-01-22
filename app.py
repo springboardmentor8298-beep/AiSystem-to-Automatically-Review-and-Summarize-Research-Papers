@@ -53,9 +53,9 @@ def stable_search(query, limit=5):
     return []
 
 # --- 4. UI Layout ---
-st.title("🔬 Research Synthesis Suite")
+st.title(" Research Synthesis Suite")
 
-tab1, tab2 = st.tabs(["🔍 Search & Preview", "✍️ Analysis & Gaps"])
+tab1, tab2 = st.tabs([" Search & Preview", " Analysis & Gaps"])
 
 with tab1:
     col1, col2 = st.columns([3, 1])
@@ -64,7 +64,7 @@ with tab1:
     with col2:
         num_papers = st.selectbox("Paper Count", [1, 3, 5, 10,13,15,17,20], index=2)
 
-    if st.button("🚀 Execute Search", type="primary"):
+    if st.button("Execute Search", type="primary"):
         with st.spinner("Accessing Academic Databases..."):
             results = stable_search(topic, limit=num_papers)
             
@@ -89,7 +89,7 @@ with tab1:
 
     # Reset Button
     if os.path.exists("dataset.json"):
-        if st.button("🗑️ Clear Local Cache"):
+        if st.button("Clear Local Cache"):
             os.remove("dataset.json")
             st.rerun()
 
@@ -99,7 +99,7 @@ with tab2:
             data = json.load(f)
         
         st.subheader("Deep Analysis & Research Gap Detection")
-        if st.button("✨ Synthesize & Identify Gaps"):
+        if st.button(" Synthesize & Identify Gaps"):
             if not data:
                 st.warning("No data found to analyze.")
             else:

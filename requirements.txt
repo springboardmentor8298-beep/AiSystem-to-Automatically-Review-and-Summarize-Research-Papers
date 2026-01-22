@@ -1,4 +1,6 @@
-google-genai
 streamlit
-requests
+chromadb
+google-genai
+sentence-transformers
 python-dotenv
+pysqlite3-binary
