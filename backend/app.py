@@ -1,80 +1,92 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from spellchecker import SpellChecker
 import os
 import sys
 
-# --------------------------------------------------
+# -----------------------------------------
 # PATH FIX
-# --------------------------------------------------
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(BASE_DIR)
+# -----------------------------------------
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(CURRENT_DIR)
+sys.path.insert(0, PROJECT_ROOT)
 
-# --------------------------------------------------
+# -----------------------------------------
 # IMPORTS
-# --------------------------------------------------
+# -----------------------------------------
 from scripts.search_and_list import search_semanticscholar
 from scripts.summarization_pipeline import generate_summary
 from scripts.download_and_extract import download_and_extract
 from scripts.section_parser import parse_sections
 from scripts.text_cleaner import clean_text_for_summary
 
-# --------------------------------------------------
+# -----------------------------------------
 # FLASK APP
-# --------------------------------------------------
+# -----------------------------------------
 app = Flask(__name__)
 CORS(app)
 
-# --------------------------------------------------
-# IN-MEMORY CACHE (PREVENT API OVERUSE)
-# --------------------------------------------------
+spell = SpellChecker()
 SUMMARY_CACHE = {}
 
-# --------------------------------------------------
+# -----------------------------------------
 # HEALTH CHECK
-# --------------------------------------------------
+# -----------------------------------------
 @app.route("/", methods=["GET"])
 def health():
     return jsonify({
         "status": "API running",
-        "message": "Use /search, /summarize_abstract, /summarize"
+        "endpoints": ["/search", "/summarize_abstract", "/summarize"]
     })
 
-# --------------------------------------------------
-# SEARCH PAPERS (SAFE, NO OFFSET, LIMIT GUARANTEED)
-# --------------------------------------------------
+# -----------------------------------------
+# SEARCH PAPERS (STRICT + MODE AWARE)
+# -----------------------------------------
 @app.route("/search", methods=["GET"])
 def search():
     query = request.args.get("query", "").strip()
     limit = int(request.args.get("limit", 5))
+    mode = request.args.get("mode", "abstract")  # abstract | full
 
     if not query:
-        return jsonify({"error": "Query is required"}), 400
+        return jsonify({"error": "Query required"}), 400
 
-    # Fetch extra papers, filter locally
-    raw_papers = search_semanticscholar(query, limit * 4)
+    # Spell correction (safe)
+    corrected_query = " ".join(
+        spell.correction(word) or word
+        for word in query.split()
+    )
 
-    accessible_papers = []
-    abstracts_for_summary = []
+    print(f"[SEARCH] {query} → {corrected_query} | mode={mode}")
+
+    raw_papers = search_semanticscholar(corrected_query, limit * 10)
+
+    results = []
+    abstracts_for_overall = []
 
     for p in raw_papers:
-        if len(accessible_papers) >= limit:
+        if len(results) >= limit:
             break
 
-        pdf_url = None
-        if isinstance(p.get("openAccessPdf"), dict):
-            pdf_url = p["openAccessPdf"].get("url")
-
         abstract = (p.get("abstract") or "").strip()
-        publisher_url = p.get("url")
+        pdf_url = p.get("openAccessPdf", {}).get("url")
+        publisher_url = p.get("url")  # ALWAYS available
 
-        # Skip papers with no usable content
-        if not abstract and not pdf_url:
+        # -------- HARD QUALITY FILTERS --------
+        if not abstract:
+            continue
+        if len(abstract) < 300:
+            continue
+        if abstract.count(".") < 2:
             continue
 
-        if abstract:
-            abstracts_for_summary.append(abstract)
+        # -------- FULL MODE: REQUIRE PDF --------
+        if mode == "full" and not pdf_url:
+            continue
 
-        accessible_papers.append({
+        abstracts_for_overall.append(abstract)
+
+        results.append({
             "title": p.get("title"),
             "year": p.get("year"),
             "venue": p.get("venue"),
@@ -83,103 +95,79 @@ def search():
             "publisher_url": publisher_url
         })
 
-    # --------------------------------------------------
-    # OVERALL SUMMARY (ABSTRACTS ONLY)
-    # --------------------------------------------------
+    # -------- OVERALL TOPIC SUMMARY --------
     overall_summary = ""
-    if abstracts_for_summary:
-        combined = " ".join(abstracts_for_summary[:5])
-        overall_summary = generate_summary(combined)
+    if abstracts_for_overall:
+        combined = " ".join(abstracts_for_overall[:5])
+        overall_summary = generate_summary(
+            clean_text_for_summary(combined)
+        )
 
     return jsonify({
-        "query": query,
-        "paper_count": len(accessible_papers),
+        "query": corrected_query,
+        "original_query": query,
+        "paper_count": len(results),
         "overall_summary": overall_summary,
-        "papers": accessible_papers
+        "papers": results
     })
 
-# --------------------------------------------------
+# -----------------------------------------
 # ABSTRACT SUMMARY
-# --------------------------------------------------
-@app.route("/summarize_abstract", methods=["POST", "OPTIONS"])
+# -----------------------------------------
+@app.route("/summarize_abstract", methods=["POST"])
 def summarize_abstract():
-    if request.method == "OPTIONS":
-        return jsonify({}), 200
-
     data = request.get_json(silent=True) or {}
     abstract = (data.get("abstract") or "").strip()
 
     if not abstract:
-        return jsonify({"summary": "No abstract available."})
+        return jsonify({"summary": ""})
 
-    summary = generate_summary(abstract)
-    return jsonify({"summary": summary})
+    cleaned = clean_text_for_summary(abstract)
+    return jsonify({"summary": generate_summary(cleaned)})
 
-# --------------------------------------------------
-# FULL PAPER SUMMARY (SECTION AWARE + CACHED)
-# --------------------------------------------------
-@app.route("/summarize", methods=["POST", "OPTIONS"])
+# -----------------------------------------
+# FULL PAPER SUMMARY (SAFE & SECTION AWARE)
+# -----------------------------------------
+@app.route("/summarize", methods=["POST"])
 def summarize_pdf():
-    if request.method == "OPTIONS":
-        return jsonify({}), 200
-
     data = request.get_json(silent=True) or {}
     pdf_url = data.get("pdf_url")
 
     if not pdf_url:
-        return jsonify({"error": "No PDF URL provided."}), 400
+        return jsonify({"error": "PDF URL missing"}), 400
 
-    # 🔥 CACHE HIT
+    # Cache hit
     if pdf_url in SUMMARY_CACHE:
         return jsonify(SUMMARY_CACHE[pdf_url])
 
-    try:
-        # 1️⃣ Download & extract
-        raw_text = download_and_extract(pdf_url)
-        if not raw_text.strip():
-            return jsonify({"error": "No text extracted from PDF."}), 400
+    # Download & extract (403-safe)
+    raw_text = download_and_extract(pdf_url)
 
-        # 2️⃣ Parse sections
-        sections = parse_sections(raw_text)
+    # ❌ PDF exists but blocked / forbidden
+    if not raw_text or not raw_text.strip():
+        return jsonify({
+            "error": "PDF not accessible for summarization"
+        }), 400
 
-        # 3️⃣ Always return consistent keys
-        result = {
-            "abstract": "Not available.",
-            "introduction": "Not available.",
-            "conclusion": "Not available.",
-            "full": "Not available."
-        }
+    sections = parse_sections(raw_text)
 
-        # 4️⃣ Section-wise summaries
-        for key in ["abstract", "introduction", "conclusion"]:
-            if key in sections:
-                cleaned = clean_text_for_summary(sections[key])
-                if cleaned.strip():
-                    result[key] = generate_summary(cleaned)
+    result = {
+        "abstract": "",
+        "introduction": "",
+        "conclusion": ""
+    }
 
-        # 5️⃣ Full summary (merged important sections)
-        merged = ""
-        for key in ["abstract", "introduction", "conclusion"]:
-            if key in sections:
-                merged += sections[key] + "\n\n"
+    # Section-wise summaries (clean only)
+    for key in ["abstract", "introduction", "conclusion"]:
+        cleaned = clean_text_for_summary(sections.get(key, ""))
+        if len(cleaned) >= 300:
+            result[key] = generate_summary(cleaned)
 
-        if not merged.strip():
-            merged = raw_text[:8000]
+    SUMMARY_CACHE[pdf_url] = result
+    return jsonify(result)
 
-        cleaned_full = clean_text_for_summary(merged)
-        if cleaned_full.strip():
-            result["full"] = generate_summary(cleaned_full)
-
-        # 🔐 SAVE TO CACHE
-        SUMMARY_CACHE[pdf_url] = result
-
-        return jsonify(result)
-
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
-# --------------------------------------------------
+# -----------------------------------------
 # RUN
-# --------------------------------------------------
+# -----------------------------------------
 if __name__ == "__main__":
     app.run(debug=True)

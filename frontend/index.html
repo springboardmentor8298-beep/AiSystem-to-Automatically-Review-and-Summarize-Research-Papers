@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>AI Research Paper Explorer</title>
-
-    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Styles -->
     <link rel="stylesheet" href="static/style.css" />
 </head>
 
@@ -15,7 +11,6 @@
 
 <div class="container">
 
-    <!-- HEADER -->
     <h1>AI Research Paper Explorer</h1>
     <p class="subtitle">
         Search, understand, and summarize research papers intelligently
@@ -39,58 +34,42 @@
             title="Number of papers"
         />
 
-        <!-- IMPORTANT: type=button prevents page reload -->
-        <button
-            id="searchBtn"
-            type="button"
-            onclick="searchPapers()"
-        >
+        <button id="searchBtn" type="button" onclick="searchPapers()">
             Search
         </button>
     </div>
 
+    <!-- SPELLING SUGGESTION -->
+    <p id="spell-hint" class="spell-hint hidden"></p>
+
     <!-- MODE TOGGLE -->
     <div class="toggle-box">
         <label class="switch">
-            <input
-                type="checkbox"
-                id="summaryToggle"
-                onchange="updateToggleLabel()"
-            />
+            <input type="checkbox" id="summaryToggle" />
             <span class="slider"></span>
         </label>
 
         <span id="toggleText" class="toggle-label">
-            🧠 Abstract Mode
+            🧠 Recommended: Abstract Mode
         </span>
     </div>
 
-    <!-- SEARCH LOADING TEXT -->
+    <!-- LOADING -->
     <p id="loading" class="hidden">
         🔎 Searching papers...
     </p>
 
-    <!-- OVERALL TOPIC SUMMARY -->
+    <!-- OVERALL SUMMARY -->
     <div id="overall-summary" class="card hidden">
         <h2>📌 Overall Topic Summary</h2>
         <p id="overall-text"></p>
     </div>
 
-    <!-- SEARCH RESULTS -->
+    <!-- RESULTS -->
     <div id="results"></div>
 
 </div>
 
-<!-- FULL PAGE LOADER (OPTIONAL / FUTURE USE) -->
-<div id="page-loader" class="page-loader hidden">
-    <div class="loader-card">
-        <div class="spinner large"></div>
-        <p>Processing… please wait</p>
-    </div>
-</div>
-
-<!-- SCRIPT -->
 <script src="static/script.js"></script>
-
 </body>
 </html>

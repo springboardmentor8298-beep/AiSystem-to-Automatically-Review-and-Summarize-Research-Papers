@@ -1,46 +1,28 @@
-import os
 import re
-import json
 
 # ---------------------------------------
-# DIRECTORIES
+# SECTION HEADERS (STRICT + ORDERED)
 # ---------------------------------------
-TEXT_DIR = "data/text"
-OUTPUT_DIR = "outputs/sections"
-
-os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-# ---------------------------------------
-# SECTION HEADERS (ROBUST PATTERNS)
-# ---------------------------------------
-SECTION_PATTERNS = {
-    "abstract": r"\babstract\b",
-    "introduction": r"\bintroduction\b",
-    "methods": r"\b(methods?|methodology)\b",
-    "results": r"\b(results?|experiments?)\b",
-    "discussion": r"\bdiscussion\b",
-    "conclusion": r"\b(conclusion|conclusions)\b",
-}
+SECTION_PATTERNS = [
+    ("abstract", r"\babstract\b"),
+    ("introduction", r"\bintroduction\b"),
+    ("methods", r"\b(methods?|methodology)\b"),
+    ("results", r"\b(results?|experiments?)\b"),
+    ("discussion", r"\bdiscussion\b"),
+    ("conclusion", r"\b(conclusion|conclusions)\b"),
+]
 
 # ---------------------------------------
-# CLEANING FUNCTION (CRITICAL)
+# CLEAN SECTION TEXT
 # ---------------------------------------
 def clean_section(text: str) -> str:
-    """
-    Cleans noisy PDF artifacts:
-    - URLs
-    - Figure/Table captions
-    - Reference leakage
-    - Broken spacing
-    """
-
     if not text:
         return ""
 
     # Remove URLs
     text = re.sub(r"http\S+", "", text)
 
-    # Remove figure/table captions
+    # Remove figure / table captions
     text = re.sub(
         r"\b(fig(ure)?|table)\s*\d+.*",
         "",
@@ -48,73 +30,73 @@ def clean_section(text: str) -> str:
         flags=re.IGNORECASE
     )
 
-    # Remove references section if it leaks
-    text = re.split(r"\breferences\b", text, flags=re.IGNORECASE)[0]
+    # Remove references leakage
+    text = re.split(
+        r"\breferences\b|\bbibliography\b",
+        text,
+        flags=re.IGNORECASE
+    )[0]
 
-    # Remove excessive whitespace
-    text = re.sub(r"\s{2,}", " ", text)
+    # Fix broken spacing
+    text = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', text)
+    text = re.sub(r'\s+', ' ', text)
 
     return text.strip()
 
+
 # ---------------------------------------
-# SECTION PARSER
+# QUALITY CHECK (CRITICAL)
+# ---------------------------------------
+def is_valid_section(text: str) -> bool:
+    """
+    Ensures section is academically meaningful
+    """
+    if not text:
+        return False
+
+    # Minimum length
+    if len(text) < 500:
+        return False
+
+    # Must have multiple sentences
+    if text.count(".") < 3:
+        return False
+
+    return True
+
+
+# ---------------------------------------
+# SECTION PARSER (FINAL)
 # ---------------------------------------
 def parse_sections(text: str) -> dict:
     """
-    Splits full paper text into clean semantic sections.
+    Extracts only high-quality semantic sections
     """
+    if not text or len(text) < 1000:
+        return {}
 
     sections = {}
     lower_text = text.lower()
 
     matches = []
 
-    for section, pattern in SECTION_PATTERNS.items():
+    for name, pattern in SECTION_PATTERNS:
         match = re.search(pattern, lower_text)
         if match:
-            matches.append((match.start(), section))
+            matches.append((match.start(), name))
 
     if not matches:
-        return sections
+        return {}
 
     matches.sort()
 
-    for i, (start, section) in enumerate(matches):
+    for i, (start, name) in enumerate(matches):
         end = matches[i + 1][0] if i + 1 < len(matches) else len(text)
 
-        raw_section = text[start:end].strip()
-        cleaned = clean_section(raw_section)
+        raw = text[start:end]
+        cleaned = clean_section(raw)
 
-        if cleaned:
-            sections[section] = cleaned
+        if is_valid_section(cleaned):
+            sections[name] = cleaned
 
     return sections
-
-# ---------------------------------------
-# CLI TEST MODE
-# ---------------------------------------
-if __name__ == "__main__":
-
-    for filename in os.listdir(TEXT_DIR):
-        if not filename.endswith(".txt"):
-            continue
-
-        print(f"🔍 Parsing sections from: {filename}")
-
-        file_path = os.path.join(TEXT_DIR, filename)
-        with open(file_path, "r", encoding="utf-8") as f:
-            text = f.read()
-
-        parsed_sections = parse_sections(text)
-
-        if not parsed_sections:
-            print("⚠️ No sections detected")
-            continue
-
-        output_file = filename.replace(".txt", "_sections.json")
-        output_path = os.path.join(OUTPUT_DIR, output_file)
-
-        with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(parsed_sections, f, indent=2, ensure_ascii=False)
-
-        print(f"✅ Saved cleaned sections to: {output_path}")

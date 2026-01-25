@@ -1,107 +1,37 @@
-"""
-Improved Extractive Summarization
-- Cleans broken PDF text
-- Filters noisy sentences
-- Produces readable summaries
-"""
-
 import re
 from collections import Counter
 
-# --------------------------------------------------
-# TEXT CLEANING (CRITICAL FOR PDF OUTPUT)
-# --------------------------------------------------
 
 def clean_pdf_text(text: str) -> str:
-    """
-    Normalize PDF extracted text:
-    - Fix broken word joins
-    - Remove excessive whitespace
-    """
-    if not text:
-        return ""
-
-    # Remove excessive newlines
-    text = re.sub(r'\n+', ' ', text)
-
-    # Fix broken camelcase words: "TotrainMusicLM" → "To train Music LM"
-    text = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', text)
-
-    # Normalize spaces
     text = re.sub(r'\s+', ' ', text)
-
+    text = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', text)
     return text.strip()
 
 
 def split_sentences(text: str):
-    """Split text into sentences"""
     return re.split(r'(?<=[.!?])\s+', text)
 
 
-def build_word_frequencies(sentences):
-    """Build word frequency table"""
-    freq = Counter()
-    for sentence in sentences:
-        words = re.findall(r'\b[a-zA-Z]{3,}\b', sentence.lower())
-        freq.update(words)
-    return freq
-
-
-def score_sentences(sentences, word_freq):
-    """Score sentences based on word importance"""
-    scores = {}
-
-    for sentence in sentences:
-        words = re.findall(r'\b[a-zA-Z]{3,}\b', sentence.lower())
-
-        # Ignore very short or very long junk sentences
-        if len(words) < 8 or len(words) > 40:
-            continue
-
-        score = sum(word_freq.get(word, 0) for word in words)
-        scores[sentence] = score
-
-    return scores
-
-
-# --------------------------------------------------
-# PUBLIC API
-# --------------------------------------------------
-
-def extractive_summary(text: str, top_n: int = 6) -> str:
-    """
-    Generate readable extractive summary
-    """
-
+def extractive_summary(text: str, top_n=5) -> str:
     text = clean_pdf_text(text)
     sentences = split_sentences(text)
 
-    if not sentences:
+    valid = [
+        s for s in sentences
+        if 12 <= len(s.split()) <= 35 and s[0].isupper()
+    ]
+
+    if not valid:
         return ""
 
-    word_freq = build_word_frequencies(sentences)
-    sentence_scores = score_sentences(sentences, word_freq)
-
-    if not sentence_scores:
-        return ""
-
-    ranked = sorted(
-        sentence_scores.items(),
-        key=lambda x: x[1],
-        reverse=True
+    freq = Counter(
+        w.lower() for s in valid for w in re.findall(r'\b[a-zA-Z]{3,}\b', s)
     )
 
-    summary_sentences = [s for s, _ in ranked[:top_n]]
-    return " ".join(summary_sentences)
+    scored = {
+        s: sum(freq[w.lower()] for w in re.findall(r'\b[a-zA-Z]{3,}\b', s))
+        for s in valid
+    }
 
-
-# --------------------------------------------------
-# CLI TEST (OPTIONAL)
-# --------------------------------------------------
-if __name__ == "__main__":
-    sample_text = """
-    TotrainMusicLM,weextracttherepresentationReAco...
-    MusicLM introduces a hierarchical framework for music generation.
-    """
-
-    print(extractive_summary(sample_text))
+    best = sorted(scored, key=scored.get, reverse=True)[:top_n]
+    return " ".join(best)
