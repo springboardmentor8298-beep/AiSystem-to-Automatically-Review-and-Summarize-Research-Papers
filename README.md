@@ -69,7 +69,7 @@ Metadata JSON
  -->
 
 
-<!-- to run the backend  -->
+<!-- to run the backnd  -->
 python backend\app.py
 
 
@@ -85,6 +85,12 @@ The system supports optional Transformer-based abstractive summarization
 using lightweight models (t5-small). If Transformers or Torch are not
 available, the system automatically falls back to extractive summarization,
 ensuring robustness and uninterrupted functionality.
+
+HF API summarizer (fast, no torch)
+        ↓ if fails
+Local transformer summarizer (t5-small)
+        ↓ if fails
+Extractive summarizer (always works)
 
 
 

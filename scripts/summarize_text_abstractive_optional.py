@@ -1,58 +1,57 @@
 """
-Optional Abstractive Summarization using Transformers
-Falls back safely if transformers/torch are unavailable
+Optional Abstractive Summarization using Hugging Face Router API
+Falls back safely if API fails
 """
 
 import os
+import requests
 
-TRANSFORMERS_AVAILABLE = False
+HF_API_KEY = os.getenv("HF_API_KEY")
+HF_API_URL = "https://router.huggingface.co/hf-inference/models/facebook/bart-large-cnn"
 
-try:
-    from transformers import pipeline
-    TRANSFORMERS_AVAILABLE = True
-except Exception as e:
-    print("[INFO] Transformers not available. Falling back to extractive summary.")
+HEADERS = {
+    "Authorization": f"Bearer {HF_API_KEY}",
+    "Content-Type": "application/json"
+}
 
-def abstractive_summarize(text, max_length=200, min_length=80):
+def abstractive_summarize(text, max_length=180, min_length=80):
     """
-    Generates abstractive summary if transformers are available.
-    Returns None if not available.
+    Uses Hugging Face Router API for abstractive summarization.
+    Returns None on failure.
     """
-    if not TRANSFORMERS_AVAILABLE:
+
+    if not HF_API_KEY:
+        print("[INFO] HF_API_KEY not set. Skipping abstractive summarization.")
         return None
+
+    payload = {
+        "inputs": text[:6000],  # SAFETY LIMIT
+        "parameters": {
+            "max_length": max_length,
+            "min_length": min_length,
+            "do_sample": False
+        }
+    }
 
     try:
-        summarizer = pipeline(
-            "summarization",
-            model="t5-small",
-            tokenizer="t5-small",
-            framework="pt"
+        response = requests.post(
+            HF_API_URL,
+            headers=HEADERS,
+            json=payload,
+            timeout=60
         )
 
-        summary = summarizer(
-            text,
-            max_length=max_length,
-            min_length=min_length,
-            do_sample=False
-        )
+        if response.status_code != 200:
+            print("[WARN] HF API error:", response.text)
+            return None
 
-        return summary[0]["summary_text"]
+        data = response.json()
 
-    except Exception as e:
-        print("[WARN] Abstractive summarization failed:", e)
+        if isinstance(data, list) and "summary_text" in data[0]:
+            return data[0]["summary_text"]
+
         return None
 
-
-if __name__ == "__main__":
-    sample_text = """
-    Attention is all you need introduces the Transformer architecture
-    based solely on attention mechanisms, dispensing with recurrence
-    and convolutions entirely.
-    """
-
-    result = abstractive_summarize(sample_text)
-
-    if result:
-        print("Abstractive Summary:\n", result)
-    else:
-        print("Abstractive summarization not available.")
+    except Exception as e:
+        print("[WARN] HF API exception:", e)
+        return None

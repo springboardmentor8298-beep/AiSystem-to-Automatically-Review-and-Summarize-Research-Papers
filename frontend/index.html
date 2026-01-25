@@ -1,36 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>AI Research Paper Finder</title>
-    <link rel="stylesheet" href="static/style.css">
+    <meta charset="UTF-8" />
+    <title>AI Research Paper Explorer</title>
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="static/style.css" />
 </head>
+
 <body>
 
 <div class="container">
-    <h1>AI Research Paper Finder</h1>
 
-    <input type="text" id="query" placeholder="Enter research topic">
-    <input type="number" id="limit" value="5" min="1" max="20">
-    <div class="toggle">
-    <label>
-        <input type="radio" name="summaryMode" value="abstract" checked>
-        Abstract only (fast)
-    </label>
+    <!-- HEADER -->
+    <h1>AI Research Paper Explorer</h1>
+    <p class="subtitle">
+        Search, understand, and summarize research papers intelligently
+    </p>
 
-    <label style="margin-left:20px;">
-        <input type="radio" name="summaryMode" value="full">
-        Full paper (download PDF)
-    </label>
-</div>
+    <!-- SEARCH BAR -->
+    <div class="search-box">
+        <input
+            type="text"
+            id="query"
+            placeholder="Enter research topic (e.g. Machine Learning)"
+            autocomplete="off"
+        />
 
-    <button onclick="searchPapers()">Search</button>
+        <input
+            type="number"
+            id="limit"
+            value="5"
+            min="1"
+            max="10"
+            title="Number of papers"
+        />
 
-    <p id="loading">Searching...</p>
+        <!-- IMPORTANT: type=button prevents page reload -->
+        <button
+            id="searchBtn"
+            type="button"
+            onclick="searchPapers()"
+        >
+            Search
+        </button>
+    </div>
 
+    <!-- MODE TOGGLE -->
+    <div class="toggle-box">
+        <label class="switch">
+            <input
+                type="checkbox"
+                id="summaryToggle"
+                onchange="updateToggleLabel()"
+            />
+            <span class="slider"></span>
+        </label>
+
+        <span id="toggleText" class="toggle-label">
+            🧠 Abstract Mode
+        </span>
+    </div>
+
+    <!-- SEARCH LOADING TEXT -->
+    <p id="loading" class="hidden">
+        🔎 Searching papers...
+    </p>
+
+    <!-- OVERALL TOPIC SUMMARY -->
+    <div id="overall-summary" class="card hidden">
+        <h2>📌 Overall Topic Summary</h2>
+        <p id="overall-text"></p>
+    </div>
+
+    <!-- SEARCH RESULTS -->
     <div id="results"></div>
+
 </div>
 
+<!-- FULL PAGE LOADER (OPTIONAL / FUTURE USE) -->
+<div id="page-loader" class="page-loader hidden">
+    <div class="loader-card">
+        <div class="spinner large"></div>
+        <p>Processing… please wait</p>
+    </div>
+</div>
+
+<!-- SCRIPT -->
 <script src="static/script.js"></script>
+
 </body>
 </html>

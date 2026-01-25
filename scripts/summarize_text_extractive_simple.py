@@ -1,90 +1,107 @@
-import os
+"""
+Improved Extractive Summarization
+- Cleans broken PDF text
+- Filters noisy sentences
+- Produces readable summaries
+"""
+
 import re
 from collections import Counter
 
-# -----------------------------
-# Directory configuration
-# -----------------------------
+# --------------------------------------------------
+# TEXT CLEANING (CRITICAL FOR PDF OUTPUT)
+# --------------------------------------------------
 
-TEXT_DIR = "data/text"
-SUMMARY_DIR = "outputs/summaries"
+def clean_pdf_text(text: str) -> str:
+    """
+    Normalize PDF extracted text:
+    - Fix broken word joins
+    - Remove excessive whitespace
+    """
+    if not text:
+        return ""
 
-os.makedirs(SUMMARY_DIR, exist_ok=True)
+    # Remove excessive newlines
+    text = re.sub(r'\n+', ' ', text)
 
-# -----------------------------
-# Utility functions
-# -----------------------------
+    # Fix broken camelcase words: "TotrainMusicLM" → "To train Music LM"
+    text = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', text)
 
-def read_text(file_path):
-    """Read text file content"""
-    with open(file_path, "r", encoding="utf-8") as f:
-        return f.read()
+    # Normalize spaces
+    text = re.sub(r'\s+', ' ', text)
+
+    return text.strip()
 
 
-def split_sentences(text):
-    """Split text into sentences using punctuation"""
-    sentences = re.split(r'(?<=[.!?])\s+', text)
-    return [s.strip() for s in sentences if s.strip()]
+def split_sentences(text: str):
+    """Split text into sentences"""
+    return re.split(r'(?<=[.!?])\s+', text)
 
 
 def build_word_frequencies(sentences):
     """Build word frequency table"""
     freq = Counter()
     for sentence in sentences:
-        words = re.findall(r'\b[a-zA-Z]+\b', sentence.lower())
+        words = re.findall(r'\b[a-zA-Z]{3,}\b', sentence.lower())
         freq.update(words)
     return freq
 
 
 def score_sentences(sentences, word_freq):
-    """Score each sentence based on word frequencies"""
+    """Score sentences based on word importance"""
     scores = {}
+
     for sentence in sentences:
-        words = re.findall(r'\b[a-zA-Z]+\b', sentence.lower())
-        score = sum(word_freq[word] for word in words)
+        words = re.findall(r'\b[a-zA-Z]{3,}\b', sentence.lower())
+
+        # Ignore very short or very long junk sentences
+        if len(words) < 8 or len(words) > 40:
+            continue
+
+        score = sum(word_freq.get(word, 0) for word in words)
         scores[sentence] = score
+
     return scores
 
-# -----------------------------
-# PUBLIC API (used by pipeline)
-# -----------------------------
 
-def extractive_summary(text, top_n=8):
+# --------------------------------------------------
+# PUBLIC API
+# --------------------------------------------------
+
+def extractive_summary(text: str, top_n: int = 6) -> str:
     """
-    Generate extractive summary from text.
-    Used by summarization_pipeline.py
+    Generate readable extractive summary
     """
+
+    text = clean_pdf_text(text)
     sentences = split_sentences(text)
+
     if not sentences:
         return ""
 
     word_freq = build_word_frequencies(sentences)
     sentence_scores = score_sentences(sentences, word_freq)
 
-    ranked = sorted(sentence_scores.items(), key=lambda x: x[1], reverse=True)
-    summary_sentences = [s for s, _ in ranked[:top_n]]
+    if not sentence_scores:
+        return ""
 
+    ranked = sorted(
+        sentence_scores.items(),
+        key=lambda x: x[1],
+        reverse=True
+    )
+
+    summary_sentences = [s for s, _ in ranked[:top_n]]
     return " ".join(summary_sentences)
 
-# -----------------------------
-# CLI test (standalone run)
-# -----------------------------
 
+# --------------------------------------------------
+# CLI TEST (OPTIONAL)
+# --------------------------------------------------
 if __name__ == "__main__":
-    input_file = "sample_attention_is_all_you_need.txt"
-    input_path = os.path.join(TEXT_DIR, input_file)
+    sample_text = """
+    TotrainMusicLM,weextracttherepresentationReAco...
+    MusicLM introduces a hierarchical framework for music generation.
+    """
 
-    print("Reading text...")
-    text = read_text(input_path)
-
-    print("Generating extractive summary...")
-    summary = extractive_summary(text)
-
-    output_file = "attention_is_all_you_need_summary.txt"
-    output_path = os.path.join(SUMMARY_DIR, output_file)
-
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(summary)
-
-    print("Summary saved at:", output_path)
-
+    print(extractive_summary(sample_text))
