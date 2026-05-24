@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DATABASE_URL=postgresql://user:password@postgres:5432/paper_review
+      - MAX_PAPERS=3
+      - ABSTRACT_WORD_LIMIT=100
+      - GPT_MODEL=gpt-3.5-turbo
+      - TEMPERATURE=0.7
+    ports:
+      - "8000:8000"  # FastAPI
+      - "7860:7860"  # Gradio
+    volumes:
+      - ./storage:/app/storage
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: paper_review
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
